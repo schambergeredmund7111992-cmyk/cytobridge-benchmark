@@ -1,6 +1,6 @@
 # CytoBridge
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21912236.svg)](https://doi.org/10.5281/zenodo.21912236)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21912287.svg)](https://doi.org/10.5281/zenodo.21912287)
 
 This codebase is a validation of the CytoBridge study. It tests whether
 single-cell perturbation predictors preserve held-out compound identity after conditioning on

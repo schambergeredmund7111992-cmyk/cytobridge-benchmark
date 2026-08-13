@@ -1,6 +1,6 @@
 # Data and Checkpoint Sources
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21912236.svg)](https://doi.org/10.5281/zenodo.21912236)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21912287.svg)](https://doi.org/10.5281/zenodo.21912287)
 
 This repository contains only source code (~30K lines). Large binary files — datasets,
 pretrained checkpoints, cached embeddings, trained model weights, and experiment results —
@@ -23,10 +23,10 @@ All binary artifacts live in one shared folder:
 
 ## Zenodo
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21912236.svg)](https://doi.org/10.5281/zenodo.21912236)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21912287.svg)](https://doi.org/10.5281/zenodo.21912287)
 
 Source code snapshot and small figure-reproduction data are archived at
-[10.5281/zenodo.21912236](https://doi.org/10.5281/zenodo.21912236) (version v1.0.3;
+[10.5281/zenodo.21912287](https://doi.org/10.5281/zenodo.21912287) (version v1.0.3;
 all-version DOI: [10.5281/zenodo.21911960](https://doi.org/10.5281/zenodo.21911960)).
 
 ## Direct download of public datasets

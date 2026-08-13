@@ -10,7 +10,7 @@
   "release": {
     "version": "1.0.3",
     "github_tag": "v1.0.3",
-    "zenodo_version_doi": "10.5281/zenodo.21912236",
+    "zenodo_version_doi": "10.5281/zenodo.21912287",
     "zenodo_concept_doi": "10.5281/zenodo.21911960"
   },
   "source_baseline_commit": "6a4d2f0e59c9fc4d203354d7cf940164e92edc83",

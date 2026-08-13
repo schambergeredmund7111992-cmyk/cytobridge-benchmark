@@ -1,0 +1,5 @@
+Method,R2(all),R2(top50 DEG),Spearman(top50 DEG),n_pairs
+Mean,0.1074,-0.03,0.3572,27
+Linear,-0.0137,-0.1932,0.1974,27
+Linear-adj,-0.0496,-0.1411,0.312,27
+kNN-MolFormer,-0.7692,-0.2743,0.3026,27

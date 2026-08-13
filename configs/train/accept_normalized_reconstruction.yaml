@@ -1,0 +1,11 @@
+# @package _global_
+defaults:
+  - /train/accept_base@_global_
+  - _self_
+
+run_name: accept_normalized_reconstruction_${protocol}_seed${seed}
+
+loss:
+  lam_recon: 0.0
+  lam_logfc: 0.0
+  lam_norm_recon: 1.0

@@ -1,0 +1,19 @@
+# Normalize text files; force LF for anything executed on Linux servers.
+* text=auto
+*.py text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text=auto
+*.cff text=auto
+*.json text=auto
+*.toml text eol=lf
+*.txt text=auto
+*.ipynb text=auto
+*.npy binary
+*.npz binary
+*.parquet binary
+*.h5ad binary
+*.pdf binary
+*.png binary
+*.svg text=auto

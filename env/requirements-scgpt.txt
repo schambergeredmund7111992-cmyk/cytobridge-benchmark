@@ -1,0 +1,11 @@
+numpy==1.26.4
+torchtext==0.18.0
+scanpy==1.10.0
+anndata==0.10.7
+scgpt==0.2.4
+ipython
+rdkit==2024.3.3
+transformers==4.42.0
+tokenizers
+huggingface-hub
+setuptools==70.3.0

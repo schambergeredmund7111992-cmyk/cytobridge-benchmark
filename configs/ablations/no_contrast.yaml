@@ -1,0 +1,5 @@
+# @package _global_
+# Ablation: no contrastive loss
+loss:
+  lam_contrast: 0.0
+run_name: no_contrast

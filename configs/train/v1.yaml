@@ -1,0 +1,69 @@
+# @package _global_
+# CytoBridge V1 training config
+seed: 42
+run_name: v1
+
+data:
+  train_manifest: data/processed/sciplex/splits/sciplex_train.parquet
+  val_manifest: data/processed/sciplex/splits/sciplex_val.parquet
+  test_manifest: data/processed/sciplex/splits/sciplex_test.parquet
+  cell_emb_path: data/cache/sciplex_scgpt_emb.npy
+  drug_emb_path: data/cache/sciplex_molformer_emb.npz
+  treated_counts_path: data/processed/sciplex/splits/sciplex_train_treated_counts.npy
+  pathway_gsea_path: data/processed/sciplex/splits/sciplex_train_pathway_gsea.npy
+  control_counts_path: data/processed/sciplex/splits/sciplex_train_control_counts.npy
+  val_treated_counts_path: data/processed/sciplex/splits/sciplex_val_treated_counts.npy
+  val_pathway_gsea_path: data/processed/sciplex/splits/sciplex_val_pathway_gsea.npy
+  val_control_counts_path: data/processed/sciplex/splits/sciplex_val_control_counts.npy
+  test_treated_counts_path: data/processed/sciplex/splits/sciplex_test_treated_counts.npy
+  test_pathway_gsea_path: data/processed/sciplex/splits/sciplex_test_pathway_gsea.npy
+  test_control_counts_path: data/processed/sciplex/splits/sciplex_test_control_counts.npy
+  batch_size: 64
+  num_workers: 4
+  n_hard_same_drug: 2
+  n_hard_same_cell: 2
+  seed: 42
+  randomize_drug_emb: false
+
+model:
+  d_cell_in: 512
+  d_drug_in: 768
+  d: 256
+  n_layers: 4
+  n_heads: 8
+  K_pathways: 50
+  n_genes: 3000
+  contrastive_dim: 128
+  dropout: 0.1
+  use_pathway_gate: true
+  pathway_init_path: null
+
+loss:
+  lam_recon: 1.0
+  lam_contrast: 0.5
+  lam_pathway: 0.3
+  lam_kl: 0.05
+  temperature: 0.07
+  weight_hard: 2.0
+
+optim:
+  lr_proj: 5.0e-5
+  lr_bridge: 2.0e-4
+  weight_decay: 0.01
+  max_steps: 10000
+
+trainer:
+  max_epochs: 1
+  accelerator: gpu
+  devices: 1
+  precision: 32
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+
+ckpt:
+  dirpath: ckpts/v1
+
+wandb:
+  use: false
+  project: cytobridge
+  name: v1

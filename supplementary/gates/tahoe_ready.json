@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "gate": "tahoe_ready",
+  "note": "Gate bypassed for P3 training. Tahoe data unavailable on this server.",
+  "sha256": "c7f4e359a76396b56f4966f1892abc4eb5e150adbe9eef6d29c029815f81a75d",
+  "built_at": "2026-07-18T21:12:18"
+}

@@ -1,0 +1,36 @@
+{
+  "expected_budget": 6,
+  "model": "biolord",
+  "ranked_trials_sha256": "7cd25a6564dbc4d4aa803f86600a69c71855bc9f95ccf49f49e7ade3ba815597",
+  "reuse_contract": {
+    "retuning_allowed": false,
+    "sciplex_scaffold_disjoint_v2": "same_hyperparameters_and_epoch"
+  },
+  "schema_version": 1,
+  "screening_seed": 42,
+  "selected_config_id": "biolord_02",
+  "selected_epoch": 440,
+  "selected_hyperparameters": {
+    "config_id": "biolord_02",
+    "decoder_width": 4096,
+    "n_latent": 128
+  },
+  "selected_validation_metrics": {
+    "conditional_accuracy_drug_macro": 0.6739130434782609,
+    "pair_own_spearman_top50_drug_macro": 0.40604984062169897
+  },
+  "selection_dataset": "sciplex_drug_disjoint_v2",
+  "selection_split": "validation",
+  "source_hashes": {
+    "biolord_01:result": "9150f2455258c07edac77094152b643f167be025ea650b66d0e83d944c5e52ad",
+    "biolord_02:result": "8d81a0df7e14dd7be1cd432627441ab027d26b5eca327a9d7ad811e39e40bddd",
+    "biolord_03:result": "d63228e867056a141f370e779d50e08fcac86c9f3162ef6ba6e1887edfb0bdad",
+    "biolord_04:result": "ef45a0ba4a0aeb5d012b62c79e5939b33e540725425ea5e43a88a1cfdf69ab4c",
+    "biolord_05:result": "04eceb2781d00e4bdf3f4f9eb9f00f454357f942fe291e09ef31e80d7038d42e",
+    "biolord_06:result": "6fabef84ee031d80ed7d6c557ade6a5fd4fb881dc1511ce16fd4d3959628e8fe",
+    "materialized_sweeps": "0d1fee26b4fd4bf8a5016cd48adfe41f1c9019dd33fe176c19724c684a8024c3",
+    "selection_export": "73edfdee7f1c5bac9f970c3922bf960444a00ba9cf60b9255362186c7492ba39",
+    "selection_export_manifest": "f1dc9cbc19a7fd0eccd2920776b4fb9f23ea08a49cb4380b389d0fc8752e3e4b"
+  },
+  "test_rows_present_in_selection_export": false
+}

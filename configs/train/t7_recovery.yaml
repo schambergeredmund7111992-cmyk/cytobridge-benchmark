@@ -1,0 +1,58 @@
+# @package _global_
+# ^ REQUIRED on hydra-core 1.3.2 (see t6_collapse_fix.yaml). `@_global_` on the
+#   /train/v1 default is the verified form (cfg.seed accessible).
+#
+# INSTRUMENTED RECOVERY — one high-leverage attempt at breaking collapse,
+# instrumented so that FAILURE is itself the negative-result evidence.
+#
+# root cause (now precise): the combined loss is scale-imbalanced by ~2-3
+# orders of magnitude. L_recon (ZINB-NLL) is ~440 during training while the
+# anti-collapse terms (L_direction, L_drugspec) are O(1) — so lam_drugspec 0.5->1.0
+# did nothing (still ~440x swamped). AND the drug signal that DOES exist in the
+# representation (c_fused inter-drug Pearson 0.66, NOT 0.99) is destroyed at the
+# decoder (output inter-drug 0.99). So: (a) REBALANCE the loss to make the
+# drug-specific delta the PRIMARY objective, and (b) per-component LayerNorm in
+# dec_in so the drug terms are not numerically washed out by the cell context.
+#
+# Run (smoke first, then long):
+#   python train.py --config-name=train/t7_recovery trainer.max_epochs=1
+#   python train.py --config-name=train/t7_recovery
+# Sweep the two levers (Hydra multirun):
+#   python train.py -m --config-name=train/t7_recovery loss.lam_drugspec=1.0,3.0,5.0
+#   python train.py -m --config-name=train/t7_recovery loss.lam_recon=0.02,0.1
+#
+# GATE after training (eval/run_internal.py + eval/verify_drug_specificity.py):
+#   (1) inter-drug pred Pearson < 0.7          (prior config: 0.99)
+#   (2) drug_discrimination_score: gap > 0 AND specificity_auc > 0.7 AND p < 0.01
+#       (this is THE test — a per-pair r without a positive gap is a collapse artifact)
+#   (3) Spearman@50 >= Mean baseline (~0.357; LOCK the number first)
+defaults:
+  - /train/v1@_global_
+  - _self_
+
+run_name: t7_recovery
+
+model:
+  residual_decoder: true
+  pool_mode: drug_query
+  drug_conditioned_decoder: true
+  dec_in_component_norm: true     # equalize cell vs drug scale before dec_in concat
+
+loss:
+  # --- REBALANCE: ZINB is a weak anchor; the drug-specific delta is primary ---
+  lam_recon: 0.02        # was 1.0. 0.02 * ~440 ~= 8.8, now comparable to the rest.
+  lam_contrast: 0.5      # InfoNCE hard-neg (same-cell-diff-drug) — keep
+  lam_pathway: 0.3       # pathway BCE vs GSEA NES — keep
+  lam_kl: 0.05
+  lam_direction: 1.0     # 1 - Pearson(pred_logfc, true_logfc)
+  lam_delta: 0.5         # DEG-weighted Huber on logFC — magnitude supervision on the delta
+  lam_drugspec: 3.0      # PRIMARY anti-collapse; sweep [1.0, 3.0, 5.0]
+
+ckpt:
+  dirpath: ckpts/t7_recovery
+
+trainer:
+  max_epochs: 20
+
+wandb:
+  name: t7_recovery_sciplex

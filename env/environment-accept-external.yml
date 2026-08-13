@@ -1,0 +1,34 @@
+name: cytobridge-accept-external
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch=2.1.0
+  - pytorch-cuda=12.1
+  - numpy=1.26.4
+  - scipy=1.13.0
+  - pandas=2.2.2
+  - h5py=3.11.0
+  - rdkit=2022.09.5
+  - pip:
+      # chemCPA's pinned 2025 source was released with this Lightning stack.
+      - lightning==2.2.4
+      - torchmetrics==1.4.0
+      - anndata==0.10.7
+      - scanpy==1.10.1
+      - scikit-learn==1.4.2
+      - pyarrow==16.0.0
+      - sympy==1.12
+      - hydra-core==1.3.2
+      - omegaconf==2.3.0
+      - descriptastorus==2.6.1
+      # First scvi-tools patch line compatible with the pinned biolord source,
+      # AnnData 0.10, and Lightning >=2.2 without the old <2.2 upper bound.
+      - scvi-tools==1.1.6.post2
+      - tqdm==4.66.4
+      - pyyaml==6.0.1
+      - pytest==8.2.2
+

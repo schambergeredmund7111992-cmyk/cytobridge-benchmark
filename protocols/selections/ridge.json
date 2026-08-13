@@ -1,0 +1,45 @@
+{
+  "alpha_grid": [
+    0.0001,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0
+  ],
+  "context_categories": [
+    "A549",
+    "K562",
+    "MCF7"
+  ],
+  "fingerprint": {
+    "bits": 2048,
+    "kind": "Morgan",
+    "radius": 2
+  },
+  "fit_splits_during_selection": [
+    "train"
+  ],
+  "model": "ridge",
+  "schema_version": 1,
+  "selected_alpha": 1.0,
+  "selected_config_id": "alpha=1",
+  "selected_validation_metrics": {
+    "conditional_accuracy_drug_macro": 0.5791062801932366,
+    "pair_own_spearman_top50_drug_macro": 0.35518372554164035
+  },
+  "selection_split": "validation",
+  "source_hashes": {
+    "gene_panels": "bbd99c2d8285cde65c4a27cf055c7d3c8ed16ea8dd18d1862fd786f77d2ce202",
+    "smiles_csv": "742c816c2daff8ff2db19ac76b2d570dff674cf658ea26d366b5819793e5fa66",
+    "train_metadata": "14b5289cc7f5c3203a770d6ebc56798693bb7c46e53888543456ff8d28509438",
+    "train_targets": "40d89103c9e79a66d2532b672739203a77c71a4b2f58e65ac675b3e82693d7ac",
+    "validation_metadata": "b281581337d24f63631e893f9b088b931b00bafe84fed61d6236a4c35ae489c7",
+    "validation_targets": "1e012e29c17198f384d1c84893b57cda7dae5b074aad36d3dd5dce48f149f95d"
+  },
+  "test_artifacts_opened_during_selection": false,
+  "trials_sha256": "64b34ddb49dd227d2e650c15843370ce8f25624f21d8627f54895176725a18b8"
+}

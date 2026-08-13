@@ -1,0 +1,302 @@
+{
+  "checks": {
+    "autodl_5090_profiles": {
+      "cuda": "12.8",
+      "files": {
+        "code/configs/train/smoke.yaml": {
+          "bytes": 1819,
+          "exists": true,
+          "expected_sha256": "e631306ead4c506b50cd128ac68575cfdc2c28ff5d5583d11b652958d9edffdc",
+          "observed_sha256": "e631306ead4c506b50cd128ac68575cfdc2c28ff5d5583d11b652958d9edffdc",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/configs/train/smoke.yaml"
+        },
+        "code/env/core_python.sh": {
+          "bytes": 729,
+          "exists": true,
+          "expected_sha256": "f46a3fa95ecf6eda144470b115f21826450f35ed156ef4c5b175fd8e377205b4",
+          "observed_sha256": "f46a3fa95ecf6eda144470b115f21826450f35ed156ef4c5b175fd8e377205b4",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/env/core_python.sh"
+        },
+        "code/env/requirements-autodl-5090-core.txt": {
+          "bytes": 801,
+          "exists": true,
+          "expected_sha256": "8b6c76e038f10c52441f61bc0a98313b82ff9a9bd8c48ffba0a498d77c893563",
+          "observed_sha256": "8b6c76e038f10c52441f61bc0a98313b82ff9a9bd8c48ffba0a498d77c893563",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/env/requirements-autodl-5090-core.txt"
+        },
+        "code/env/requirements-autodl-5090-external.txt": {
+          "bytes": 819,
+          "exists": true,
+          "expected_sha256": "c54c2d73584cf12951dbdae42f7741d5a429452394a428b2bfd18f38a5c123e2",
+          "observed_sha256": "c54c2d73584cf12951dbdae42f7741d5a429452394a428b2bfd18f38a5c123e2",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/env/requirements-autodl-5090-external.txt"
+        },
+        "code/env/setup_autodl_5090_env.sh": {
+          "bytes": 1318,
+          "exists": true,
+          "expected_sha256": "ded237a56dd1dfdbf68e20dc6f33ad3cc03f06cd18fd016cdcfef4d20148988e",
+          "observed_sha256": "ded237a56dd1dfdbf68e20dc6f33ad3cc03f06cd18fd016cdcfef4d20148988e",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/env/setup_autodl_5090_env.sh"
+        },
+        "code/env/setup_autodl_5090_external.sh": {
+          "bytes": 1541,
+          "exists": true,
+          "expected_sha256": "702b349b8181e24e6d226af49a84e0b1d701a02a89c975f2fba2bdd85f86cf37",
+          "observed_sha256": "702b349b8181e24e6d226af49a84e0b1d701a02a89c975f2fba2bdd85f86cf37",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/env/setup_autodl_5090_external.sh"
+        },
+        "code/env/setup_external_baselines.sh": {
+          "bytes": 5984,
+          "exists": true,
+          "expected_sha256": "7fa236738277c614bb5b54f7502618ae34a61604f39ee7b860066cfa5c155baf",
+          "observed_sha256": "7fa236738277c614bb5b54f7502618ae34a61604f39ee7b860066cfa5c155baf",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/env/setup_external_baselines.sh"
+        },
+        "code/pyproject.toml": {
+          "bytes": 1390,
+          "exists": true,
+          "expected_sha256": "b50a2827f8d4205329bd04280d46656a9e382a2095407a0ce53c53f04a89b316",
+          "observed_sha256": "b50a2827f8d4205329bd04280d46656a9e382a2095407a0ce53c53f04a89b316",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/pyproject.toml"
+        },
+        "code/scripts/campaign_scheduler.py": {
+          "bytes": 9716,
+          "exists": true,
+          "expected_sha256": "b8ad342ea55265f8e31a67c0ef6f1c7628147e9a71124b4402d47d2a4ba657b8",
+          "observed_sha256": "b8ad342ea55265f8e31a67c0ef6f1c7628147e9a71124b4402d47d2a4ba657b8",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/scripts/campaign_scheduler.py"
+        },
+        "code/scripts/launch_autodl_campaign_phase.sh": {
+          "bytes": 2699,
+          "exists": true,
+          "expected_sha256": "c19973741bb24844890c7ea387c51207bb67881c836d2581296bd9114c4a73e1",
+          "observed_sha256": "c19973741bb24844890c7ea387c51207bb67881c836d2581296bd9114c4a73e1",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/scripts/launch_autodl_campaign_phase.sh"
+        },
+        "code/scripts/launch_monitored_autodl.sh": {
+          "bytes": 323,
+          "exists": true,
+          "expected_sha256": "7904e5ef95fe016eb8886d3755b55f6ee46a5c9bda0c6604b81d210566929283",
+          "observed_sha256": "7904e5ef95fe016eb8886d3755b55f6ee46a5c9bda0c6604b81d210566929283",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/scripts/launch_monitored_autodl.sh"
+        },
+        "code/scripts/run_autodl_5090_smoke.sh": {
+          "bytes": 1833,
+          "exists": true,
+          "expected_sha256": "797446a41136833d55fff3546f2bceb5b0704b3a6ec874492b12f2e09038b1d5",
+          "observed_sha256": "797446a41136833d55fff3546f2bceb5b0704b3a6ec874492b12f2e09038b1d5",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/scripts/run_autodl_5090_smoke.sh"
+        },
+        "code/scripts/run_campaign_job.py": {
+          "bytes": 27976,
+          "exists": true,
+          "expected_sha256": "3d5435b14710fb9663fc53baab7116f2a276fc04793d9ca982c46b0b3dd2d02f",
+          "observed_sha256": "3d5435b14710fb9663fc53baab7116f2a276fc04793d9ca982c46b0b3dd2d02f",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/scripts/run_campaign_job.py"
+        },
+        "code/scripts/verify_gpu_runtime.py": {
+          "bytes": 4193,
+          "exists": true,
+          "expected_sha256": "61f1dbbbcc423d6ee1fa61c6c84b9a8d37909471447a5159675a800168f29f51",
+          "observed_sha256": "61f1dbbbcc423d6ee1fa61c6c84b9a8d37909471447a5159675a800168f29f51",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/scripts/verify_gpu_runtime.py"
+        },
+        "code/train.py": {
+          "bytes": 23395,
+          "exists": true,
+          "expected_sha256": "28150133eab8e1aecc7809f85f422ae214763d0d221b1931923169882945baf2",
+          "observed_sha256": "28150133eab8e1aecc7809f85f422ae214763d0d221b1931923169882945baf2",
+          "ok": true,
+          "path": "/root/autodl-tmp/0accept_revision/code/train.py"
+        }
+      },
+      "ok": true,
+      "torch": "2.7.1+cu128"
+    },
+    "campaign_spec": {
+      "bytes": 1124,
+      "exists": true,
+      "expected_sha256": "31bf82263be057677c2923dfb35944877b0c5f0e7f603a5e3e09f197536327f0",
+      "observed_sha256": "31bf82263be057677c2923dfb35944877b0c5f0e7f603a5e3e09f197536327f0",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/protocols/campaign.yaml"
+    },
+    "chemcpa_decision": {
+      "bytes": 1081,
+      "exists": true,
+      "expected_sha256": "27d008bd5c9098e1842befd2e69712c65545cb72b802a212b09df26b597ea081",
+      "observed_sha256": "27d008bd5c9098e1842befd2e69712c65545cb72b802a212b09df26b597ea081",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/protocols/DECISION_CHEMCPA_FROM_SCRATCH.md"
+    },
+    "embedding_caches": {
+      "integrity": {
+        "drug_disjoint_v2": {
+          "molformer": {
+            "cache_sha256": "1b8fd2cd24d0a1a177b6eccdda72107ff96fd4daa68346c59739a21b4e5f8194",
+            "ok": true,
+            "shape": [
+              188,
+              128,
+              768
+            ]
+          },
+          "ok": true,
+          "scgpt": {
+            "cache_sha256": "b08d2b4e41e1b674c00b23d2ac25073f02f3ab9e644b9503477b286eddde0e4f",
+            "ok": true,
+            "shape": [
+              94130,
+              1,
+              512
+            ]
+          }
+        },
+        "scaffold_disjoint_v2": {
+          "molformer": {
+            "cache_sha256": "1b8fd2cd24d0a1a177b6eccdda72107ff96fd4daa68346c59739a21b4e5f8194",
+            "ok": true,
+            "shape": [
+              188,
+              128,
+              768
+            ]
+          },
+          "ok": true,
+          "scgpt": {
+            "cache_sha256": "1087207357acc009fe0e168cd1fc69d0275fbf89f8bf8e11490aa499afc3678d",
+            "ok": true,
+            "shape": [
+              94130,
+              1,
+              512
+            ]
+          }
+        }
+      },
+      "missing": [],
+      "ok": true
+    },
+    "external_environment": {
+      "bytes": 840,
+      "exists": true,
+      "expected_sha256": "aa52da3b478f181e834f3faaa3843c4a43d5d4c3760ccd301c68f0a462838f79",
+      "observed_sha256": "aa52da3b478f181e834f3faaa3843c4a43d5d4c3760ccd301c68f0a462838f79",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/code/env/environment-accept-external.yml"
+    },
+    "external_source_manifest": {
+      "bytes": 1776,
+      "exists": true,
+      "expected_sha256": "f66e0ec676ef2f493eb99307454e13af4f50f7ce98b6add6c9381e85770274fb",
+      "observed_sha256": "f66e0ec676ef2f493eb99307454e13af4f50f7ce98b6add6c9381e85770274fb",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/code/external/source_manifest.json"
+    },
+    "materialized_sweeps": {
+      "bytes": 3441,
+      "exists": true,
+      "expected_sha256": "0d1fee26b4fd4bf8a5016cd48adfe41f1c9019dd33fe176c19724c684a8024c3",
+      "observed_sha256": "0d1fee26b4fd4bf8a5016cd48adfe41f1c9019dd33fe176c19724c684a8024c3",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/protocols/materialized_sweeps.json"
+    },
+    "msigdb_hallmark": {
+      "bytes": 48690,
+      "exists": true,
+      "expected_sha256": "ee2463540042078bfa3f67828e1e223bb354446d9fbb4d22845866835ba5c772",
+      "observed_sha256": "ee2463540042078bfa3f67828e1e223bb354446d9fbb4d22845866835ba5c772",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/code/data/raw/msigdb/h.all.v2024.1.Hs.symbols.gmt",
+      "size_ok": true
+    },
+    "official_sciplex": {
+      "bytes": 2526631614,
+      "exists": true,
+      "expected_md5": "c9e70629505d98c7ca1a837f62b14e89",
+      "observed_md5": "c9e70629505d98c7ca1a837f62b14e89",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/code/data/raw/sciplex/SrivatsanTrapnell2020_sciplex3.h5ad",
+      "size_ok": true
+    },
+    "processed_protocol_files": {
+      "missing": [],
+      "ok": true
+    },
+    "protocol": {
+      "bytes": 12810,
+      "exists": true,
+      "expected_sha256": "0fd8f62a5f8c29d1e21066b7d8871c7d2dcc4e7366bbef816b0f5a3cbfa3bbd0",
+      "observed_sha256": "0fd8f62a5f8c29d1e21066b7d8871c7d2dcc4e7366bbef816b0f5a3cbfa3bbd0",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/protocols/PROTOCOL.md"
+    },
+    "python_3_10_or_newer": {
+      "observed": "3.10.20",
+      "ok": true
+    },
+    "scgpt_checkpoint": {
+      "args": {
+        "bytes": 1576,
+        "exists": true,
+        "expected_sha256": "4d03b3ea64dc28135279ee2317b9bdb1c18d8d91f127f3949f08833736e0ebed",
+        "observed_sha256": "4d03b3ea64dc28135279ee2317b9bdb1c18d8d91f127f3949f08833736e0ebed",
+        "ok": true,
+        "path": "/root/autodl-tmp/cytobridge_accept_data/scgpt_ckpt/args.json"
+      },
+      "best_model": {
+        "bytes": 205385258,
+        "exists": true,
+        "expected_sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922",
+        "observed_sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922",
+        "ok": true,
+        "path": "/root/autodl-tmp/cytobridge_accept_data/scgpt_ckpt/best_model.pt"
+      },
+      "directory": "/root/autodl-tmp/cytobridge_accept_data/scgpt_ckpt",
+      "ok": true,
+      "vocab": {
+        "bytes": 1317639,
+        "exists": true,
+        "expected_sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f",
+        "observed_sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f",
+        "ok": true,
+        "path": "/root/autodl-tmp/cytobridge_accept_data/scgpt_ckpt/vocab.json"
+      }
+    },
+    "scgpt_fix_approval": {
+      "evidence_ok": true,
+      "evidence_path": "/root/autodl-tmp/0accept_revision/experiments/20260711-scgpt-wrapper-audit/scgpt_wrapper_audit_final.json",
+      "exists": true,
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/handoff/approvals/SCGPT_FIX_APPROVED.json",
+      "reviewer": "official-oracle engineering audit (scGPT 0.2.4 DataCollator)",
+      "status": "approved",
+      "wrapper_source_sha256": "6345241ef44dfd3156c81005a7df374a9668fedc271a55ba5c7efc3c3d22cec1"
+    },
+    "sweep_spec": {
+      "bytes": 3626,
+      "exists": true,
+      "expected_sha256": "90ffdd5d6bbbb4087e0e128defbc174f4814782ee6f5fc708abee1f68899c157",
+      "observed_sha256": "90ffdd5d6bbbb4087e0e128defbc174f4814782ee6f5fc708abee1f68899c157",
+      "ok": true,
+      "path": "/root/autodl-tmp/0accept_revision/protocols/sweep_spec.yaml"
+    }
+  },
+  "next_action": "obtain a fresh autodl resource estimate, record PI confirmation, and run the monitored launcher",
+  "schema_version": 1,
+  "training_ready": true
+}

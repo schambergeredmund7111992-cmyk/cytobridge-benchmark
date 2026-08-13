@@ -1,0 +1,7 @@
+method,r2_all,r2_deg,spearman_logfc,val_loss,notes
+v1_default,0.0432,0.0115,0.1687,335.7,complete model epoch 0
+no_pathway_gating,0.0418,0.0098,0.1521,336.4,remove pathway gating
+no_contrast,0.0421,0.0102,0.1589,332.7,remove contrastive loss
+no_pathway_loss,0.0425,0.0108,0.1634,334.8,remove pathway prediction loss
+no_molformer,0.0402,0.0087,0.1456,332.2,remove drug encoder
+t1t4l1_best,N/A,N/A,0.2444,381.0,residual+DQ+dir loss epoch 16

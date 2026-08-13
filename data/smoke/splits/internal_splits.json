@@ -1,0 +1,12 @@
+{
+  "train_drugs": [
+    "drug_a",
+    "drug_b"
+  ],
+  "val_drugs": [
+    "drug_c"
+  ],
+  "test_drugs": [
+    "drug_d"
+  ]
+}

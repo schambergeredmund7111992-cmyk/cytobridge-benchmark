@@ -1,0 +1,1 @@
+{"schema_version": 1, "selected_config_id": "chemcpa_01", "selected_epoch": 201, "reuse_contract": {"retuning_allowed": false}, "model": "chemcpa", "selection_split": "validation", "test_artifacts_opened_during_selection": false}

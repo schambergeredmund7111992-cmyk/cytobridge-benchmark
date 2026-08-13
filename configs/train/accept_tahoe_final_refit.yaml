@@ -1,0 +1,28 @@
+# @package _global_
+defaults:
+  - /train/accept_final_refit@_global_
+  - _self_
+
+# This config is valid only with the frozen primary sci-Plex config and epoch overrides
+# emitted by scripts/freeze_cytobridge_selection.py.
+protocol: tahoe
+run_name: accept_tahoe_final_refit_seed${seed}
+
+data:
+  train_manifest: data/processed/tahoe_accept/fit/tahoe_fit.parquet
+  val_manifest: null
+  test_manifest: null
+  cell_emb_path: data/cache/tahoe_accept/scgpt_emb.npy
+  drug_emb_path: data/cache/tahoe_accept/molformer_emb.npz
+  treated_counts_path: data/processed/tahoe_accept/fit/tahoe_fit_treated_counts.npy
+  input_control_counts_path: data/processed/tahoe_accept/fit/tahoe_fit_input_control_counts.npy
+  truth_control_counts_path: data/processed/tahoe_accept/fit/tahoe_fit_truth_control_counts.npy
+  pathway_gsea_path: data/processed/tahoe_accept/fit/tahoe_fit_pathway_gsea.npy
+  gene_scale_path: data/processed/tahoe_accept/splits/training_gene_scale.npy
+
+metric:
+  enabled: false
+
+trainer:
+  final_refit: true
+  early_stopping_patience: null

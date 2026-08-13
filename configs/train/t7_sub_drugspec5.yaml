@@ -1,0 +1,47 @@
+# @package _global_
+defaults:
+  - /train/v1@_global_
+  - _self_
+
+run_name: t7_sub_drugspec5
+
+model:
+  residual_decoder: true
+  pool_mode: drug_query
+  drug_conditioned_decoder: true
+  dec_in_component_norm: true
+
+loss:
+  lam_recon: 0.02
+  lam_contrast: 0.5
+  lam_pathway: 0.3
+  lam_kl: 0.05
+  lam_direction: 1.0
+  lam_delta: 0.5
+  lam_drugspec: 5.0
+
+data:
+  train_manifest: data/processed/sciplex/splits_sub/sciplex_train.parquet
+  val_manifest: data/processed/sciplex/splits_sub/sciplex_val.parquet
+  test_manifest: data/processed/sciplex/splits_sub/sciplex_test.parquet
+  treated_counts_path: data/processed/sciplex/splits_sub/sciplex_train_treated_counts.npy
+  val_treated_counts_path: data/processed/sciplex/splits_sub/sciplex_val_treated_counts.npy
+  test_treated_counts_path: data/processed/sciplex/splits_sub/sciplex_test_treated_counts.npy
+  control_counts_path: data/processed/sciplex/splits_sub/sciplex_train_control_counts.npy
+  val_control_counts_path: data/processed/sciplex/splits_sub/sciplex_val_control_counts.npy
+  test_control_counts_path: data/processed/sciplex/splits_sub/sciplex_test_control_counts.npy
+  pathway_gsea_path: data/processed/sciplex/splits_sub/sciplex_train_pathway_gsea.npy
+  val_pathway_gsea_path: data/processed/sciplex/splits_sub/sciplex_val_pathway_gsea.npy
+  test_pathway_gsea_path: data/processed/sciplex/splits_sub/sciplex_test_pathway_gsea.npy
+  batch_size: 128
+  num_workers: 16
+  persistent_workers: true
+
+ckpt:
+  dirpath: ckpts/t7_sub_drugspec5
+
+trainer:
+  max_epochs: 20
+
+wandb:
+  name: t7_sub_drugspec5

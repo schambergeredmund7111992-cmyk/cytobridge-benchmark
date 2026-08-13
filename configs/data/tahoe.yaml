@@ -1,0 +1,12 @@
+dataset: tahoebio/Tahoe-100M
+revision: 2dc5790
+metadata_dir: data/raw/tahoe/metadata
+selection_dir: data/processed/tahoe_selection
+selected_h5ad: data/raw/tahoe/selected_panel.h5ad
+out_dir: data/processed/tahoe_accept
+seed: 20260710
+n_contexts: 10
+max_drugs: 120
+min_cells_per_pair: 64
+cap_per_drug_context_dose_sample: 64
+minimum_sciplex_gene_coverage: 0.90

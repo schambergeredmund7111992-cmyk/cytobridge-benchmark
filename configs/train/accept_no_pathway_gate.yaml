@@ -1,0 +1,13 @@
+# @package _global_
+defaults:
+  - /train/accept_base@_global_
+  - _self_
+
+run_name: accept_no_pathway_gate_${protocol}_seed${seed}
+
+model:
+  use_pathway_gate: false
+
+loss:
+  lam_pathway: 0.0
+  lam_kl: 0.0

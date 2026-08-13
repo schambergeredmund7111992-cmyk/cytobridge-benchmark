@@ -1,0 +1,12 @@
+{
+  "on_diag_mean": -0.04627564094689238,
+  "off_diag_mean": -0.04627728429820705,
+  "gap": 1.6433513146794973e-06,
+  "specificity_auc": 0.5092592592592593,
+  "n_pairs_scored": 27,
+  "wilcoxon_p_on_gt_off": 0.9754490479826927,
+  "inter_drug_pred_pearson": 0.9973755412541307,
+  "n_pairs": 27,
+  "modality": "pathway",
+  "VERDICT": "FAIL: collapse artifact (per-pair r is shared structure)"
+}

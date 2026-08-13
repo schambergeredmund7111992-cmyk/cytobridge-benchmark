@@ -1,0 +1,6 @@
+predictor,auc,gap
+Random (50 perm),0.5001851851851853,
+Mean (collapsed),0.5,1.644774851296528e-17
+Oracle (truth),1.0,0.8823309963923178
+CytoBridge (best),0.5833333333333334,0.033052362948572174
+Ridge (clean),0.509,0.003

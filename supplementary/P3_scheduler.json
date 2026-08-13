@@ -1,0 +1,96 @@
+{
+  "automatic_retries": 0,
+  "completed": [
+    {
+      "job_id": "p3-tahoe-random-seed67",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "6451a0fec6dd4bcbf313d4718bf7cfad3b70cc6298ce1f9ad8aae878128b75e9"
+    },
+    {
+      "job_id": "p3-tahoe-random-seed11",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "abe3adf6658a235965e6cfe3848e0c71a89020cebbd0d813fd483e3d37fb9486"
+    },
+    {
+      "job_id": "p3-tahoe-random-seed42",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "3b346a24bc3372b0c9916339692745ba70e090fe8dc85413ed55c0e37e5e3ff4"
+    },
+    {
+      "job_id": "p3-tahoe-cytobridge-seed11",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "66e22b1d1c4caea587971c4e6c9a3869ca2a0acf7d834725f0160b5717d2c2ef"
+    },
+    {
+      "job_id": "p3-tahoe-random-seed101",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "5947befc2e77bdc894f0cb99dcd8d9683173f49fba1ab27385a1ebcc7fe9a63d"
+    },
+    {
+      "job_id": "p3-tahoe-oracle-deterministic",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "d3bfefd9efb2a48e73ac8daa1e86d08e7efeddf6a0895478805e43ee1dff52e0"
+    },
+    {
+      "job_id": "p3-tahoe-cytobridge-seed23",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "9c9282409ef538d5b2965028ed6c91c7ff1669ea5935bc0903cab842df0c0693"
+    },
+    {
+      "job_id": "p3-tahoe-cytobridge-seed42",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "f98f83a2f69615037862a968d3b35514a648a8e1c8bd749fb545b64a030e5fd8"
+    },
+    {
+      "job_id": "p3-tahoe-cytobridge-seed67",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "43dacf6d8a526d89beedf61f872aecde64cfce0a1c9cfc068aa9deb44ddbbe5e"
+    },
+    {
+      "job_id": "p3-tahoe-cytobridge-seed101",
+      "returncode": 0,
+      "status": "complete",
+      "status_sha256": "1674349ede38cb1ec47d4a32b4ac7784d0d67a425512bdac1b929eeb63f51a30"
+    }
+  ],
+  "eligible_gpus": [
+    0
+  ],
+  "expected_host": "autodl",
+  "failed": [
+    {
+      "job_id": "p3-tahoe-random-seed23",
+      "returncode": 1,
+      "status": "failed",
+      "status_sha256": "3fcdb2805a834d99e2235aef33872586359ff0ea5f2dd675bd80872dbcc8e3c8"
+    },
+    {
+      "job_id": "p3-tahoe-mean-deterministic",
+      "returncode": 1,
+      "status": "failed",
+      "status_sha256": "6af34a6b1606eba7f54d786cbddc6c63cf6665f5a36f054cace766cd84590f96"
+    },
+    {
+      "job_id": "p3-tahoe-ridge-deterministic",
+      "returncode": 1,
+      "status": "failed",
+      "status_sha256": "3a2fbf3aee695adaa84fd04a66f9995b19e2ea7efd8fa04223f4c0ec04ebfcd6"
+    }
+  ],
+  "finite_loss_jobs": [],
+  "manifest_sha256": "22459b6df7d6f4061f0bc5477ec0c0ca2ac5ccda55022afd005b4422db9e404e",
+  "not_launched": [],
+  "phase": "P3",
+  "preflight_sha256": "ba254d3ab00aa07b72c4879e466ea8b2df16e548750e914ca7dc826eb3072e9c",
+  "schema_version": 1,
+  "status": "failed"
+}

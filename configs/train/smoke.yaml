@@ -1,0 +1,74 @@
+# @package _global_
+defaults:
+  - _self_
+
+seed: 42
+run_name: smoke
+
+ckpt:
+  dirpath: ckpts/${run_name}
+  resume_from: null
+
+data:
+  train_manifest: data/smoke/splits/sciplex_train.csv
+  val_manifest: data/smoke/splits/sciplex_val.csv
+  test_manifest: data/smoke/splits/sciplex_test.csv
+  cell_emb_path: data/smoke/sciplex_scgpt_emb.npy
+  drug_emb_path: data/smoke/sciplex_molformer_emb.npz
+  treated_counts_path: data/smoke/splits/sciplex_train_treated_counts.npy
+  val_treated_counts_path: data/smoke/splits/sciplex_val_treated_counts.npy
+  test_treated_counts_path: data/smoke/splits/sciplex_test_treated_counts.npy
+  control_counts_path: data/smoke/splits/sciplex_train_control_counts.npy
+  val_control_counts_path: data/smoke/splits/sciplex_val_control_counts.npy
+  test_control_counts_path: data/smoke/splits/sciplex_test_control_counts.npy
+  pathway_gsea_path: data/smoke/splits/sciplex_train_pathway_gsea.npy
+  val_pathway_gsea_path: data/smoke/splits/sciplex_val_pathway_gsea.npy
+  test_pathway_gsea_path: data/smoke/splits/sciplex_test_pathway_gsea.npy
+  batch_size: 4
+  num_workers: 0
+  multiprocessing_context: null
+  pin_memory: false
+  persistent_workers: false
+  prefetch_factor: null
+  n_hard_same_drug: 1
+  n_hard_same_cell: 1
+
+model:
+  d_cell_in: 8
+  d_drug_in: 6
+  d: 16
+  n_layers: 1
+  n_heads: 2
+  K_pathways: 5
+  n_genes: 10
+  contrastive_dim: 8
+  dropout: 0.1
+  pathway_init_path: null
+
+loss:
+  lam_recon: 1.0
+  lam_contrast: 0.5
+  lam_pathway: 0.3
+  lam_kl: 0.05
+  temperature: 0.07
+  weight_hard: 2.0
+
+optim:
+  lr_bridge: 1.0e-3
+  lr_proj: 1.0e-3
+  weight_decay: 0.0
+  max_steps: 20
+
+trainer:
+  max_epochs: 1
+  accelerator: cpu
+  devices: 1
+  precision: 32-true
+  deterministic: true
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 1
+
+wandb:
+  use: false
+  project: cytobridge
+  name: smoke

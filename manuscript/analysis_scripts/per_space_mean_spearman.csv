@@ -1,0 +1,4 @@
+space,mean_spearman50
+E6E7,0.4021
+ridge_recon,0.5058
+chemcpa_recon,0.4154

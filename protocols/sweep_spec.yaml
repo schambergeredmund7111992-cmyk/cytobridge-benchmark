@@ -1,0 +1,128 @@
+schema_version: 2
+frozen_at: "2026-07-11"
+selection:
+  primary_metric: validation/conditional_accuracy_drug_macro
+  tie_breaker: validation/pair_own_spearman_top50_drug_macro
+  test_used_for_selection: false
+  screening_seed: 42
+  freeze_selected_epoch: true
+final_refit:
+  fit_splits: [train, validation]
+  validation_passes: 0
+  early_stopping: false
+  epochs: validation_selected
+final_seeds: [11, 23, 42, 67, 101]
+
+cytobridge:
+  budget: 12
+  grid:
+    loss.lam_recon: [0.0, 0.02, 0.1, 1.0]
+    loss.lam_drugspec: [1.0, 3.0, 5.0]
+  fixed:
+    loss.lam_logfc: 0.5
+    loss.lam_delta: 1.0
+    loss.lam_direction: 1.0
+    loss.lam_contrast: 0.5
+    loss.lam_pathway: 0.3
+    loss.lam_kl: 0.05
+  early_stop:
+    monitor: validation/conditional_accuracy_drug_macro
+    mode: max
+    patience_evaluations: 5
+
+ridge:
+  fingerprint: Morgan
+  radius: 2
+  bits: 2048
+  alpha_grid: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0, 10000.0]
+  fit_data: train_only_during_selection
+  selection_data: validation_only
+  final_refit_data: [train, validation]
+
+chemcpa:
+  budget: 6
+  source: https://github.com/theislab/chemCPA
+  initialization: from_scratch
+  public_label: chemCPA (from scratch)
+  require_pretrained_checkpoint: false
+  sampler: fixed_seed_random
+  sampler_seed: 20260710
+  official_ranges:
+    autoencoder_lr: {distribution: loguniform, low: 0.0001, high: 0.01}
+    autoencoder_wd: {distribution: loguniform, low: 1.0e-8, high: 1.0e-5}
+    adversary_width: {choices: [64, 128, 256]}
+    adversary_depth: {choices: [2, 3, 4]}
+    adversary_steps: {choices: [2, 3]}
+    reg_adversary: {distribution: loguniform, low: 1.0, high: 40.0}
+  fixed_from_pinned_official_default:
+    dim: 32
+    dropout: 0.262378
+    autoencoder_width: 256
+    autoencoder_depth: 4
+    adversary_lr: 0.0011926173789223548
+    adversary_wd: 0.000009846738873614555
+    reg_adversary_cov: 16.165583124257587
+    penalty_adversary: 0.4550475813202185
+    batch_size: 256
+    dosers_width: 64
+    dosers_depth: 3
+    dosers_lr: 0.0015751320499779737
+    dosers_wd: 0.0000006251373574521742
+    step_size_lr: 6
+    embedding_encoder_width: 128
+    embedding_encoder_depth: 4
+    decoder_activation: ReLU
+    doser_type: amortized
+    model_seed: 1337
+  require_source_commit: true
+  max_epochs: 201
+  validation_epochs: [50, 100, 150, 200, 201]
+  early_stopping: false
+
+biolord:
+  budget: 6
+  source: https://github.com/nitzanlab/biolord_reproducibility
+  grid:
+    n_latent: [128, 256]
+    decoder_width: [2048, 4096, 8192]
+  fixed_from_official_sciplex3:
+    decoder_depth: 4
+    attribute_nn_width: 2048
+    attribute_nn_depth: 2
+    n_latent_attribute_ordered: 256
+    n_latent_attribute_categorical: 3
+    reconstruction_penalty: 10000.0
+    unknown_attribute_penalty: 0.1
+    unknown_attribute_noise_param: 20.0
+    attribute_dropout_rate: 0.1
+    latent_lr: 0.0001
+    latent_wd: 0.0001
+    decoder_lr: 0.0001
+    decoder_wd: 0.0001
+    attribute_nn_lr: 0.01
+    attribute_nn_wd: 0.00000004
+    step_size_lr: 45
+    cosine_scheduler: true
+    scheduler_final_lr: 0.00001
+    batch_size: 512
+    gene_likelihood: normal
+    use_batch_norm: false
+    use_layer_norm: false
+  max_epochs: 500
+  validation_interval_epochs: 20
+  early_stopping_patience_evaluations: 20
+
+runtime_gate:
+  precision_candidates: [32-true, bf16-mixed]
+  numerical_steps: 2
+  fp32_required: true
+  bf16_failure_fallback: 32-true
+  dataloader_worker_candidates: [0, 2, 4, 8]
+  dataloader_multiprocessing_context: spawn
+  dataloader_prefetch_factor: 1
+
+stress_tests:
+  scaffold_disjoint_v2:
+    retune: false
+  tahoe:
+    reuse_selected_cytobridge_hyperparameters: true

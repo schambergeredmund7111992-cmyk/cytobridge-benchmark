@@ -1,0 +1,2931 @@
+{
+  "jobs": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_01-seed42"
+      ],
+      "config_id": "cytobridge_01",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_01-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_01-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_01-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_02-seed42"
+      ],
+      "config_id": "cytobridge_02",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_02-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_02-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_02-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_03-seed42"
+      ],
+      "config_id": "cytobridge_03",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_03-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_03-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_03-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_04-seed42"
+      ],
+      "config_id": "cytobridge_04",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_04-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_04-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_04-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_05-seed42"
+      ],
+      "config_id": "cytobridge_05",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_05-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_05-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_05-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_06-seed42"
+      ],
+      "config_id": "cytobridge_06",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_06-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_06-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_06-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_07-seed42"
+      ],
+      "config_id": "cytobridge_07",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_07-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_07-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_07-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_08-seed42"
+      ],
+      "config_id": "cytobridge_08",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_08-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_08-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_08-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_09-seed42"
+      ],
+      "config_id": "cytobridge_09",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_09-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_09-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_09-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_10-seed42"
+      ],
+      "config_id": "cytobridge_10",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_10-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_10-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_10-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_11-seed42"
+      ],
+      "config_id": "cytobridge_11",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_11-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_11-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_11-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-cytobridge_12-seed42"
+      ],
+      "config_id": "cytobridge_12",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-cytobridge_12-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-cytobridge_12-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-cytobridge_12-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-chemcpa_01-seed42"
+      ],
+      "config_id": "chemcpa_01",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-chemcpa_01-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-chemcpa_01-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-chemcpa_01-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-chemcpa_02-seed42"
+      ],
+      "config_id": "chemcpa_02",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-chemcpa_02-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-chemcpa_02-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-chemcpa_02-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-chemcpa_03-seed42"
+      ],
+      "config_id": "chemcpa_03",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-chemcpa_03-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-chemcpa_03-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-chemcpa_03-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-chemcpa_04-seed42"
+      ],
+      "config_id": "chemcpa_04",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-chemcpa_04-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-chemcpa_04-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-chemcpa_04-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-chemcpa_05-seed42"
+      ],
+      "config_id": "chemcpa_05",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-chemcpa_05-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-chemcpa_05-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-chemcpa_05-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-chemcpa_06-seed42"
+      ],
+      "config_id": "chemcpa_06",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-chemcpa_06-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-chemcpa_06-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-chemcpa_06-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-biolord_01-seed42"
+      ],
+      "config_id": "biolord_01",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-biolord_01-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-biolord_01-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-biolord_01-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-biolord_02-seed42"
+      ],
+      "config_id": "biolord_02",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-biolord_02-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-biolord_02-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-biolord_02-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-biolord_03-seed42"
+      ],
+      "config_id": "biolord_03",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-biolord_03-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-biolord_03-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-biolord_03-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-biolord_04-seed42"
+      ],
+      "config_id": "biolord_04",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-biolord_04-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-biolord_04-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-biolord_04-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-biolord_05-seed42"
+      ],
+      "config_id": "biolord_05",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-biolord_05-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-biolord_05-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-biolord_05-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-biolord_06-seed42"
+      ],
+      "config_id": "biolord_06",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-biolord_06-seed42/run.status",
+        "experiments/runs/p1-sciplex-primary-biolord_06-seed42/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-biolord_06-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P1",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p1-sciplex-primary-ridge-grid"
+      ],
+      "config_id": "ridge_alpha_grid",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p0_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p1-sciplex-primary-ridge-grid/run.status",
+        "experiments/runs/p1-sciplex-primary-ridge-grid/provenance.json"
+      ],
+      "job_id": "p1-sciplex-primary-ridge-grid",
+      "learned": false,
+      "model": "ridge",
+      "phase": "P1",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_full-seed11"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_full-seed11",
+      "learned": true,
+      "model": "cytobridge_full",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_full-seed23"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_full-seed23",
+      "learned": true,
+      "model": "cytobridge_full",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_full-seed42"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_full-seed42",
+      "learned": true,
+      "model": "cytobridge_full",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_full-seed67"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_full-seed67",
+      "learned": true,
+      "model": "cytobridge_full",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_full-seed101"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_full-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_full-seed101",
+      "learned": true,
+      "model": "cytobridge_full",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_reconstruction_free-seed11"
+      ],
+      "config_id": "cytobridge_reconstruction_free",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_reconstruction_free-seed11",
+      "learned": true,
+      "model": "cytobridge_reconstruction_free",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_reconstruction_free-seed23"
+      ],
+      "config_id": "cytobridge_reconstruction_free",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_reconstruction_free-seed23",
+      "learned": true,
+      "model": "cytobridge_reconstruction_free",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_reconstruction_free-seed42"
+      ],
+      "config_id": "cytobridge_reconstruction_free",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_reconstruction_free-seed42",
+      "learned": true,
+      "model": "cytobridge_reconstruction_free",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_reconstruction_free-seed67"
+      ],
+      "config_id": "cytobridge_reconstruction_free",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_reconstruction_free-seed67",
+      "learned": true,
+      "model": "cytobridge_reconstruction_free",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_reconstruction_free-seed101"
+      ],
+      "config_id": "cytobridge_reconstruction_free",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_reconstruction_free-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_reconstruction_free-seed101",
+      "learned": true,
+      "model": "cytobridge_reconstruction_free",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed11"
+      ],
+      "config_id": "cytobridge_normalized_reconstruction",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed11",
+      "learned": true,
+      "model": "cytobridge_normalized_reconstruction",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed23"
+      ],
+      "config_id": "cytobridge_normalized_reconstruction",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed23",
+      "learned": true,
+      "model": "cytobridge_normalized_reconstruction",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed42"
+      ],
+      "config_id": "cytobridge_normalized_reconstruction",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed42",
+      "learned": true,
+      "model": "cytobridge_normalized_reconstruction",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed67"
+      ],
+      "config_id": "cytobridge_normalized_reconstruction",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed67",
+      "learned": true,
+      "model": "cytobridge_normalized_reconstruction",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed101"
+      ],
+      "config_id": "cytobridge_normalized_reconstruction",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_normalized_reconstruction-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_normalized_reconstruction-seed101",
+      "learned": true,
+      "model": "cytobridge_normalized_reconstruction",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_no_pathway_gate-seed11"
+      ],
+      "config_id": "cytobridge_no_pathway_gate",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_no_pathway_gate-seed11",
+      "learned": true,
+      "model": "cytobridge_no_pathway_gate",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_no_pathway_gate-seed23"
+      ],
+      "config_id": "cytobridge_no_pathway_gate",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_no_pathway_gate-seed23",
+      "learned": true,
+      "model": "cytobridge_no_pathway_gate",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_no_pathway_gate-seed42"
+      ],
+      "config_id": "cytobridge_no_pathway_gate",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_no_pathway_gate-seed42",
+      "learned": true,
+      "model": "cytobridge_no_pathway_gate",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_no_pathway_gate-seed67"
+      ],
+      "config_id": "cytobridge_no_pathway_gate",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_no_pathway_gate-seed67",
+      "learned": true,
+      "model": "cytobridge_no_pathway_gate",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_no_pathway_gate-seed101"
+      ],
+      "config_id": "cytobridge_no_pathway_gate",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_no_pathway_gate-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_no_pathway_gate-seed101",
+      "learned": true,
+      "model": "cytobridge_no_pathway_gate",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_drug_blind-seed11"
+      ],
+      "config_id": "cytobridge_drug_blind",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_drug_blind-seed11",
+      "learned": true,
+      "model": "cytobridge_drug_blind",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_drug_blind-seed23"
+      ],
+      "config_id": "cytobridge_drug_blind",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_drug_blind-seed23",
+      "learned": true,
+      "model": "cytobridge_drug_blind",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_drug_blind-seed42"
+      ],
+      "config_id": "cytobridge_drug_blind",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_drug_blind-seed42",
+      "learned": true,
+      "model": "cytobridge_drug_blind",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_drug_blind-seed67"
+      ],
+      "config_id": "cytobridge_drug_blind",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_drug_blind-seed67",
+      "learned": true,
+      "model": "cytobridge_drug_blind",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-cytobridge_drug_blind-seed101"
+      ],
+      "config_id": "cytobridge_drug_blind",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-cytobridge_drug_blind-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-cytobridge_drug_blind-seed101",
+      "learned": true,
+      "model": "cytobridge_drug_blind",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-chemcpa-seed11"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-chemcpa-seed11",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-chemcpa-seed23"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-chemcpa-seed23",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-chemcpa-seed42"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-chemcpa-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-chemcpa-seed67"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-chemcpa-seed67",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-chemcpa-seed101"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-chemcpa-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-chemcpa-seed101",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-biolord-seed11"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-biolord-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-biolord-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-biolord-seed11",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-biolord-seed23"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-biolord-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-biolord-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-biolord-seed23",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-biolord-seed42"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-biolord-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-biolord-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-biolord-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-biolord-seed67"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-biolord-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-biolord-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-biolord-seed67",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-biolord-seed101"
+      ],
+      "config_id": "selected",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-biolord-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-biolord-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-biolord-seed101",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-random-seed11"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-random-seed11/run.status",
+        "experiments/runs/p2-sciplex-primary-random-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-random-seed11",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-random-seed23"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-random-seed23/run.status",
+        "experiments/runs/p2-sciplex-primary-random-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-random-seed23",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-random-seed42"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-random-seed42/run.status",
+        "experiments/runs/p2-sciplex-primary-random-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-random-seed42",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-random-seed67"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-random-seed67/run.status",
+        "experiments/runs/p2-sciplex-primary-random-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-random-seed67",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-random-seed101"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-random-seed101/run.status",
+        "experiments/runs/p2-sciplex-primary-random-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-random-seed101",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-mean-deterministic"
+      ],
+      "config_id": "mean",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-mean-deterministic/run.status",
+        "experiments/runs/p2-sciplex-primary-mean-deterministic/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-mean-deterministic",
+      "learned": false,
+      "model": "mean",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-ridge-deterministic"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-ridge-deterministic/run.status",
+        "experiments/runs/p2-sciplex-primary-ridge-deterministic/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-ridge-deterministic",
+      "learned": false,
+      "model": "ridge",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-primary-oracle-deterministic"
+      ],
+      "config_id": "oracle",
+      "dataset": "sciplex_drug_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-primary-oracle-deterministic/run.status",
+        "experiments/runs/p2-sciplex-primary-oracle-deterministic/provenance.json"
+      ],
+      "job_id": "p2-sciplex-primary-oracle-deterministic",
+      "learned": false,
+      "model": "oracle",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-cytobridge-seed11"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed11/run.status",
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-cytobridge-seed11",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-cytobridge-seed23"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed23/run.status",
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-cytobridge-seed23",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-cytobridge-seed42"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed42/run.status",
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-cytobridge-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-cytobridge-seed67"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed67/run.status",
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-cytobridge-seed67",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-cytobridge-seed101"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed101/run.status",
+        "experiments/runs/p2-sciplex-scaffold-cytobridge-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-cytobridge-seed101",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-chemcpa-seed11"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed11/run.status",
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-chemcpa-seed11",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-chemcpa-seed23"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed23/run.status",
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-chemcpa-seed23",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-chemcpa-seed42"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed42/run.status",
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-chemcpa-seed42",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-chemcpa-seed67"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed67/run.status",
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-chemcpa-seed67",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-chemcpa-seed101"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed101/run.status",
+        "experiments/runs/p2-sciplex-scaffold-chemcpa-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-chemcpa-seed101",
+      "learned": true,
+      "model": "chemcpa",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-biolord-seed11"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed11/run.status",
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-biolord-seed11",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-biolord-seed23"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed23/run.status",
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-biolord-seed23",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-biolord-seed42"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed42/run.status",
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-biolord-seed42",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-biolord-seed67"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed67/run.status",
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-biolord-seed67",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-biolord-seed101"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed101/run.status",
+        "experiments/runs/p2-sciplex-scaffold-biolord-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-biolord-seed101",
+      "learned": true,
+      "model": "biolord",
+      "phase": "P2",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-random-seed11"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-random-seed11/run.status",
+        "experiments/runs/p2-sciplex-scaffold-random-seed11/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-random-seed11",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-random-seed23"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-random-seed23/run.status",
+        "experiments/runs/p2-sciplex-scaffold-random-seed23/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-random-seed23",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-random-seed42"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-random-seed42/run.status",
+        "experiments/runs/p2-sciplex-scaffold-random-seed42/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-random-seed42",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-random-seed67"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-random-seed67/run.status",
+        "experiments/runs/p2-sciplex-scaffold-random-seed67/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-random-seed67",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-random-seed101"
+      ],
+      "config_id": "random",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-random-seed101/run.status",
+        "experiments/runs/p2-sciplex-scaffold-random-seed101/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-random-seed101",
+      "learned": false,
+      "model": "random",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-mean-deterministic"
+      ],
+      "config_id": "mean",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-mean-deterministic/run.status",
+        "experiments/runs/p2-sciplex-scaffold-mean-deterministic/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-mean-deterministic",
+      "learned": false,
+      "model": "mean",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-ridge-deterministic"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-ridge-deterministic/run.status",
+        "experiments/runs/p2-sciplex-scaffold-ridge-deterministic/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-ridge-deterministic",
+      "learned": false,
+      "model": "ridge",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p2-sciplex-scaffold-oracle-deterministic"
+      ],
+      "config_id": "oracle",
+      "dataset": "sciplex_scaffold_disjoint_v2",
+      "depends_on": [
+        "gate:p1_selection_frozen"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p2-sciplex-scaffold-oracle-deterministic/run.status",
+        "experiments/runs/p2-sciplex-scaffold-oracle-deterministic/provenance.json"
+      ],
+      "job_id": "p2-sciplex-scaffold-oracle-deterministic",
+      "learned": false,
+      "model": "oracle",
+      "phase": "P2",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-cytobridge-seed11"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:p1_selection_frozen",
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-cytobridge-seed11/run.status",
+        "experiments/runs/p3-tahoe-cytobridge-seed11/provenance.json"
+      ],
+      "job_id": "p3-tahoe-cytobridge-seed11",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P3",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-random-seed11"
+      ],
+      "config_id": "random",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-random-seed11/run.status",
+        "experiments/runs/p3-tahoe-random-seed11/provenance.json"
+      ],
+      "job_id": "p3-tahoe-random-seed11",
+      "learned": false,
+      "model": "random",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 11
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-cytobridge-seed23"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:p1_selection_frozen",
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-cytobridge-seed23/run.status",
+        "experiments/runs/p3-tahoe-cytobridge-seed23/provenance.json"
+      ],
+      "job_id": "p3-tahoe-cytobridge-seed23",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P3",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-random-seed23"
+      ],
+      "config_id": "random",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-random-seed23/run.status",
+        "experiments/runs/p3-tahoe-random-seed23/provenance.json"
+      ],
+      "job_id": "p3-tahoe-random-seed23",
+      "learned": false,
+      "model": "random",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 23
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-cytobridge-seed42"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:p1_selection_frozen",
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-cytobridge-seed42/run.status",
+        "experiments/runs/p3-tahoe-cytobridge-seed42/provenance.json"
+      ],
+      "job_id": "p3-tahoe-cytobridge-seed42",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P3",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-random-seed42"
+      ],
+      "config_id": "random",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-random-seed42/run.status",
+        "experiments/runs/p3-tahoe-random-seed42/provenance.json"
+      ],
+      "job_id": "p3-tahoe-random-seed42",
+      "learned": false,
+      "model": "random",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 42
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-cytobridge-seed67"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:p1_selection_frozen",
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-cytobridge-seed67/run.status",
+        "experiments/runs/p3-tahoe-cytobridge-seed67/provenance.json"
+      ],
+      "job_id": "p3-tahoe-cytobridge-seed67",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P3",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-random-seed67"
+      ],
+      "config_id": "random",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-random-seed67/run.status",
+        "experiments/runs/p3-tahoe-random-seed67/provenance.json"
+      ],
+      "job_id": "p3-tahoe-random-seed67",
+      "learned": false,
+      "model": "random",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 67
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-cytobridge-seed101"
+      ],
+      "config_id": "selected_primary",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:p1_selection_frozen",
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-cytobridge-seed101/run.status",
+        "experiments/runs/p3-tahoe-cytobridge-seed101/provenance.json"
+      ],
+      "job_id": "p3-tahoe-cytobridge-seed101",
+      "learned": true,
+      "model": "cytobridge",
+      "phase": "P3",
+      "resources": {
+        "gpus": 1
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-random-seed101"
+      ],
+      "config_id": "random",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-random-seed101/run.status",
+        "experiments/runs/p3-tahoe-random-seed101/provenance.json"
+      ],
+      "job_id": "p3-tahoe-random-seed101",
+      "learned": false,
+      "model": "random",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": 101
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-mean-deterministic"
+      ],
+      "config_id": "mean",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-mean-deterministic/run.status",
+        "experiments/runs/p3-tahoe-mean-deterministic/provenance.json"
+      ],
+      "job_id": "p3-tahoe-mean-deterministic",
+      "learned": false,
+      "model": "mean",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-ridge-deterministic"
+      ],
+      "config_id": "tahoe_alpha_grid",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-ridge-deterministic/run.status",
+        "experiments/runs/p3-tahoe-ridge-deterministic/provenance.json"
+      ],
+      "job_id": "p3-tahoe-ridge-deterministic",
+      "learned": false,
+      "model": "ridge",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "scripts.run_campaign_job",
+        "--manifest",
+        "../experiments/campaign_manifest.json",
+        "--job-id",
+        "p3-tahoe-oracle-deterministic"
+      ],
+      "config_id": "oracle",
+      "dataset": "tahoe",
+      "depends_on": [
+        "gate:tahoe_ready"
+      ],
+      "expected_outputs": [
+        "experiments/runs/p3-tahoe-oracle-deterministic/run.status",
+        "experiments/runs/p3-tahoe-oracle-deterministic/provenance.json"
+      ],
+      "job_id": "p3-tahoe-oracle-deterministic",
+      "learned": false,
+      "model": "oracle",
+      "phase": "P3",
+      "resources": {
+        "gpus": 0
+      },
+      "seed": null
+    }
+  ],
+  "protocol_version": "1.5.0",
+  "schema_version": 1,
+  "spec_sha256": "a5ace177691abe1897213bc1f07e1172dd3110ee9b72be4edabdd0e4a3ec1e06",
+  "validation": {
+    "errors": [],
+    "gradient_audit_jobs": 25,
+    "jobs": 104,
+    "learned_jobs": 79,
+    "ok": true
+  }
+}

@@ -1,0 +1,35 @@
+# @package _global_
+# T2-2: Lambda Sweep config — grid search over lam_delta × lam_contrast.
+#
+# Usage (Hydra multirun with sweep overrides on command line):
+#   python train.py -m --config-name=train/t2_lambda_sweep \
+#       loss.lam_delta=0.0,0.1,0.5,1.0 \
+#       loss.lam_contrast=0.1,0.5,1.0,2.0
+#
+# Each multirun job writes checkpoints to:
+#   ckpts/t2_lambda_sweep/ld=<lam_delta>_lc=<lam_contrast>/
+
+defaults:
+  - /train/t1_residual
+  - _self_
+
+run_name: t2_lambda_sweep
+
+# Turn off L-1 direction loss to isolate the effect of lam_delta
+loss:
+  lam_direction: 0.0
+  lam_delta: 0.0       # default; overridden by sweep
+  lam_contrast: 0.5     # default; overridden by sweep
+
+# Reduce training cost per sweep point
+trainer:
+  max_epochs: 1
+  precision: 32
+
+# Disable wandb for batch sweep runs
+wandb:
+  use: false
+
+# Each combination gets its own checkpoint directory via interpolation
+ckpt:
+  dirpath: ckpts/t2_lambda_sweep/ld_${loss.lam_delta}_lc_${loss.lam_contrast}

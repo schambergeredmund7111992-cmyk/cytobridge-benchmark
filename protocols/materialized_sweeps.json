@@ -1,0 +1,87 @@
+{
+  "biolord": [
+    {"config_id": "biolord_01", "decoder_width": 2048, "n_latent": 128},
+    {"config_id": "biolord_02", "decoder_width": 4096, "n_latent": 128},
+    {"config_id": "biolord_03", "decoder_width": 8192, "n_latent": 128},
+    {"config_id": "biolord_04", "decoder_width": 2048, "n_latent": 256},
+    {"config_id": "biolord_05", "decoder_width": 4096, "n_latent": 256},
+    {"config_id": "biolord_06", "decoder_width": 8192, "n_latent": 256}
+  ],
+  "chemcpa": [
+    {
+      "adversary_depth": 4,
+      "adversary_steps": 3,
+      "adversary_width": 128,
+      "autoencoder_lr": 0.0015586594119832323,
+      "autoencoder_wd": 0.000006297571944515368,
+      "config_id": "chemcpa_01",
+      "reg_adversary": 2.1577562069761105
+    },
+    {
+      "adversary_depth": 4,
+      "adversary_steps": 2,
+      "adversary_width": 64,
+      "autoencoder_lr": 0.0004173048121580372,
+      "autoencoder_wd": 0.000000295966137803566,
+      "config_id": "chemcpa_02",
+      "reg_adversary": 34.39032170752321
+    },
+    {
+      "adversary_depth": 4,
+      "adversary_steps": 3,
+      "adversary_width": 128,
+      "autoencoder_lr": 0.004220913618068953,
+      "autoencoder_wd": 0.0000009487264881179742,
+      "config_id": "chemcpa_03",
+      "reg_adversary": 1.0369181118671995
+    },
+    {
+      "adversary_depth": 2,
+      "adversary_steps": 3,
+      "adversary_width": 64,
+      "autoencoder_lr": 0.0005489584963179736,
+      "autoencoder_wd": 0.0000002893411203913077,
+      "config_id": "chemcpa_04",
+      "reg_adversary": 1.9230236993371659
+    },
+    {
+      "adversary_depth": 4,
+      "adversary_steps": 2,
+      "adversary_width": 256,
+      "autoencoder_lr": 0.0007639104684280876,
+      "autoencoder_wd": 0.0000001211686090475964,
+      "config_id": "chemcpa_05",
+      "reg_adversary": 1.9880907117759987
+    },
+    {
+      "adversary_depth": 2,
+      "adversary_steps": 2,
+      "adversary_width": 128,
+      "autoencoder_lr": 0.0008946332934591326,
+      "autoencoder_wd": 0.0000002591388693160544,
+      "config_id": "chemcpa_06",
+      "reg_adversary": 7.899453569430804
+    }
+  ],
+  "cytobridge": [
+    {"config_id": "cytobridge_01", "loss.lam_drugspec": 1.0, "loss.lam_recon": 0.0},
+    {"config_id": "cytobridge_02", "loss.lam_drugspec": 3.0, "loss.lam_recon": 0.0},
+    {"config_id": "cytobridge_03", "loss.lam_drugspec": 5.0, "loss.lam_recon": 0.0},
+    {"config_id": "cytobridge_04", "loss.lam_drugspec": 1.0, "loss.lam_recon": 0.02},
+    {"config_id": "cytobridge_05", "loss.lam_drugspec": 3.0, "loss.lam_recon": 0.02},
+    {"config_id": "cytobridge_06", "loss.lam_drugspec": 5.0, "loss.lam_recon": 0.02},
+    {"config_id": "cytobridge_07", "loss.lam_drugspec": 1.0, "loss.lam_recon": 0.1},
+    {"config_id": "cytobridge_08", "loss.lam_drugspec": 3.0, "loss.lam_recon": 0.1},
+    {"config_id": "cytobridge_09", "loss.lam_drugspec": 5.0, "loss.lam_recon": 0.1},
+    {"config_id": "cytobridge_10", "loss.lam_drugspec": 1.0, "loss.lam_recon": 1.0},
+    {"config_id": "cytobridge_11", "loss.lam_drugspec": 3.0, "loss.lam_recon": 1.0},
+    {"config_id": "cytobridge_12", "loss.lam_drugspec": 5.0, "loss.lam_recon": 1.0}
+  ],
+  "materialization": {
+    "chemcpa_rng": "numpy.default_rng(20260710)",
+    "chemcpa_omitted_fields": "fixed to pinned official config/model/hparams/default.yaml",
+    "frozen_at": "2026-07-11",
+    "source": "sweep_spec.yaml",
+    "source_commit": "43e830eb0958c54e4aa64442c17ec0fed19b3f15"
+  }
+}

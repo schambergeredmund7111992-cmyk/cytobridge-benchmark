@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-07-15T08:05:55Z",
+  "captured_at_asia_shanghai": "2026-07-15T16:05:55+08:00",
+  "status": "protocol_1_5_autodl_5090_handoff_sysu_validated",
+  "formal_execution_target": "AutoDL RTX 5090 (32 GB)",
+  "training_started": false,
+  "revised_results_exist": false,
+  "paper_inputs_unlocked": false,
+  "source_baseline_commit": "6a4d2f0e59c9fc4d203354d7cf940164e92edc83",
+  "protocol": {
+    "version": "1.5.0",
+    "protocol_sha256": "0fd8f62a5f8c29d1e21066b7d8871c7d2dcc4e7366bbef816b0f5a3cbfa3bbd0",
+    "sweep_spec_sha256": "90ffdd5d6bbbb4087e0e128defbc174f4814782ee6f5fc708abee1f68899c157",
+    "campaign_spec_sha256": "31bf82263be057677c2923dfb35944877b0c5f0e7f603a5e3e09f197536327f0",
+    "chemcpa_decision_sha256": "27d008bd5c9098e1842befd2e69712c65545cb72b802a212b09df26b597ea081",
+    "materialized_sweeps_sha256": "0d1fee26b4fd4bf8a5016cd48adfe41f1c9019dd33fe176c19724c684a8024c3",
+    "external_source_manifest_sha256": "f66e0ec676ef2f493eb99307454e13af4f50f7ce98b6add6c9381e85770274fb",
+    "external_environment_sha256": "aa52da3b478f181e834f3faaa3843c4a43d5d4c3760ccd301c68f0a462838f79"
+  },
+  "autodl_5090": {
+    "python": "3.10",
+    "torch": "2.7.1+cu128",
+    "cuda": "12.8",
+    "required_compute_capability": "sm_120",
+    "profile_files": {
+      "code/env/requirements-autodl-5090-core.txt": "8b6c76e038f10c52441f61bc0a98313b82ff9a9bd8c48ffba0a498d77c893563",
+      "code/env/setup_autodl_5090_env.sh": "ded237a56dd1dfdbf68e20dc6f33ad3cc03f06cd18fd016cdcfef4d20148988e",
+      "code/env/requirements-autodl-5090-external.txt": "c54c2d73584cf12951dbdae42f7741d5a429452394a428b2bfd18f38a5c123e2",
+      "code/env/setup_autodl_5090_external.sh": "702b349b8181e24e6d226af49a84e0b1d701a02a89c975f2fba2bdd85f86cf37",
+      "code/env/setup_external_baselines.sh": "7fa236738277c614bb5b54f7502618ae34a61604f39ee7b860066cfa5c155baf",
+      "code/env/core_python.sh": "f46a3fa95ecf6eda144470b115f21826450f35ed156ef4c5b175fd8e377205b4",
+      "code/scripts/verify_gpu_runtime.py": "61f1dbbbcc423d6ee1fa61c6c84b9a8d37909471447a5159675a800168f29f51",
+      "code/scripts/run_autodl_5090_smoke.sh": "797446a41136833d55fff3546f2bceb5b0704b3a6ec874492b12f2e09038b1d5",
+      "code/scripts/launch_monitored_autodl.sh": "7904e5ef95fe016eb8886d3755b55f6ee46a5c9bda0c6604b81d210566929283",
+      "code/scripts/launch_autodl_campaign_phase.sh": "c19973741bb24844890c7ea387c51207bb67881c836d2581296bd9114c4a73e1",
+      "code/scripts/campaign_scheduler.py": "151f47c4a2a57b7b802f9b86c3106b7fecb0fbb9bbc28428accd5f4244cbcc6a",
+      "code/scripts/run_campaign_job.py": "a0c1ac1ffd9a4206085d5ced45f62f7a06f5fcfa86e20f96db6437d26cf41739",
+      "code/configs/train/smoke.yaml": "e631306ead4c506b50cd128ac68575cfdc2c28ff5d5583d11b652958d9edffdc",
+      "code/train.py": "28150133eab8e1aecc7809f85f422ae214763d0d221b1931923169882945baf2",
+      "code/pyproject.toml": "b50a2827f8d4205329bd04280d46656a9e382a2095407a0ce53c53f04a89b316"
+    }
+  },
+  "verification": {
+    "local_static_2026_07_15": "compileall passed; campaign validate: 104 jobs, 79 learned, 25 gradient-audit; AutoDL/readiness targeted tests passed",
+    "sysu_core_environment": "torch 2.7.1+cu128 installed; pip check passed",
+    "sysu_a6000_numeric": "model smoke finite: fp32 loss=42.6810; bf16 loss=45.1909",
+    "sysu_full_smoke": "exit 0; 231 passed, 3 skipped, 21 warnings; Ruff passed; spawn workers=2; train/loss_step=46.60; train/loss_epoch=46.80; [autodl-5090-smoke] PASS",
+    "sysu_external_environment": "exit 0; torch 2.7.1+cu128, Lightning 2.2.4, scvi-tools 1.1.6.post2; 3 frozen checkouts verified; pip check and CUDA runtime passed",
+    "sysu_evidence": "experiments/20260715-sysu-autodl5090-validation",
+    "sysu_external_runtime_sha256": "729b860acce17fce347a81e4b62298d84b492707038054271cc56a4f74282c7b",
+    "sysu_checkout_verification_sha256": "7af191602e1d456741d2ec65acaebff43c09492943609b437782a64addf0627f",
+    "historical_cityu_full": "221 passed, 3 skipped",
+    "historical_scgpt_l20": "checkpoint coverage 153/153; official token/binning oracle exact"
+  },
+  "official_sciplex": {
+    "record": "https://zenodo.org/records/13350497",
+    "filename": "SrivatsanTrapnell2020_sciplex3.h5ad",
+    "bytes": 2526631614,
+    "md5": "c9e70629505d98c7ca1a837f62b14e89",
+    "present_in_bundle": false
+  },
+  "msigdb_hallmark": {
+    "expected_sets": 50,
+    "bytes": 48690,
+    "sha256": "ee2463540042078bfa3f67828e1e223bb354446d9fbb4d22845866835ba5c772",
+    "download_url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2024.1.Hs/h.all.v2024.1.Hs.symbols.gmt",
+    "prior_local_copy_gene_membership_equivalent": true,
+    "present_in_bundle": false
+  },
+  "scgpt_checkpoint": {
+    "best_model_sha256": "6cb5d451ab5c4b33eb673adbe4fddc61d2389df1b89b7651a9fe2e557572b922",
+    "vocab_sha256": "acca93d114ca62c3f0f50debbd23e8c87f0714f4737764454f6b2b13f2e8580f",
+    "args_sha256": "4d03b3ea64dc28135279ee2317b9bdb1c18d8d91f127f3949f08833736e0ebed",
+    "wrapper_source_sha256": "6345241ef44dfd3156c81005a7df374a9668fedc271a55ba5c7efc3c3d22cec1",
+    "wrapper_review_approved": true,
+    "audit_evidence": "experiments/20260711-scgpt-wrapper-audit/scgpt_wrapper_audit_final.json",
+    "audit_evidence_sha256": "cfc2f8597b0316fdbd1d50ffa36d60c84ff786c163d16367ed73dadb89be0c1f",
+    "required_encoder_key_coverage": "153/153",
+    "official_token_oracle_exact": true,
+    "present_in_bundle": false
+  },
+  "campaign": {
+    "jobs": 104,
+    "learned_jobs": 79,
+    "gradient_audit_jobs": 25,
+    "completed_jobs": 0
+  },
+  "blockers": [
+    "the actual AutoDL RTX 5090 must pass the sm_120 hardware smoke",
+    "the student's external assets and generated caches must pass handoff/check_readiness.py",
+    "the numerical first-batch and spawn DataLoader equivalence gates must pass on AutoDL",
+    "a fresh AutoDL GPU/RAM/disk/runtime estimate must receive explicit PI confirmation",
+    "the frozen 104-job campaign and final result gate have not run"
+  ],
+  "chemcpa": {
+    "public_label": "chemCPA (from scratch)",
+    "initialization": "from_scratch",
+    "pretrained_weights_allowed": false,
+    "pi_approved_before_revised_training": true
+  },
+  "resource_estimate_not_observed_on_autodl": {
+    "vram_gib_per_task": "18-28",
+    "cpu_ram_gib_per_task": "30-60",
+    "total_disk_gib": "90-140",
+    "total_gpu_hours": "140-260",
+    "single_rtx_5090_wall_time_days": "approximately 6-11 before queue or data-transfer overhead"
+  }
+}

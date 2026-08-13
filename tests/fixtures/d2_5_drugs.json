@@ -1,0 +1,27 @@
+[
+  {
+    "cell_state_id": "IPF_fibroblast_d2_pilot",
+    "cell_state_summary": "Cell type: lung fibroblast from idiopathic pulmonary fibrosis patient (proxy from GSE135893). Top dysregulated genes: COL1A1 (up), COL3A1 (up), POSTN (up), CTHRC1 (up), ACTA2 (up), SFRP2 (up), TGFB1 (up), MMP1 (up), SPP1 (up), FAP (up), CCL2 (up), IL6 (up), CXCL14 (up), IGFBP6 (up), SERPINE1 (up), LUM (up), FN1 (up), VCAN (up), TIMP1 (up), CDKN2A (up). Down: SFTPC, SFTPB, SCGB3A2, AGER, AQP4, CAV1, ENPEP, CXCL13, IGFBP3, RAMP3.",
+    "candidate_drugs": ["nintedanib", "pirfenidone", "trametinib", "imatinib", "metformin"]
+  },
+  {
+    "cell_state_id": "GBM_MES_d2_pilot",
+    "cell_state_summary": "Cell type: mesenchymal-like glioblastoma stem cell (proxy from Neftel 2019). Top dysregulated: VIM (up), CHI3L1 (up), CD44 (up), SERPINE1 (up), MGMT (up), NF1 (down), CDKN2A (down), EGFR (up), TGFB1 (up), STAT3 (up). Hypoxic, mesenchymal phenotype with reduced apoptosis sensitivity.",
+    "candidate_drugs": ["temozolomide", "bevacizumab", "trametinib", "rapamycin", "metformin"]
+  },
+  {
+    "cell_state_id": "BRCA_exhausted_T_d2_pilot",
+    "cell_state_summary": "Cell type: exhausted CD8+ T cell from breast cancer (proxy from Bassez 2021). Top dysregulated: PDCD1 (up), TIGIT (up), HAVCR2 (up), LAG3 (up), TOX (up), EOMES (up), TCF7 (down), IL7R (down), GZMK (down), GNLY (down).",
+    "candidate_drugs": ["pembrolizumab", "nivolumab", "ipilimumab", "metformin", "trametinib"]
+  },
+  {
+    "cell_state_id": "K562_proliferating_d2_pilot",
+    "cell_state_summary": "Cell type: K562 chronic myeloid leukemia cell, BCR-ABL+. Top markers: BCR-ABL fusion expression, MYC up, GATA1 up.",
+    "candidate_drugs": ["imatinib", "dasatinib", "nilotinib", "metformin", "trametinib"]
+  },
+  {
+    "cell_state_id": "MCF7_estrogen_d2_pilot",
+    "cell_state_summary": "Cell type: MCF7 breast adenocarcinoma, ER+ HER2-. ESR1 up, PGR up, GATA3 up, MUC1 up.",
+    "candidate_drugs": ["tamoxifen", "fulvestrant", "letrozole", "trametinib", "metformin"]
+  }
+]

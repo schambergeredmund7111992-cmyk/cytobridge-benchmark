@@ -1,0 +1,52 @@
+{
+  "task": "G3-2 IPF drug ranking case study",
+  "disease": "Idiopathic Pulmonary Fibrosis",
+  "n_drugs_ranked": 17,
+  "top_5_drugs": [
+    "Sodium Phenylbutyrate",
+    "Temsirolimus (CCI-779, NSC 683864)",
+    "SRT3025 HCl",
+    "Tie2 kinase inhibitor",
+    "SRT1720 HCl"
+  ],
+  "top_5_scores": [
+    0.015863313201571885,
+    0.01586272359339796,
+    0.01585912980906597,
+    0.01585086107340786,
+    0.015844217913986883
+  ],
+  "known_positives": [
+    "Sodium Phenylbutyrate",
+    "Temsirolimus (CCI-779, NSC 683864)",
+    "SRT3025 HCl",
+    "SRT1720 HCl",
+    "Veliparib (ABT-888)",
+    "Vandetanib (ZD6474)",
+    "Zileuton",
+    "ABT-737",
+    "AG-490 (Tyrphostin B42)",
+    "Celecoxib",
+    "SL-327",
+    "Tofacitinib (CP-690550) Citrate",
+    "Thalidomide"
+  ],
+  "hit_results": {
+    "hit@1_any": 1,
+    "hit@1_strong": 0,
+    "precision@1": 1.0,
+    "recall@1": 0.07692307692307693,
+    "hit@3_any": 3,
+    "hit@3_strong": 0,
+    "precision@3": 1.0,
+    "recall@3": 0.23076923076923078,
+    "hit@5_any": 4,
+    "hit@5_strong": 0,
+    "precision@5": 0.8,
+    "recall@5": 0.3076923076923077,
+    "hit@10_any": 8,
+    "hit@10_strong": 1,
+    "precision@10": 0.8,
+    "recall@10": 0.6153846153846154
+  }
+}

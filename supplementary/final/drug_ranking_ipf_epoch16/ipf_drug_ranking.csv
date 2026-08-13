@@ -1,0 +1,18 @@
+drug,ipf_reversal_score,gene_reversal_score,delta_mean,mechanism,ipf_relevance,rationale,n_cell_lines,rank
+Thalidomide,-0.00467760683133077,0.020917754620313644,-0.020917754620313644,"Immunomodulatory (anti-TNFa, anti-TGFb)",1,Reduces TGFb1 and TNFa. Case reports for IPF-related cough.,3,1
+Veliparib (ABT-888),-0.004689096785167798,0.019896363839507103,-0.019896363839507103,PARP inhibitor,1,PARP1 contributes to TGFb/Smad signaling. PARP inhibition reduces fibrosis.,3,2
+"Temsirolimus (CCI-779, NSC 683864)",-0.004689799605715972,0.021936068311333656,-0.021936068311333656,mTOR inhibitor,1,mTOR pathway activated in IPF fibroblasts. Rapamycin reduces fibrosis.,3,3
+Celecoxib,-0.0047113473917175415,0.022191646819313366,-0.022191646819313366,COX-2 inhibitor,1,COX-2/PGE2 axis has complex role in IPF; mixed preclinical evidence.,3,4
+Vandetanib (ZD6474),-0.004716793898073922,0.02162536419928074,-0.02162536419928074,VEGFR/EGFR inhibitor,2,Same TKI class as nintedanib (approved IPF drug targeting VEGFR/PDGFR/FGFR).,3,5
+ABT-737,-0.004727111544111726,0.020326683297753334,-0.020326683297753334,Bcl-2/Bcl-xL inhibitor,1,Myofibroblast apoptosis resistance drives IPF. BH3 mimetics show antifibrotic activity.,3,6
+Amisulpride,-0.004727709979141963,0.020959366112947464,-0.020959366112947464,D2/D3 antagonist,0,Dopamine antagonist. No known IPF relevance.,3,7
+Fulvestrant,-0.004729552632441553,0.020415155837933224,-0.020415155837933224,ER antagonist,0,Estrogen signaling not a primary IPF driver. Limited relevance.,3,8
+Tie2 kinase inhibitor,-0.004730025193252037,0.020813362672924995,-0.020813362672924995,Tie2 (TEK) inhibitor,0,Angiopoietin/Tie2 pathway primarily vascular. Limited IPF data.,3,9
+SRT1720 HCl,-0.004758882963061339,0.02043636329472065,-0.02043636329472065,SIRT1 activator,1,Same target as SRT3025. SIRT1 agonism attenuates fibrosis.,3,10
+Zileuton,-0.0047604365787286725,0.022610073288281757,-0.022610073288281757,5-lipoxygenase inhibitor,1,Leukotrienes promote fibrosis; 5-LO inhibition is antifibrotic in mouse models.,3,11
+Tofacitinib (CP-690550) Citrate,-0.0047606910321847705,0.020246480281154316,-0.020246480281154316,JAK1/3 inhibitor,2,Pan-JAK inhibition attenuates bleomycin-induced pulmonary fibrosis. Phase II trial in IPF.,3,12
+SRT3025 HCl,-0.0047674401117446695,0.020896720389525097,-0.020896720389525097,SIRT1 activator,1,SIRT1 attenuates TGFb-induced fibrosis. Emerging antifibrotic target.,3,13
+Ramelteon,-0.0047690553519958235,0.021171243240435917,-0.021171243240435917,Melatonin receptor agonist,0,No established role in IPF treatment.,3,14
+Sodium Phenylbutyrate,-0.0047843091937468515,0.019802750398715336,-0.019802750398715336,HDAC inhibitor / chemical chaperone,1,HDAC inhibitors reduce myofibroblast activation and collagen production.,3,15
+SL-327,-0.00479938475078274,0.022271032134691875,-0.022271032134691875,MEK1/2 inhibitor,1,ERK/MAPK mediates TGFb-induced EMT. MEK inhibition blocks myofibroblast differentiation.,3,16
+AG-490 (Tyrphostin B42),-0.004812632067093083,0.021436794350544613,-0.021436794350544613,JAK2 inhibitor,2,JAK/STAT3 blockade reduces TGFb-induced fibrosis in preclinical IPF models.,3,17

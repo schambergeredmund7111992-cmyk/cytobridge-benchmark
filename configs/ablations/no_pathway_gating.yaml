@@ -1,0 +1,5 @@
+# @package _global_
+# Ablation: no pathway gating
+model:
+  use_pathway_gate: false
+run_name: no_pathway_gating

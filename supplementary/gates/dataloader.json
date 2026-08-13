@@ -1,0 +1,39 @@
+{
+  "config_name": "train/accept_base",
+  "results": [
+    {
+      "batches": 200,
+      "order_sha256": "0a964ab114b6cf6d0ab9ef37bc385e956b69182d910e2a461d7d11eeef946513",
+      "rows": 12800,
+      "rows_per_second": 93.47484783114511,
+      "seconds": 136.93523227897822,
+      "status": "passed",
+      "workers": 0
+    },
+    {
+      "returncode": 1,
+      "status": "failed",
+      "stderr": "terminate called without an active exception\nterminate called without an active exception\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/runpy.py\", line 196, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/runpy.py\", line 86, in _run_code\n    exec(code, run_globals)\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 167, in <module>\n    main()\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 161, in main\n    _run_worker(args.config_name, args.worker_count, args.batches, args.out)\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 62, in _run_worker\n    shutdown()\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/site-packages/torch/utils/data/dataloader.py\", line 1627, in _shutdown_workers\n    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/process.py\", line 149, in join\n    res = self._popen.wait(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/popen_fork.py\", line 40, in wait\n    if not wait([self.sentinel], timeout):\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/connection.py\", line 931, in wait\n    ready = selector.select(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/selectors.py\", line 416, in select\n    fd_event_list = self._selector.poll(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py\", line 73, in handler\n    _error_if_any_worker_fails()\nRuntimeError: DataLoader worker (pid 20055) is killed by signal: Aborted. \n",
+      "stdout": "",
+      "workers": 2
+    },
+    {
+      "returncode": 1,
+      "status": "failed",
+      "stderr": "terminate called without an active exception\nterminate called without an active exception\nterminate called without an active exception\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/runpy.py\", line 196, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/runpy.py\", line 86, in _run_code\n    exec(code, run_globals)\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 167, in <module>\n    main()\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 161, in main\n    _run_worker(args.config_name, args.worker_count, args.batches, args.out)\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 62, in _run_worker\n    shutdown()\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/site-packages/torch/utils/data/dataloader.py\", line 1627, in _shutdown_workers\n    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/process.py\", line 149, in join\n    res = self._popen.wait(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/popen_fork.py\", line 40, in wait\n    if not wait([self.sentinel], timeout):\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/connection.py\", line 931, in wait\n    ready = selector.select(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/selectors.py\", line 416, in select\n    fd_event_list = self._selector.poll(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py\", line 73, in handler\n    _error_if_any_worker_fails()\nRuntimeError: DataLoader worker (pid 20761) is killed by signal: Aborted. \n",
+      "stdout": "",
+      "workers": 4
+    },
+    {
+      "returncode": 1,
+      "status": "failed",
+      "stderr": "terminate called without an active exception\nterminate called without an active exception\nterminate called without an active exception\nterminate called without an active exception\nterminate called without an active exception\nTraceback (most recent call last):\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/runpy.py\", line 196, in _run_module_as_main\n    return _run_code(code, main_globals, None,\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/runpy.py\", line 86, in _run_code\n    exec(code, run_globals)\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 167, in <module>\n    main()\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 161, in main\n    _run_worker(args.config_name, args.worker_count, args.batches, args.out)\n  File \"/root/autodl-tmp/0accept_revision/code/scripts/benchmark_dataloader.py\", line 62, in _run_worker\n    shutdown()\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/site-packages/torch/utils/data/dataloader.py\", line 1627, in _shutdown_workers\n    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/process.py\", line 149, in join\n    res = self._popen.wait(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/popen_fork.py\", line 40, in wait\n    if not wait([self.sentinel], timeout):\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/multiprocessing/connection.py\", line 931, in wait\n    ready = selector.select(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/selectors.py\", line 416, in select\n    fd_event_list = self._selector.poll(timeout)\n  File \"/root/autodl-tmp/envs/cytobridge-accept-5090/lib/python3.10/site-packages/torch/utils/data/_utils/signal_handling.py\", line 73, in handler\n    _error_if_any_worker_fails()\nRuntimeError: DataLoader worker (pid 21718) is killed by signal: Aborted. \n",
+      "stdout": "",
+      "workers": 8
+    }
+  ],
+  "schema_version": 1,
+  "selected_workers": 0,
+  "selection_rule": "fastest order-equivalent successful candidate",
+  "status": "passed"
+}

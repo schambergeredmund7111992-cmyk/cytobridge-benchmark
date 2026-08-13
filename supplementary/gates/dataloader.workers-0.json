@@ -1,0 +1,9 @@
+{
+  "batches": 200,
+  "order_sha256": "0a964ab114b6cf6d0ab9ef37bc385e956b69182d910e2a461d7d11eeef946513",
+  "rows": 12800,
+  "rows_per_second": 93.47484783114511,
+  "seconds": 136.93523227897822,
+  "status": "passed",
+  "workers": 0
+}

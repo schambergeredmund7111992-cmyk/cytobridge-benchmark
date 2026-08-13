@@ -1,0 +1,16 @@
+# @package _global_
+# Ablation #4: replace MolFormer drug embeddings with deterministic random
+# vectors. Tests whether the chemical foundation model is required, or whether
+# CytoBridge could rely on cell-state alone + a drug ID lookup. Expectation:
+# this ablation should clearly underperform v1 on unseen drugs.
+defaults:
+  - /train/v1
+  - _self_
+
+run_name: no_molformer
+
+data:
+  randomize_drug_emb: true
+
+wandb:
+  name: ablation_no_molformer

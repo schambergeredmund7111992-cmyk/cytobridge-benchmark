@@ -1,0 +1,52 @@
+drug,cell_line,split,ipf_reversal_score,gene_reversal_score,delta_mean,delta_std,mechanism,ipf_relevance,rationale
+ABT-737,A549,val,0.01580868908326251,-0.05463463440537453,0.05463463440537453,0.10744840651750565,Bcl-2/Bcl-xL inhibitor,1,Myofibroblast apoptosis resistance drives IPF. BH3 mimetics show antifibrotic activity.
+ABT-737,K562,val,0.015885772183786295,-0.07599425315856934,0.07599425315856934,0.12523184716701508,Bcl-2/Bcl-xL inhibitor,1,Myofibroblast apoptosis resistance drives IPF. BH3 mimetics show antifibrotic activity.
+ABT-737,MCF7,val,0.015809513341334024,-0.08070316910743713,0.08070316910743713,0.14129966497421265,Bcl-2/Bcl-xL inhibitor,1,Myofibroblast apoptosis resistance drives IPF. BH3 mimetics show antifibrotic activity.
+Amisulpride,A549,val,0.01578105699395494,-0.05420299246907234,0.05420299246907234,0.10451703518629074,D2/D3 antagonist,0,Dopamine antagonist. No known IPF relevance.
+Amisulpride,K562,val,0.015871145316359424,-0.0712742730975151,0.0712742730975151,0.12385740131139755,D2/D3 antagonist,0,Dopamine antagonist. No known IPF relevance.
+Amisulpride,MCF7,val,0.01578186286748726,-0.07437974214553833,0.07437974214553833,0.1390334814786911,D2/D3 antagonist,0,Dopamine antagonist. No known IPF relevance.
+SRT1720 HCl,A549,val,0.015834899042778565,-0.05765670910477638,0.05765670910477638,0.10628268122673035,SIRT1 activator,1,Same target as SRT3025. SIRT1 agonism attenuates fibrosis.
+SRT1720 HCl,K562,val,0.015891271253886168,-0.0733104795217514,0.0733104795217514,0.12488715350627899,SIRT1 activator,1,Same target as SRT3025. SIRT1 agonism attenuates fibrosis.
+SRT1720 HCl,MCF7,val,0.01580648344529592,-0.07729925960302353,0.07729925960302353,0.14263436198234558,SIRT1 activator,1,Same target as SRT3025. SIRT1 agonism attenuates fibrosis.
+Sodium Phenylbutyrate,A549,val,0.015844706803464004,-0.05691252276301384,0.05691252276301384,0.11035459488630295,HDAC inhibitor / chemical chaperone,1,HDAC inhibitors reduce myofibroblast activation and collagen production.
+Sodium Phenylbutyrate,K562,val,0.015893733961558708,-0.07284381240606308,0.07284381240606308,0.12387296557426453,HDAC inhibitor / chemical chaperone,1,HDAC inhibitors reduce myofibroblast activation and collagen production.
+Sodium Phenylbutyrate,MCF7,val,0.015851498839692942,-0.08238045126199722,0.08238045126199722,0.13841959834098816,HDAC inhibitor / chemical chaperone,1,HDAC inhibitors reduce myofibroblast activation and collagen production.
+"Temsirolimus (CCI-779, NSC 683864)",A549,val,0.015842598844392552,-0.060287363827228546,0.060287363827228546,0.12254558503627777,mTOR inhibitor,1,mTOR pathway activated in IPF fibroblasts. Rapamycin reduces fibrosis.
+"Temsirolimus (CCI-779, NSC 683864)",K562,val,0.015898520998372967,-0.07387170195579529,0.07387170195579529,0.12639117240905762,mTOR inhibitor,1,mTOR pathway activated in IPF fibroblasts. Rapamycin reduces fibrosis.
+"Temsirolimus (CCI-779, NSC 683864)",MCF7,val,0.015847050937428362,-0.07738539576530457,0.07738539576530457,0.14660805463790894,mTOR inhibitor,1,mTOR pathway activated in IPF fibroblasts. Rapamycin reduces fibrosis.
+Tie2 kinase inhibitor,A549,val,0.01584017092139674,-0.0577961690723896,0.0577961690723896,0.11121008545160294,Tie2 (TEK) inhibitor,0,Angiopoietin/Tie2 pathway primarily vascular. Limited IPF data.
+Tie2 kinase inhibitor,K562,val,0.015899183427792604,-0.07657597213983536,0.07657597213983536,0.12771983444690704,Tie2 (TEK) inhibitor,0,Angiopoietin/Tie2 pathway primarily vascular. Limited IPF data.
+Tie2 kinase inhibitor,MCF7,val,0.015813228871034243,-0.08020947128534317,0.08020947128534317,0.14378058910369873,Tie2 (TEK) inhibitor,0,Angiopoietin/Tie2 pathway primarily vascular. Limited IPF data.
+Vandetanib (ZD6474),A549,val,0.015821768742102678,-0.057358261197805405,0.057358261197805405,0.10303299129009247,VEGFR/EGFR inhibitor,2,Same TKI class as nintedanib (approved IPF drug targeting VEGFR/PDGFR/FGFR).
+Vandetanib (ZD6474),K562,val,0.015888401989046168,-0.0708114504814148,0.0708114504814148,0.1237468272447586,VEGFR/EGFR inhibitor,2,Same TKI class as nintedanib (approved IPF drug targeting VEGFR/PDGFR/FGFR).
+Vandetanib (ZD6474),MCF7,val,0.015819926234125353,-0.07015487551689148,0.07015487551689148,0.1394294947385788,VEGFR/EGFR inhibitor,2,Same TKI class as nintedanib (approved IPF drug targeting VEGFR/PDGFR/FGFR).
+Veliparib (ABT-888),A549,val,0.0158445560832918,-0.06074026599526405,0.06074026599526405,0.1066194549202919,PARP inhibitor,1,PARP1 contributes to TGFb/Smad signaling. PARP inhibition reduces fibrosis.
+Veliparib (ABT-888),K562,val,0.01588047684533619,-0.07586666196584702,0.07586666196584702,0.12559950351715088,PARP inhibitor,1,PARP1 contributes to TGFb/Smad signaling. PARP inhibition reduces fibrosis.
+Veliparib (ABT-888),MCF7,val,0.01580519235180457,-0.07845848798751831,0.07845848798751831,0.1417447328567505,PARP inhibitor,1,PARP1 contributes to TGFb/Smad signaling. PARP inhibition reduces fibrosis.
+AG-490 (Tyrphostin B42),A549,test,0.01582138908383213,-0.05461402237415314,0.05461402237415314,0.1036151722073555,JAK2 inhibitor,2,JAK/STAT3 blockade reduces TGFb-induced fibrosis in preclinical IPF models.
+AG-490 (Tyrphostin B42),K562,test,0.01587559490006051,-0.07160301506519318,0.07160301506519318,0.12273810803890228,JAK2 inhibitor,2,JAK/STAT3 blockade reduces TGFb-induced fibrosis in preclinical IPF models.
+AG-490 (Tyrphostin B42),MCF7,test,0.0157975369674374,-0.07152590900659561,0.07152590900659561,0.13809090852737427,JAK2 inhibitor,2,JAK/STAT3 blockade reduces TGFb-induced fibrosis in preclinical IPF models.
+Celecoxib,A549,test,0.015792152916622507,-0.05374487489461899,0.05374487489461899,0.11193659901618958,COX-2 inhibitor,1,COX-2/PGE2 axis has complex role in IPF; mixed preclinical evidence.
+Celecoxib,K562,test,0.015886973032960962,-0.07124985009431839,0.07124985009431839,0.12428081780672073,COX-2 inhibitor,1,COX-2/PGE2 axis has complex role in IPF; mixed preclinical evidence.
+Celecoxib,MCF7,test,0.015797649905237635,-0.0761319100856781,0.0761319100856781,0.1416090577840805,COX-2 inhibitor,1,COX-2/PGE2 axis has complex role in IPF; mixed preclinical evidence.
+Fulvestrant,A549,test,0.015797272196335334,-0.0554409995675087,0.0554409995675087,0.11581017822027206,ER antagonist,0,Estrogen signaling not a primary IPF driver. Limited relevance.
+Fulvestrant,K562,test,0.01587587383532965,-0.07279059290885925,0.07279059290885925,0.12498539686203003,ER antagonist,0,Estrogen signaling not a primary IPF driver. Limited relevance.
+Fulvestrant,MCF7,test,0.015782837288810688,-0.0774039626121521,0.0774039626121521,0.14398810267448425,ER antagonist,0,Estrogen signaling not a primary IPF driver. Limited relevance.
+Ramelteon,A549,test,0.015812441878941295,-0.05590297281742096,0.05590297281742096,0.09992511570453644,Melatonin receptor agonist,0,No established role in IPF treatment.
+Ramelteon,K562,test,0.015899893480390594,-0.07119756191968918,0.07119756191968918,0.12261135876178741,Melatonin receptor agonist,0,No established role in IPF treatment.
+Ramelteon,MCF7,test,0.015815845601127913,-0.07092861086130142,0.07092861086130142,0.13680338859558105,Melatonin receptor agonist,0,No established role in IPF treatment.
+SL-327,A549,test,0.015801832090702128,-0.05884599685668945,0.05884599685668945,0.11059345304965973,MEK1/2 inhibitor,1,ERK/MAPK mediates TGFb-induced EMT. MEK inhibition blocks myofibroblast differentiation.
+SL-327,K562,test,0.015878456369797036,-0.07377533614635468,0.07377533614635468,0.12434167414903641,MEK1/2 inhibitor,1,ERK/MAPK mediates TGFb-induced EMT. MEK inhibition blocks myofibroblast differentiation.
+SL-327,MCF7,test,0.01579001656558557,-0.0749385878443718,0.0749385878443718,0.13560354709625244,MEK1/2 inhibitor,1,ERK/MAPK mediates TGFb-induced EMT. MEK inhibition blocks myofibroblast differentiation.
+SRT3025 HCl,A549,test,0.0158419233340512,-0.05955413728952408,0.05955413728952408,0.1061321571469307,SIRT1 activator,1,SIRT1 attenuates TGFb-induced fibrosis. Emerging antifibrotic target.
+SRT3025 HCl,K562,test,0.01590246930729025,-0.07260997593402863,0.07260997593402863,0.12378154695034027,SIRT1 activator,1,SIRT1 attenuates TGFb-induced fibrosis. Emerging antifibrotic target.
+SRT3025 HCl,MCF7,test,0.015832996785856458,-0.074082151055336,0.074082151055336,0.13802792131900787,SIRT1 activator,1,SIRT1 attenuates TGFb-induced fibrosis. Emerging antifibrotic target.
+Thalidomide,A549,test,0.015792283548057024,-0.054386794567108154,0.054386794567108154,0.11102607846260071,"Immunomodulatory (anti-TNFa, anti-TGFb)",1,Reduces TGFb1 and TNFa. Case reports for IPF-related cough.
+Thalidomide,K562,test,0.015868280207363743,-0.07143271714448929,0.07143271714448929,0.12445290386676788,"Immunomodulatory (anti-TNFa, anti-TGFb)",1,Reduces TGFb1 and TNFa. Case reports for IPF-related cough.
+Thalidomide,MCF7,test,0.01579652448944665,-0.07419347018003464,0.07419347018003464,0.14034849405288696,"Immunomodulatory (anti-TNFa, anti-TGFb)",1,Reduces TGFb1 and TNFa. Case reports for IPF-related cough.
+Tofacitinib (CP-690550) Citrate,A549,test,0.015802036755465862,-0.0595991425216198,0.0595991425216198,0.11077646911144257,JAK1/3 inhibitor,2,Pan-JAK inhibition attenuates bleomycin-induced pulmonary fibrosis. Phase II trial in IPF.
+Tofacitinib (CP-690550) Citrate,K562,test,0.015865481857991692,-0.07268723100423813,0.07268723100423813,0.12457109987735748,JAK1/3 inhibitor,2,Pan-JAK inhibition attenuates bleomycin-induced pulmonary fibrosis. Phase II trial in IPF.
+Tofacitinib (CP-690550) Citrate,MCF7,test,0.015798521760614744,-0.07511941343545914,0.07511941343545914,0.140981525182724,JAK1/3 inhibitor,2,Pan-JAK inhibition attenuates bleomycin-induced pulmonary fibrosis. Phase II trial in IPF.
+Zileuton,A549,test,0.01583076807526509,-0.05805903673171997,0.05805903673171997,0.10352298617362976,5-lipoxygenase inhibitor,1,Leukotrienes promote fibrosis; 5-LO inhibition is antifibrotic in mouse models.
+Zileuton,K562,test,0.015882840601237482,-0.07271029055118561,0.07271029055118561,0.1248043030500412,5-lipoxygenase inhibitor,1,Leukotrienes promote fibrosis; 5-LO inhibition is antifibrotic in mouse models.
+Zileuton,MCF7,test,0.015803383708528403,-0.07259377092123032,0.07259377092123032,0.13541138172149658,5-lipoxygenase inhibitor,1,Leukotrienes promote fibrosis; 5-LO inhibition is antifibrotic in mouse models.

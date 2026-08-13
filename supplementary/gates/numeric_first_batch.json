@@ -1,0 +1,1101 @@
+{
+  "anchor_indices": [
+    17752,
+    47273,
+    12926,
+    47802,
+    47944,
+    55315,
+    52534,
+    56321,
+    30138,
+    35403,
+    41932,
+    45632,
+    42339,
+    17881,
+    139,
+    35379,
+    8295,
+    16953,
+    30541,
+    46150,
+    22917,
+    4022,
+    7351,
+    5856,
+    51965,
+    33151,
+    37095,
+    43199,
+    50832,
+    26159,
+    2163,
+    6807,
+    16441,
+    26095,
+    27533,
+    10666,
+    10764,
+    56360,
+    19498,
+    48751,
+    43241,
+    41210,
+    6303,
+    9599,
+    8827,
+    31512,
+    9033,
+    35824,
+    6026,
+    3783,
+    13662,
+    8912,
+    25834,
+    21432,
+    6149,
+    15352,
+    39454,
+    6363,
+    15416,
+    9824,
+    34368,
+    46272,
+    188,
+    14783
+  ],
+  "config_name": "train/accept_base",
+  "hard_negative_indices": [
+    [
+      20472,
+      50172,
+      2950,
+      36330
+    ],
+    [
+      41610,
+      21133,
+      45755,
+      11966
+    ],
+    [
+      17220,
+      3624,
+      18534,
+      8883
+    ],
+    [
+      37946,
+      18067,
+      39242,
+      41705
+    ],
+    [
+      17817,
+      52768,
+      3287,
+      47272
+    ],
+    [
+      25721,
+      35767,
+      17651,
+      51488
+    ],
+    [
+      34142,
+      8196,
+      21470,
+      55005
+    ],
+    [
+      3284,
+      7331,
+      57932,
+      51643
+    ],
+    [
+      27829,
+      47446,
+      57485,
+      11281
+    ],
+    [
+      21351,
+      23037,
+      7061,
+      9372
+    ],
+    [
+      20270,
+      38393,
+      5193,
+      37428
+    ],
+    [
+      32588,
+      41090,
+      7073,
+      19927
+    ],
+    [
+      20972,
+      2511,
+      19244,
+      25971
+    ],
+    [
+      45041,
+      43791,
+      18427,
+      41879
+    ],
+    [
+      3135,
+      25230,
+      3049,
+      4519
+    ],
+    [
+      30362,
+      18307,
+      33574,
+      53649
+    ],
+    [
+      47458,
+      1778,
+      5743,
+      55349
+    ],
+    [
+      32838,
+      31259,
+      23678,
+      39138
+    ],
+    [
+      29139,
+      535,
+      48058,
+      17741
+    ],
+    [
+      57225,
+      12418,
+      55904,
+      31066
+    ],
+    [
+      36113,
+      48419,
+      33468,
+      47999
+    ],
+    [
+      20863,
+      31793,
+      12565,
+      2361
+    ],
+    [
+      12962,
+      41739,
+      32742,
+      14174
+    ],
+    [
+      28772,
+      51210,
+      22456,
+      34442
+    ],
+    [
+      36639,
+      35895,
+      40602,
+      35567
+    ],
+    [
+      14472,
+      22828,
+      32788,
+      37596
+    ],
+    [
+      2925,
+      24982,
+      18562,
+      18538
+    ],
+    [
+      45263,
+      25495,
+      21833,
+      39199
+    ],
+    [
+      7530,
+      19645,
+      36547,
+      54174
+    ],
+    [
+      47276,
+      30316,
+      50336,
+      37901
+    ],
+    [
+      14406,
+      21812,
+      10821,
+      2376
+    ],
+    [
+      6016,
+      8176,
+      8587,
+      152
+    ],
+    [
+      51173,
+      54498,
+      3457,
+      1048
+    ],
+    [
+      55868,
+      29859,
+      37851,
+      20885
+    ],
+    [
+      45200,
+      7292,
+      11278,
+      42092
+    ],
+    [
+      6149,
+      30872,
+      9252,
+      18121
+    ],
+    [
+      18211,
+      9903,
+      40389,
+      48252
+    ],
+    [
+      46609,
+      39518,
+      47383,
+      18229
+    ],
+    [
+      9340,
+      49777,
+      20964,
+      12989
+    ],
+    [
+      19013,
+      15792,
+      45011,
+      21262
+    ],
+    [
+      44920,
+      5263,
+      32612,
+      28264
+    ],
+    [
+      47099,
+      41452,
+      55438,
+      37873
+    ],
+    [
+      36595,
+      1159,
+      20291,
+      17197
+    ],
+    [
+      12134,
+      22931,
+      55437,
+      6550
+    ],
+    [
+      28861,
+      12554,
+      18591,
+      39925
+    ],
+    [
+      38331,
+      27070,
+      54486,
+      52799
+    ],
+    [
+      22571,
+      57927,
+      4369,
+      35872
+    ],
+    [
+      1745,
+      7224,
+      2326,
+      4291
+    ],
+    [
+      19055,
+      44971,
+      47880,
+      46783
+    ],
+    [
+      51626,
+      31930,
+      16991,
+      44850
+    ],
+    [
+      9462,
+      22159,
+      49670,
+      1550
+    ],
+    [
+      4505,
+      49555,
+      53308,
+      23054
+    ],
+    [
+      32072,
+      1585,
+      9609,
+      11436
+    ],
+    [
+      1420,
+      35355,
+      58047,
+      52748
+    ],
+    [
+      17126,
+      29603,
+      47074,
+      37062
+    ],
+    [
+      3899,
+      24831,
+      11041,
+      40563
+    ],
+    [
+      51966,
+      26815,
+      36117,
+      13116
+    ],
+    [
+      31793,
+      57621,
+      35948,
+      35956
+    ],
+    [
+      20181,
+      32722,
+      41479,
+      8483
+    ],
+    [
+      37620,
+      28539,
+      30564,
+      28188
+    ],
+    [
+      29314,
+      11885,
+      56579,
+      9240
+    ],
+    [
+      4775,
+      51285,
+      7282,
+      52366
+    ],
+    [
+      13328,
+      1168,
+      22842,
+      39324
+    ],
+    [
+      48731,
+      38825,
+      32630,
+      48987
+    ]
+  ],
+  "results": {
+    "32-true": {
+      "peak_memory_mib": 1098,
+      "precision": "32-true",
+      "status": "passed",
+      "steps": [
+        {
+          "gradient_audit": {
+            "L_contrast": {
+              "coefficient": 0.5,
+              "connected_parameter_tensors": 92,
+              "gradient_elements": 4886144,
+              "max_abs_gradient": 0.3652496337890625,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 2.203092575073242,
+              "weighted_gradient_l2": 6.142449924661565
+            },
+            "L_delta": {
+              "coefficient": 1.0,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 0.006138000171631575,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 0.3225504159927368,
+              "weighted_gradient_l2": 0.10086749770160948
+            },
+            "L_direction": {
+              "coefficient": 1.0,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 0.014691750518977642,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 0.8581401109695435,
+              "weighted_gradient_l2": 0.3162676500627278
+            },
+            "L_drugspec": {
+              "coefficient": 3.0,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 0.026994574815034866,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 0.9906873106956482,
+              "weighted_gradient_l2": 0.7257886236493574
+            },
+            "L_kl": {
+              "coefficient": 0.05,
+              "connected_parameter_tensors": 81,
+              "gradient_elements": 4458752,
+              "max_abs_gradient": 0.0002381486992817372,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 12.817941665649414,
+              "weighted_gradient_l2": 0.004809195969716554
+            },
+            "L_logfc": {
+              "coefficient": 0.5,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 1.0705244541168213,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 215.22293090820312,
+              "weighted_gradient_l2": 27.244546432412918
+            },
+            "L_pathway": {
+              "coefficient": 0.3,
+              "connected_parameter_tensors": 83,
+              "gradient_elements": 4458852,
+              "max_abs_gradient": 0.02140633575618267,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 1.9392766952514648,
+              "weighted_gradient_l2": 0.09802954938969867
+            },
+            "L_recon": {
+              "coefficient": 0.1,
+              "connected_parameter_tensors": 105,
+              "gradient_elements": 6728232,
+              "max_abs_gradient": 77503704.0,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 3196.6611328125,
+              "weighted_gradient_l2": 941169274.7464056
+            }
+          },
+          "gradient_max_abs": 77503704.0,
+          "losses": {
+            "L_contrast": 2.203092575073242,
+            "L_delta": 0.3225504159927368,
+            "L_direction": 0.8581401109695435,
+            "L_drugspec": 0.9906873106956482,
+            "L_kl": 12.817941665649414,
+            "L_logfc": 215.22293090820312,
+            "L_norm_recon": 0.0,
+            "L_pathway": 1.9392766952514648,
+            "L_recon": 3196.6611328125,
+            "loss": 433.75457763671875
+          },
+          "outputs": {
+            "delta": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.0,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "log_var": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 2.869227409362793,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "mu": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 68.0,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "pathway_attn": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.020225197076797485,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pathway_pred": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 3.9220705032348633,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pi": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 2.4952259063720703,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "theta": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.6931471824645996,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "z": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.9040300250053406,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            },
+            "z_hard_neg": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.8976756930351257,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                4,
+                128
+              ]
+            },
+            "z_pos": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.8136710524559021,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            }
+          },
+          "step": 0
+        },
+        {
+          "gradient_audit": null,
+          "gradient_max_abs": 52.5112190246582,
+          "losses": {
+            "L_contrast": 2.1637537479400635,
+            "L_delta": 0.3216524124145508,
+            "L_direction": 0.8610712289810181,
+            "L_drugspec": 0.9890861511230469,
+            "L_kl": 12.817752838134766,
+            "L_logfc": 215.05194091796875,
+            "L_norm_recon": 0.0,
+            "L_pathway": 1.9392549991607666,
+            "L_recon": 918.107421875,
+            "loss": 205.79124450683594
+          },
+          "outputs": {
+            "delta": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.019509969279170036,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "log_var": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 2.8429887294769287,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "mu": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 69.10153198242188,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "pathway_attn": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.020214013755321503,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pathway_pred": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 3.9226386547088623,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pi": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 2.497690200805664,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "theta": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.6931471824645996,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "z": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.8870123624801636,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            },
+            "z_hard_neg": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.9138475656509399,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                4,
+                128
+              ]
+            },
+            "z_pos": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.8650985956192017,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            }
+          },
+          "step": 1
+        }
+      ]
+    },
+    "bf16-mixed": {
+      "peak_memory_mib": 972,
+      "precision": "bf16-mixed",
+      "status": "passed",
+      "steps": [
+        {
+          "gradient_audit": {
+            "L_contrast": {
+              "coefficient": 0.5,
+              "connected_parameter_tensors": 92,
+              "gradient_elements": 4886144,
+              "max_abs_gradient": 0.310546875,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 2.1768696308135986,
+              "weighted_gradient_l2": 6.1191122454139455
+            },
+            "L_delta": {
+              "coefficient": 1.0,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 0.006683349609375,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 0.3225504159927368,
+              "weighted_gradient_l2": 0.1012292848000989
+            },
+            "L_direction": {
+              "coefficient": 1.0,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 0.01556396484375,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 0.8581401109695435,
+              "weighted_gradient_l2": 0.31658323367203617
+            },
+            "L_drugspec": {
+              "coefficient": 3.0,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 0.0341796875,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 0.9906873106956482,
+              "weighted_gradient_l2": 0.7285032034553532
+            },
+            "L_kl": {
+              "coefficient": 0.05,
+              "connected_parameter_tensors": 81,
+              "gradient_elements": 4458752,
+              "max_abs_gradient": 0.0002536773681640625,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 12.818095207214355,
+              "weighted_gradient_l2": 0.0049205600912535594
+            },
+            "L_logfc": {
+              "coefficient": 0.5,
+              "connected_parameter_tensors": 102,
+              "gradient_elements": 5954232,
+              "max_abs_gradient": 1.140625,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 215.22293090820312,
+              "weighted_gradient_l2": 27.265543006407302
+            },
+            "L_pathway": {
+              "coefficient": 0.3,
+              "connected_parameter_tensors": 83,
+              "gradient_elements": 4458852,
+              "max_abs_gradient": 0.021406618878245354,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 1.9392874240875244,
+              "weighted_gradient_l2": 0.09803009204181
+            },
+            "L_recon": {
+              "coefficient": 0.1,
+              "connected_parameter_tensors": 105,
+              "gradient_elements": 6728232,
+              "max_abs_gradient": 74973184.0,
+              "nonfinite_gradient_elements": 0,
+              "raw_loss": 3196.75341796875,
+              "weighted_gradient_l2": 945342690.6920412
+            }
+          },
+          "gradient_max_abs": 74973184.0,
+          "losses": {
+            "L_contrast": 2.1768696308135986,
+            "L_delta": 0.3225504159927368,
+            "L_direction": 0.8581401109695435,
+            "L_drugspec": 0.9906873106956482,
+            "L_kl": 12.818095207214355,
+            "L_logfc": 215.22293090820312,
+            "L_norm_recon": 0.0,
+            "L_pathway": 1.9392874240875244,
+            "L_recon": 3196.75341796875,
+            "loss": 433.750732421875
+          },
+          "outputs": {
+            "delta": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.0,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "log_var": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 2.90625,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "mu": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 68.0,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "pathway_attn": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.020215298980474472,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pathway_pred": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 3.922203302383423,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pi": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 2.671875,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "theta": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.6931471824645996,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "z": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.80859375,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            },
+            "z_hard_neg": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.87109375,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                4,
+                128
+              ]
+            },
+            "z_pos": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.86328125,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            }
+          },
+          "step": 0
+        },
+        {
+          "gradient_audit": null,
+          "gradient_max_abs": 49.5,
+          "losses": {
+            "L_contrast": 2.1746041774749756,
+            "L_delta": 0.32160621881484985,
+            "L_direction": 0.8610419034957886,
+            "L_drugspec": 0.9890443682670593,
+            "L_kl": 12.818140029907227,
+            "L_logfc": 214.9998016357422,
+            "L_norm_recon": 0.0,
+            "L_pathway": 1.9392683506011963,
+            "L_recon": 915.5209350585938,
+            "loss": 205.5117645263672
+          },
+          "outputs": {
+            "delta": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.019287109375,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "log_var": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 2.765625,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "mu": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 68.99254608154297,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "pathway_attn": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.020252758637070656,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pathway_pred": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 3.9225165843963623,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                50
+              ]
+            },
+            "pi": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 2.515625,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "theta": {
+              "dtype": "torch.float32",
+              "finite": true,
+              "max_abs": 0.6931471824645996,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                3000
+              ]
+            },
+            "z": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.76171875,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            },
+            "z_hard_neg": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.9140625,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                4,
+                128
+              ]
+            },
+            "z_pos": {
+              "dtype": "torch.bfloat16",
+              "finite": true,
+              "max_abs": 0.83203125,
+              "nonfinite_elements": 0,
+              "shape": [
+                64,
+                128
+              ]
+            }
+          },
+          "step": 1
+        }
+      ]
+    }
+  },
+  "schema_version": 1,
+  "seed": 42,
+  "selected_precision": "bf16-mixed",
+  "status": "passed"
+}

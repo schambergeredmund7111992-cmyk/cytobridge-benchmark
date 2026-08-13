@@ -1,0 +1,4 @@
+Method,R2(all),R2(top50 DEG),Spearman(top50 DEG),n_pairs,n_deg_genes
+(A) Pure retrieval (kNN),-1.6409,-0.3067,0.3423,27,354
+(B) Retrieval + g_theta correction,-0.3343,-0.0312,0.3617,27,354
+(C) Linear-adjusted (SOTA bar),-0.2504,-0.1401,0.3274,27,354

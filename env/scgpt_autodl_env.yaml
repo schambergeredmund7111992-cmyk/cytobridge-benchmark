@@ -1,0 +1,62 @@
+# scGPT cache-generation environment manifest for Ampere reference servers.
+#
+# This file documents the exact versions verified on the reference GPU server. The project uses
+# shell installers in env/install_scgpt_env.sh because they work with explicit
+# Python paths and do not require `conda activate`.
+#
+# Do not install this profile as the RTX 5090 training environment: torch 2.3.1+cu121 does not
+# contain Blackwell sm_120 kernels. AutoDL training consumes the already validated scGPT caches
+# through env/setup_autodl_5090_env.sh (torch 2.7.1+cu128) and never imports torchtext/scgpt.
+profile: cytobridge-scgpt-py310
+purpose: "Generate scGPT caches on the audited Ampere stack; not for RTX 5090 training."
+
+python:
+  version: "3.10"
+  recommendation: "Use only on Ampere for cache generation; use the separate 5090 core profile for training."
+
+paths:
+  # Set these to your own project root, virtualenv, and checkpoint directory.
+  project_root: "/path/to/CytoBridge"
+  venv: "/path/to/venvs/cytobridge-scgpt-py310"
+  checkpoint_dir: "/path/to/scgpt_ckpt"
+
+torch:
+  index_url: "https://download.pytorch.org/whl/cu121"
+  packages:
+    torch: "2.3.1+cu121"
+    torchvision: "0.18.1+cu121"
+
+pip_packages:
+  numpy: "1.26.4"
+  torchtext: "0.18.0"
+  scanpy: "1.10.0"
+  anndata: "0.10.7"
+  scgpt: "0.2.4"
+  rdkit: "2024.3.3"
+  transformers: "4.42.0"
+  setuptools: "70.3.0"
+  extra:
+    - "ipython"
+    - "tokenizers"
+    - "huggingface-hub"
+
+checkpoint:
+  repo: "perturblab/scgpt-human"
+  files:
+    - "args.json"
+    - "best_model.pt"
+    - "vocab.json"
+
+verified:
+  date: "2026-07-11"
+  python: "3.10.20"
+  torch: "2.3.1+cu121"
+  torchtext: "0.18.0+cpu"
+  scgpt: "0.2.4"
+  checks:
+    - "import torch, torchtext, scgpt"
+    - "from cytobridge.encoders.scgpt_wrapper import ScGPTEncoder"
+    - "ScGPTEncoder exact required-key coverage (153/153)"
+    - "official scGPT 0.2.4 DataCollator token/value oracle match"
+    - "real mini-batch deterministic and padding-invariant CLS embeddings"
+    - "tiny AnnData cache smoke output shape (4, 1, 512) plus provenance"

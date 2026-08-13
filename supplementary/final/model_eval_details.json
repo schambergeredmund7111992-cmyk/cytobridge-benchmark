@@ -1,0 +1,63 @@
+{
+  "evaluation_timestamp": "2026-06-09",
+  "test_set": "sci-Plex internal test (27 drug-cell line pairs, 3 cell lines x 9 test drugs)",
+  "models": {
+    "v1_base_epoch00": {
+      "checkpoint": "ckpts/v1/epoch00-val_spearman0.1687.ckpt",
+      "config": {
+        "residual_decoder": false,
+        "pool_mode": "mean",
+        "gene_shrinkage": false,
+        "lam_direction": 0.0
+      },
+      "val": {"R2_all": -1187.82, "R2_DEG": -80.75, "Spearman_DEG": 0.1687, "n_pairs": 24},
+      "test": {"R2_all": -1333.87, "R2_DEG": -68.64, "Spearman_DEG": 0.1684, "n_pairs": 27}
+    },
+    "t1_residual_epoch16": {
+      "checkpoint": "ckpts/v1/epoch16-val_spearman0.2444.ckpt",
+      "config": {
+        "residual_decoder": true,
+        "pool_mode": "drug_query",
+        "gene_shrinkage": false,
+        "lam_direction": 1.0
+      },
+      "val": {"R2_all": -7.30, "R2_DEG": -4.22, "Spearman_DEG": 0.2444, "n_pairs": 24},
+      "test": {"R2_all": -6.80, "R2_DEG": -4.31, "Spearman_DEG": 0.1799, "n_pairs": 27}
+    },
+    "t1_5_shrinkage_epoch18": {
+      "checkpoint": "ckpts/t1_5_shrinkage/epoch18-val_spearman0.2024.ckpt",
+      "config": {
+        "residual_decoder": true,
+        "pool_mode": "drug_query",
+        "gene_shrinkage": true,
+        "lam_direction": 1.0
+      },
+      "val": {"R2_all": -162.59, "R2_DEG": -13.38, "Spearman_DEG": 0.2024, "n_pairs": 24},
+      "test": {"R2_all": -88.74, "R2_DEG": -12.71, "Spearman_DEG": 0.1894, "n_pairs": 27},
+      "shrinkage_params": {
+        "alpha_g": {"min": 0.102, "max": 1.173, "mean": 0.884, "std": 0.148},
+        "beta_g": {"min": -0.016, "max": 0.035, "mean": -0.0003, "std": 0.004}
+      }
+    }
+  },
+  "baselines": {
+    "mean": {"R2_all": 0.0130, "R2_DEG": -0.0314, "Spearman_DEG": 0.3847},
+    "linear": {"R2_all": -0.2433, "R2_DEG": -0.1959, "Spearman_DEG": 0.1834},
+    "linear_adj": {"R2_all": -0.2504, "R2_DEG": -0.1401, "Spearman_DEG": 0.3274},
+    "knn_molformer": {"R2_all": -1.6409, "R2_DEG": -0.3067, "Spearman_DEG": 0.3423},
+    "ridge_clean": {"R2_all": null, "R2_DEG": null, "Spearman_DEG": 0.3268}
+  },
+  "retrieval_augmented": {
+    "pure_knn": {"R2_all": -1.6409, "R2_DEG": -0.3067, "Spearman_DEG": 0.3423},
+    "knn_g_theta": {"R2_all": -0.3343, "R2_DEG": -0.0312, "Spearman_DEG": 0.3617},
+    "linear_adj_sota": {"R2_all": -0.2504, "R2_DEG": -0.1401, "Spearman_DEG": 0.3274}
+  },
+  "ipf_drug_ranking_epoch16": {
+    "hit_at_1": {"any": 1, "strong": 0, "precision": 1.0, "recall": 0.077},
+    "hit_at_3": {"any": 3, "strong": 0, "precision": 1.0, "recall": 0.231},
+    "hit_at_5": {"any": 5, "strong": 1, "precision": 1.0, "recall": 0.385},
+    "hit_at_10": {"any": 7, "strong": 1, "precision": 0.70, "recall": 0.538},
+    "cross_cell_line_spearman": {"A549_K562": 0.6985, "A549_MCF7": 0.6127, "K562_MCF7": 0.4608, "mean": 0.5907},
+    "top5_drugs": ["Thalidomide", "Veliparib (ABT-888)", "Temsirolimus (CCI-779, NSC 683864)", "Celecoxib", "Vandetanib (ZD6474)"]
+  }
+}

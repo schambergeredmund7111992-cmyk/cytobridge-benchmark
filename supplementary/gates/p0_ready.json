@@ -1,0 +1,111 @@
+{
+  "control_calibration": {
+    "drug_disjoint_v2": {
+      "oracle": 1.0,
+      "oracle_required_minimum": 0.99,
+      "random_mean": 0.5,
+      "random_required_interval": [
+        0.4,
+        0.6
+      ],
+      "random_scores": [
+        {
+          "conditional_accuracy": 0.4752415458937198,
+          "seed": 11
+        },
+        {
+          "conditional_accuracy": 0.5006038647342995,
+          "seed": 23
+        },
+        {
+          "conditional_accuracy": 0.4873188405797102,
+          "seed": 42
+        },
+        {
+          "conditional_accuracy": 0.5555555555555555,
+          "seed": 67
+        },
+        {
+          "conditional_accuracy": 0.481280193236715,
+          "seed": 101
+        }
+      ],
+      "random_seeds": [
+        11,
+        23,
+        42,
+        67,
+        101
+      ],
+      "split": "validation",
+      "status": "passed",
+      "test_targets_opened": false
+    },
+    "scaffold_disjoint_v2": {
+      "oracle": 1.0,
+      "oracle_required_minimum": 0.99,
+      "random_mean": 0.4892512077294685,
+      "random_required_interval": [
+        0.4,
+        0.6
+      ],
+      "random_scores": [
+        {
+          "conditional_accuracy": 0.4716183574879227,
+          "seed": 11
+        },
+        {
+          "conditional_accuracy": 0.4595410628019323,
+          "seed": 23
+        },
+        {
+          "conditional_accuracy": 0.45350241545893716,
+          "seed": 42
+        },
+        {
+          "conditional_accuracy": 0.48188405797101447,
+          "seed": 67
+        },
+        {
+          "conditional_accuracy": 0.5797101449275363,
+          "seed": 101
+        }
+      ],
+      "random_seeds": [
+        11,
+        23,
+        42,
+        67,
+        101
+      ],
+      "split": "validation",
+      "status": "passed",
+      "test_targets_opened": false
+    }
+  },
+  "num_workers": 0,
+  "precision": "bf16-mixed",
+  "protocol_version": "1.5.0",
+  "readiness_command": "/root/autodl-tmp/envs/cytobridge-accept-5090/bin/python /root/autodl-tmp/0accept_revision/handoff/check_readiness.py --code-dir /root/autodl-tmp/0accept_revision/code --scgpt-ckpt-dir /root/autodl-tmp/cytobridge_accept_data/scgpt_ckpt",
+  "readiness_training_ready": true,
+  "schema_version": 1,
+  "source_hashes": {
+    "data/processed/external/drug_disjoint_v2/final_refit.h5ad": "83a3c197f51b42731ece109953b6e7d746d9c94ae9bad04db90c149a65c752fb",
+    "data/processed/external/drug_disjoint_v2/final_refit.manifest.json": "f3a90695e08ac7e974934bdeb7e53a13a6bd5d10807926f14d363a69bef8427f",
+    "data/processed/external/drug_disjoint_v2/final_refit_chemcpa_rdkit.manifest.json": "d62530f2ef8e8f377feb854ca374628ca819b4f3322ad7742845e3a9734c86e9",
+    "data/processed/external/drug_disjoint_v2/final_refit_chemcpa_rdkit.parquet": "4e7d09add43724fb87c2a4fca499c453ab9bdc3da21e52848de8170601a39bf5",
+    "data/processed/external/drug_disjoint_v2/selection.h5ad": "a1be28c0341125238120f7a352ba563f7b5de2dc868286674bfd937a3c443be8",
+    "data/processed/external/drug_disjoint_v2/selection.manifest.json": "f1dc9cbc19a7fd0eccd2920776b4fb9f23ea08a49cb4380b389d0fc8752e3e4b",
+    "data/processed/external/drug_disjoint_v2/selection_chemcpa_rdkit.manifest.json": "b6bde0bb79051513f1bb010804f8fe13ecedbfa708709b7cf82758513c7a7149",
+    "data/processed/external/drug_disjoint_v2/selection_chemcpa_rdkit.parquet": "3d9e980b1675267ff158cf5bebb7b942e45bf4135a15a0dc9a3f28fa640dcd2f",
+    "data/processed/external/scaffold_disjoint_v2/final_refit.h5ad": "19b94478d0669073aad1ce498f21a359804e73a80869981b84477655110d0762",
+    "data/processed/external/scaffold_disjoint_v2/final_refit.manifest.json": "6e309d0a918f935f0f81a7c107be3b6d2140e3f700e64eacf3953c8aed546e0b",
+    "data/processed/external/scaffold_disjoint_v2/final_refit_chemcpa_rdkit.manifest.json": "867a851598885d19683f4aaf2cb3d4d9ebedaa0b66bcdabd918c5f9cb2ff9438",
+    "data/processed/external/scaffold_disjoint_v2/final_refit_chemcpa_rdkit.parquet": "fe3f349c089e0403bf3bcccc1051223ba51c63ac47832d730300a9aba300fc1e",
+    "dataloader_gate": "fc52de17f06c565e77e972cac0cd30f1086c3bcb8ce92495fb37ac5a10e6aa18",
+    "external_checkout_verification": "7af191602e1d456741d2ec65acaebff43c09492943609b437782a64addf0627f",
+    "numeric_gate": "b2fffcadc3bd77c2ef5a6257081d94ba86849a1108fe1a1ed99e49791c4ad8cf"
+  },
+  "status": "passed",
+  "test_targets_opened": false
+}

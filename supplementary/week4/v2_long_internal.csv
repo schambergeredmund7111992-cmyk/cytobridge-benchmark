@@ -1,0 +1,13 @@
+metric,value
+recon_pearson_r_mean,0.05943438038229942
+recon_pearson_r_median,0.00047169183380901814
+recon_rmse_log1p,0.2586674690246582
+baseline_ctrl_pearson_r_mean,0.032657504081726074
+pathway_pearson_r_mean,0.4231323301792145
+pathway_pearson_r_median,0.4342542290687561
+drug_retrieval_mrr,0.5552295954080918
+drug_retrieval_hit1,0.11079378412431751
+drug_retrieval_hit5,0.9999580008399832
+drug_retrieval_mean_rank,1.8905921881562369
+ridge_pearson_top50_mean,0.137945714234202
+ridge_spearman_top50_mean,0.13261660219643412

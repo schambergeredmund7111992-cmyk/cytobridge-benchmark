@@ -1,0 +1,1802 @@
+{
+  "metrics": {
+    "ipf": {
+      "tool_call_success_rate": 0.9643,
+      "n_calls": 56,
+      "n_success": 54,
+      "by_tool": {
+        "query_drugbank": 1.0,
+        "get_pathway_info": 0.7778,
+        "retrieve_lincs_signatures": 1.0,
+        "search_pubmed": 1.0,
+        "predict_response": 1.0
+      },
+      "evidence_precision": 0.6667,
+      "evidence_recall": 0.1667,
+      "evidence_f1": 0.2667,
+      "tp": 4,
+      "fp": 2,
+      "fn": 20,
+      "pathway_faithfulness_spearman": 0.5617,
+      "pathway_faithfulness_median": 0.5092,
+      "n_comparable_pairs": 6,
+      "n_valid_spearman": 6,
+      "repeat_consistency_mean_kendall_tau": 1.0,
+      "repeat_consistency_std": 0.0,
+      "n_runs": 3,
+      "n_pairwise_comparisons": 1,
+      "n_successful_runs": 2,
+      "mean_tokens_in": 10787.3,
+      "mean_tokens_out": 1372.3
+    },
+    "gbm": {
+      "tool_call_success_rate": 1.0,
+      "n_calls": 45,
+      "n_success": 45,
+      "by_tool": {
+        "query_drugbank": 1.0,
+        "get_pathway_info": 1.0,
+        "retrieve_lincs_signatures": 1.0,
+        "predict_response": 1.0,
+        "search_pubmed": 1.0
+      },
+      "evidence_precision": 0.9091,
+      "evidence_recall": 0.6667,
+      "evidence_f1": 0.7692,
+      "tp": 10,
+      "fp": 1,
+      "fn": 5,
+      "pathway_faithfulness_spearman": 0.743,
+      "pathway_faithfulness_median": 0.8819,
+      "n_comparable_pairs": 8,
+      "n_valid_spearman": 8,
+      "repeat_consistency_mean_kendall_tau": 0.7778,
+      "repeat_consistency_std": 0.1571,
+      "n_runs": 3,
+      "n_pairwise_comparisons": 3,
+      "n_successful_runs": 3,
+      "mean_tokens_in": 9263.0,
+      "mean_tokens_out": 3917.7
+    }
+  },
+  "runs": {
+    "ipf": [
+      {
+        "case": "ipf",
+        "final_ranking": [
+          {
+            "drug": "Nintedanib",
+            "rank": 1,
+            "confidence": "high",
+            "rationale": "Approved for IPF; directly targets PDGFR/FGFR/VEGFR tyrosine kinases; highest LINCS similarity (0.87) to TGFB1_down signature in A549 cells; linked to HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION pathway; multi-kinase inhibition blocks key fibrotic drivers."
+          },
+          {
+            "drug": "Pirfenidone",
+            "rank": 2,
+            "confidence": "high",
+            "rationale": "Approved for IPF; directly inhibits TGFB1 and TNFA; strong LINCS similarity (0.82) to TGFB1_down in A549 cells; linked to both EMT and inflammatory response pathways; well-established anti-fibrotic mechanism."
+          },
+          {
+            "drug": "Losartan",
+            "rank": 3,
+            "confidence": "medium",
+            "rationale": "Angiotensin II receptor blocker with known TGF-beta downregulation; moderate LINCS similarity (0.65) to TGFB1_down in A549 cells; linked to EMT pathway but not FDA-approved for IPF; evidence is preclinical/investigational."
+          },
+          {
+            "drug": "Dexamethasone",
+            "rank": 4,
+            "confidence": "low",
+            "rationale": "Potent anti-inflammatory via glucocorticoid receptor but no LINCS TGFB1_down signature in A549; linked only to inflammatory response pathway, not directly to EMT; chronic steroid use is not standard for IPF and may be detrimental in fibrotic disease."
+          }
+        ],
+        "error": null,
+        "tool_results": [
+          {
+            "name": "Nintedanib",
+            "drugbank_id": "DB09079",
+            "targets": [
+              "PDGFRA",
+              "PDGFRB",
+              "FGFR1",
+              "FGFR2",
+              "FGFR3",
+              "VEGFR1",
+              "VEGFR2",
+              "VEGFR3"
+            ],
+            "moa": "Tyrosine kinase inhibitor targeting PDGFR, FGFR, VEGFR -- anti-fibrotic and anti-angiogenic",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_ANGIOGENESIS"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Pirfenidone",
+            "drugbank_id": "DB04951",
+            "targets": [
+              "TGFB1",
+              "TNFA"
+            ],
+            "moa": "Anti-fibrotic; inhibits TGF-beta synthesis and fibroblast proliferation",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_INFLAMMATORY_RESPONSE"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Losartan",
+            "drugbank_id": "DB00678",
+            "targets": [
+              "AGTR1"
+            ],
+            "moa": "Angiotensin II receptor blocker (ARB); anti-fibrotic via TGF-beta downregulation",
+            "indication": "Hypertension; investigated for IPF",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Dexamethasone",
+            "drugbank_id": "DB01234",
+            "targets": [
+              "NR3C1"
+            ],
+            "moa": "Glucocorticoid receptor agonist; anti-inflammatory and immunosuppressive",
+            "indication": "Cerebral edema in GBM, inflammation",
+            "pathways": [
+              "HALLMARK_INFLAMMATORY_RESPONSE",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+            "genes": [
+              "TGFB1",
+              "SNAI1",
+              "SNAI2",
+              "TWIST1",
+              "ZEB1",
+              "ZEB2",
+              "CDH1",
+              "CDH2",
+              "VIM",
+              "FN1",
+              "COL1A1",
+              "COL1A2",
+              "ACTA2"
+            ],
+            "n_genes": 13,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_TGF_BETA_SIGNALING",
+            "genes": [],
+            "error": "pathway not found",
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_INFLAMMATORY_RESPONSE",
+            "genes": [
+              "IL6",
+              "IL1B",
+              "TNF",
+              "CXCL8",
+              "CCL2",
+              "PTGS2",
+              "NFKB1",
+              "RELA",
+              "TLR4",
+              "MYD88"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "signatures": [
+              {
+                "drug": "nintedanib",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.87
+              },
+              {
+                "drug": "pirfenidone",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.82
+              },
+              {
+                "drug": "losartan",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.65
+              }
+            ],
+            "n": 3,
+            "error": null,
+            "tool": "retrieve_lincs_signatures"
+          },
+          {
+            "query": "nintedanib A549 TGF-beta EMT fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "pirfenidone A549 TGF-beta EMT fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "losartan A549 TGF-beta EMT pulmonary fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "dexamethasone A549 TGF-beta EMT pulmonary fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "CN1CCN(CC1)C2=C(C=C(C=C2)C(=O)N3CC4=C(C3)C5=C(C=C(C=C5)F)N4C(=O)C6=CC=C(C=C6)F)OC7=CC=CC=C7",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "CC1=C(C(=O)N(C1=O)C2=CC=CC=C2)C",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "ClC1=CC=C(C=C1)C2=CC=NN2C3=CC=C(C=C3)C(=O)O",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "CC12CCC3C(C1CCC2(C(=O)CO)O)CCC4=CC(=O)C=CC34C",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "query": "nintedanib pirfenidone losartan dexamethasone idiopathic pulmonary fibrosis comparison",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "losartan anti-fibrotic TGF-beta pulmonary fibrosis clinical trial",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "dexamethasone pulmonary fibrosis TGF-beta epithelial mesenchymal transition",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "nintedanib TGF-beta signaling EMT inhibition A549 cell",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          }
+        ],
+        "tokens_in": 11544,
+        "tokens_out": 1489
+      },
+      {
+        "case": "ipf",
+        "final_ranking": [
+          {
+            "drug": "Nintedanib",
+            "rank": 1,
+            "confidence": "high",
+            "rationale": "Approved first-line IPF therapy; targets PDGFR/FGFR/VEGFR (anti-fibrotic/anti-angiogenic); highest LINCS similarity (0.87) for reversing TGFB1_down signature in A549 cells; directly targets HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION pathway"
+          },
+          {
+            "drug": "Pirfenidone",
+            "rank": 2,
+            "confidence": "high",
+            "rationale": "Approved first-line IPF therapy; inhibits TGFB1 and TNFA; strong LINCS similarity (0.82) for reversing TGFB1_down in A549; targets both EMT and inflammatory response pathways"
+          },
+          {
+            "drug": "Losartan",
+            "rank": 3,
+            "confidence": "medium",
+            "rationale": "Angiotensin II receptor blocker with anti-fibrotic TGF-beta downregulation; moderate LINCS similarity (0.65) for TGFB1 reversal in A549; targets EMT pathway but not approved for IPF; weaker evidence than nintedanib/pirfenidone"
+          },
+          {
+            "drug": "Dexamethasone",
+            "rank": 4,
+            "confidence": "low",
+            "rationale": "Anti-inflammatory glucocorticoid; targets inflammatory response pathway but not directly EMT or TGF-beta signaling; no LINCS signature for TGFB1 reversal in A549; corticosteroids lack proven efficacy in IPF clinical trials and may be harmful"
+          }
+        ],
+        "error": null,
+        "tool_results": [
+          {
+            "name": "Nintedanib",
+            "drugbank_id": "DB09079",
+            "targets": [
+              "PDGFRA",
+              "PDGFRB",
+              "FGFR1",
+              "FGFR2",
+              "FGFR3",
+              "VEGFR1",
+              "VEGFR2",
+              "VEGFR3"
+            ],
+            "moa": "Tyrosine kinase inhibitor targeting PDGFR, FGFR, VEGFR -- anti-fibrotic and anti-angiogenic",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_ANGIOGENESIS"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Pirfenidone",
+            "drugbank_id": "DB04951",
+            "targets": [
+              "TGFB1",
+              "TNFA"
+            ],
+            "moa": "Anti-fibrotic; inhibits TGF-beta synthesis and fibroblast proliferation",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_INFLAMMATORY_RESPONSE"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Losartan",
+            "drugbank_id": "DB00678",
+            "targets": [
+              "AGTR1"
+            ],
+            "moa": "Angiotensin II receptor blocker (ARB); anti-fibrotic via TGF-beta downregulation",
+            "indication": "Hypertension; investigated for IPF",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Dexamethasone",
+            "drugbank_id": "DB01234",
+            "targets": [
+              "NR3C1"
+            ],
+            "moa": "Glucocorticoid receptor agonist; anti-inflammatory and immunosuppressive",
+            "indication": "Cerebral edema in GBM, inflammation",
+            "pathways": [
+              "HALLMARK_INFLAMMATORY_RESPONSE",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+            "genes": [
+              "TGFB1",
+              "SNAI1",
+              "SNAI2",
+              "TWIST1",
+              "ZEB1",
+              "ZEB2",
+              "CDH1",
+              "CDH2",
+              "VIM",
+              "FN1",
+              "COL1A1",
+              "COL1A2",
+              "ACTA2"
+            ],
+            "n_genes": 13,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_TGF_BETA_SIGNALING",
+            "genes": [],
+            "error": "pathway not found",
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_INFLAMMATORY_RESPONSE",
+            "genes": [
+              "IL6",
+              "IL1B",
+              "TNF",
+              "CXCL8",
+              "CCL2",
+              "PTGS2",
+              "NFKB1",
+              "RELA",
+              "TLR4",
+              "MYD88"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "signatures": [
+              {
+                "drug": "nintedanib",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.87
+              },
+              {
+                "drug": "pirfenidone",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.82
+              },
+              {
+                "drug": "losartan",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.65
+              }
+            ],
+            "n": 3,
+            "error": null,
+            "tool": "retrieve_lincs_signatures"
+          },
+          {
+            "query": "nintedanib A549 TGF-beta EMT fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "pirfenidone A549 TGF-beta EMT",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "losartan A549 TGF-beta EMT pulmonary fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "dexamethasone A549 TGF-beta EMT fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "CN1CCN(CC1)C2=C(C=C(C=C2)NC(=O)C3=CC(=C(C=C3)NC(=O)C4=CC5=C(C=C4)N=CN5)C(=O)N(C)C)OC",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "CC1=C(C(=O)N(C1=O)C)C2=CC=CC=C2",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "ClC1=CC=C(C=C1)C2=CC(=NN2C3=CC=CC=C3C4=CC=CC=C4)C(=O)O",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "CC12CCC3C(C1CCC2(C(=O)CO)O)CCC4=CC(=O)C=CC34C",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "query": "nintedanib idiopathic pulmonary fibrosis clinical trial efficacy",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "pirfenidone idiopathic pulmonary fibrosis clinical trial",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "losartan idiopathic pulmonary fibrosis clinical trial",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "dexamethasone idiopathic pulmonary fibrosis treatment",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          }
+        ],
+        "tokens_in": 11414,
+        "tokens_out": 1454
+      },
+      {
+        "case": "ipf",
+        "final_ranking": null,
+        "error": "No ranking JSON found in response: ```json\n{\"ranked_candidates\": [{\"drug\": \"Nintedanib\", \"rank\": 1, \"confidence\": \"high\", \"rationale\": \"Approved for IPF, directly targets PDGFR/FGFR/VEGFR (anti-fibrotic/anti-angiogenic), hits HALLMARK_EMT pathway, and shows highest LINCS similarity (0.87) to TGFB1_down perturbation in A549 cells, ind",
+        "tool_results": [
+          {
+            "name": "Nintedanib",
+            "drugbank_id": "DB09079",
+            "targets": [
+              "PDGFRA",
+              "PDGFRB",
+              "FGFR1",
+              "FGFR2",
+              "FGFR3",
+              "VEGFR1",
+              "VEGFR2",
+              "VEGFR3"
+            ],
+            "moa": "Tyrosine kinase inhibitor targeting PDGFR, FGFR, VEGFR -- anti-fibrotic and anti-angiogenic",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_ANGIOGENESIS"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Pirfenidone",
+            "drugbank_id": "DB04951",
+            "targets": [
+              "TGFB1",
+              "TNFA"
+            ],
+            "moa": "Anti-fibrotic; inhibits TGF-beta synthesis and fibroblast proliferation",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_INFLAMMATORY_RESPONSE"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Losartan",
+            "drugbank_id": "DB00678",
+            "targets": [
+              "AGTR1"
+            ],
+            "moa": "Angiotensin II receptor blocker (ARB); anti-fibrotic via TGF-beta downregulation",
+            "indication": "Hypertension; investigated for IPF",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Dexamethasone",
+            "drugbank_id": "DB01234",
+            "targets": [
+              "NR3C1"
+            ],
+            "moa": "Glucocorticoid receptor agonist; anti-inflammatory and immunosuppressive",
+            "indication": "Cerebral edema in GBM, inflammation",
+            "pathways": [
+              "HALLMARK_INFLAMMATORY_RESPONSE",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "signatures": [
+              {
+                "drug": "nintedanib",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.87
+              },
+              {
+                "drug": "pirfenidone",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.82
+              },
+              {
+                "drug": "losartan",
+                "perturbation": "TGFB1_down",
+                "cell_line": "A549",
+                "similarity": 0.65
+              }
+            ],
+            "n": 3,
+            "error": null,
+            "tool": "retrieve_lincs_signatures"
+          },
+          {
+            "name": "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+            "genes": [
+              "TGFB1",
+              "SNAI1",
+              "SNAI2",
+              "TWIST1",
+              "ZEB1",
+              "ZEB2",
+              "CDH1",
+              "CDH2",
+              "VIM",
+              "FN1",
+              "COL1A1",
+              "COL1A2",
+              "ACTA2"
+            ],
+            "n_genes": 13,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+            "genes": [
+              "TNF",
+              "NFKB1",
+              "NFKBIA",
+              "RELA",
+              "TNFAIP3",
+              "JUN",
+              "FOS",
+              "IL6",
+              "IL1B",
+              "CCL2",
+              "CXCL8"
+            ],
+            "n_genes": 11,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_INFLAMMATORY_RESPONSE",
+            "genes": [
+              "IL6",
+              "IL1B",
+              "TNF",
+              "CXCL8",
+              "CCL2",
+              "PTGS2",
+              "NFKB1",
+              "RELA",
+              "TLR4",
+              "MYD88"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "query": "Nintedanib A549 TGF-beta EMT fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Pirfenidone A549 TGF-beta EMT anti-fibrotic",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Losartan A549 TGF-beta EMT pulmonary fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Dexamethasone A549 TGF-beta EMT fibrosis",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "Nintedanib",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "Pirfenidone",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "Losartan",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "A549",
+            "drug_smiles": "Dexamethasone",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          }
+        ],
+        "tokens_in": 9404,
+        "tokens_out": 1174
+      }
+    ],
+    "gbm": [
+      {
+        "case": "gbm",
+        "final_ranking": [
+          {
+            "drug": "Temozolomide",
+            "rank": 1,
+            "confidence": "high",
+            "rationale": "Standard of care for GBM; directly targets DNA repair defects and p53 pathway dysregulation; highest LINCS similarity (0.91) in U251 cells for DNA damage response."
+          },
+          {
+            "drug": "Bevacizumab",
+            "rank": 2,
+            "confidence": "high",
+            "rationale": "Targets VEGF-driven angiogenesis and hypoxia, key GBM features; strong LINCS similarity (0.78) for VEGF downregulation in U251; clinically used in recurrent GBM."
+          },
+          {
+            "drug": "Dexamethasone",
+            "rank": 3,
+            "confidence": "medium",
+            "rationale": "Used for cerebral edema management in GBM; moderate LINCS similarity (0.73) for NFKB downregulation; does not target core GBM biology (DNA repair, p53, angiogenesis)."
+          },
+          {
+            "drug": "Pirfenidone",
+            "rank": 4,
+            "confidence": "low",
+            "rationale": "Anti-fibrotic drug not indicated for GBM; lowest LINCS similarity (0.51) for TGFB1 downregulation in U251; targets EMT/inflammation rather than primary GBM drivers."
+          }
+        ],
+        "error": null,
+        "tool_results": [
+          {
+            "name": "Temozolomide",
+            "drugbank_id": "DB00853",
+            "targets": [
+              "DNA"
+            ],
+            "moa": "Alkylating agent; methylates guanine at O6 position causing DNA damage and apoptosis",
+            "indication": "Glioblastoma multiforme (GBM)",
+            "pathways": [
+              "HALLMARK_DNA_REPAIR",
+              "HALLMARK_P53_PATHWAY",
+              "HALLMARK_APOPTOSIS"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Bevacizumab",
+            "drugbank_id": "DB00112",
+            "targets": [
+              "VEGFA"
+            ],
+            "moa": "Anti-VEGF monoclonal antibody; inhibits angiogenesis",
+            "indication": "Glioblastoma (recurrent), colorectal cancer, NSCLC",
+            "pathways": [
+              "HALLMARK_ANGIOGENESIS",
+              "HALLMARK_HYPOXIA"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Dexamethasone",
+            "drugbank_id": "DB01234",
+            "targets": [
+              "NR3C1"
+            ],
+            "moa": "Glucocorticoid receptor agonist; anti-inflammatory and immunosuppressive",
+            "indication": "Cerebral edema in GBM, inflammation",
+            "pathways": [
+              "HALLMARK_INFLAMMATORY_RESPONSE",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Pirfenidone",
+            "drugbank_id": "DB04951",
+            "targets": [
+              "TGFB1",
+              "TNFA"
+            ],
+            "moa": "Anti-fibrotic; inhibits TGF-beta synthesis and fibroblast proliferation",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_INFLAMMATORY_RESPONSE"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "HALLMARK_ANGIOGENESIS",
+            "genes": [
+              "VEGFA",
+              "VEGFR2",
+              "PDGFRB",
+              "FGFR1",
+              "ANGPT1",
+              "ANGPT2",
+              "TEK",
+              "FLT1",
+              "KDR",
+              "NOTCH1"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_DNA_REPAIR",
+            "genes": [
+              "BRCA1",
+              "BRCA2",
+              "RAD51",
+              "ATM",
+              "ATR",
+              "TP53",
+              "CHEK1",
+              "CHEK2",
+              "MLH1",
+              "MSH2"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_P53_PATHWAY",
+            "genes": [
+              "TP53",
+              "CDKN1A",
+              "MDM2",
+              "BAX",
+              "BBC3",
+              "GADD45A",
+              "RRM2B",
+              "SESN1",
+              "TIGAR"
+            ],
+            "n_genes": 9,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_HYPOXIA",
+            "genes": [
+              "HIF1A",
+              "VEGFA",
+              "LDHA",
+              "HK2",
+              "SLC2A1",
+              "PGK1",
+              "EPO",
+              "BNIP3",
+              "BNIP3L",
+              "PDK1"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "signatures": [
+              {
+                "drug": "temozolomide",
+                "perturbation": "DNA_damage_up",
+                "cell_line": "U251",
+                "similarity": 0.91
+              },
+              {
+                "drug": "bevacizumab",
+                "perturbation": "VEGF_down",
+                "cell_line": "U251",
+                "similarity": 0.78
+              },
+              {
+                "drug": "dexamethasone",
+                "perturbation": "NFKB_down",
+                "cell_line": "U251",
+                "similarity": 0.73
+              },
+              {
+                "drug": "nintedanib",
+                "perturbation": "TGFB1_down",
+                "cell_line": "U251",
+                "similarity": 0.55
+              },
+              {
+                "drug": "pirfenidone",
+                "perturbation": "TGFB1_down",
+                "cell_line": "U251",
+                "similarity": 0.51
+              }
+            ],
+            "n": 5,
+            "error": null,
+            "tool": "retrieve_lincs_signatures"
+          },
+          {
+            "cell_line": "U251",
+            "drug_smiles": "CN1N=NC(=O)C1=NC(=O)N(C)C",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "",
+            "drug_smiles": "",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "U251",
+            "drug_smiles": "CC(C)CC1=CC=C(C=C1)C(C(=O)O)N",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          }
+        ],
+        "tokens_in": 9026,
+        "tokens_out": 9367
+      },
+      {
+        "case": "gbm",
+        "final_ranking": [
+          {
+            "drug": "Temozolomide",
+            "rank": 1,
+            "confidence": "high",
+            "rationale": "Standard of care for GBM; directly targets DNA repair defects via O6-guanine methylation, activates p53 pathway and apoptosis. Highest LINCS similarity (0.91) in U251 cells for DNA damage response, directly matching GBM's hallmark DNA repair defects."
+          },
+          {
+            "drug": "Bevacizumab",
+            "rank": 2,
+            "confidence": "high",
+            "rationale": "Anti-VEGF antibody directly inhibits angiogenesis (VEGFA target), a key GBM feature. LINCS signature shows VEGF_down (0.78) in U251 cells. Approved for recurrent GBM, addressing hypoxia-driven VEGF pathway."
+          },
+          {
+            "drug": "Pirfenidone",
+            "rank": 3,
+            "confidence": "medium",
+            "rationale": "Anti-fibrotic targeting TGFB1/TNFA; may reduce EMT and inflammation in GBM microenvironment. LINCS shows TGFB1_down (0.51) in U251, but not approved for GBM and lower similarity score than top candidates."
+          },
+          {
+            "drug": "Dexamethasone",
+            "rank": 4,
+            "confidence": "low",
+            "rationale": "Glucocorticoid used for cerebral edema in GBM, not for tumor growth inhibition. LINCS shows NFKB_down (0.73) in U251, but its primary role is symptom management and may even promote tumor growth via immunosuppression; no direct anti-tumor efficacy."
+          }
+        ],
+        "error": null,
+        "tool_results": [
+          {
+            "name": "Temozolomide",
+            "drugbank_id": "DB00853",
+            "targets": [
+              "DNA"
+            ],
+            "moa": "Alkylating agent; methylates guanine at O6 position causing DNA damage and apoptosis",
+            "indication": "Glioblastoma multiforme (GBM)",
+            "pathways": [
+              "HALLMARK_DNA_REPAIR",
+              "HALLMARK_P53_PATHWAY",
+              "HALLMARK_APOPTOSIS"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Bevacizumab",
+            "drugbank_id": "DB00112",
+            "targets": [
+              "VEGFA"
+            ],
+            "moa": "Anti-VEGF monoclonal antibody; inhibits angiogenesis",
+            "indication": "Glioblastoma (recurrent), colorectal cancer, NSCLC",
+            "pathways": [
+              "HALLMARK_ANGIOGENESIS",
+              "HALLMARK_HYPOXIA"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Dexamethasone",
+            "drugbank_id": "DB01234",
+            "targets": [
+              "NR3C1"
+            ],
+            "moa": "Glucocorticoid receptor agonist; anti-inflammatory and immunosuppressive",
+            "indication": "Cerebral edema in GBM, inflammation",
+            "pathways": [
+              "HALLMARK_INFLAMMATORY_RESPONSE",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Pirfenidone",
+            "drugbank_id": "DB04951",
+            "targets": [
+              "TGFB1",
+              "TNFA"
+            ],
+            "moa": "Anti-fibrotic; inhibits TGF-beta synthesis and fibroblast proliferation",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_INFLAMMATORY_RESPONSE"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "signatures": [
+              {
+                "drug": "temozolomide",
+                "perturbation": "DNA_damage_up",
+                "cell_line": "U251",
+                "similarity": 0.91
+              },
+              {
+                "drug": "bevacizumab",
+                "perturbation": "VEGF_down",
+                "cell_line": "U251",
+                "similarity": 0.78
+              },
+              {
+                "drug": "dexamethasone",
+                "perturbation": "NFKB_down",
+                "cell_line": "U251",
+                "similarity": 0.73
+              },
+              {
+                "drug": "nintedanib",
+                "perturbation": "TGFB1_down",
+                "cell_line": "U251",
+                "similarity": 0.55
+              },
+              {
+                "drug": "pirfenidone",
+                "perturbation": "TGFB1_down",
+                "cell_line": "U251",
+                "similarity": 0.51
+              }
+            ],
+            "n": 5,
+            "error": null,
+            "tool": "retrieve_lincs_signatures"
+          },
+          {
+            "name": "HALLMARK_ANGIOGENESIS",
+            "genes": [
+              "VEGFA",
+              "VEGFR2",
+              "PDGFRB",
+              "FGFR1",
+              "ANGPT1",
+              "ANGPT2",
+              "TEK",
+              "FLT1",
+              "KDR",
+              "NOTCH1"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_DNA_REPAIR",
+            "genes": [
+              "BRCA1",
+              "BRCA2",
+              "RAD51",
+              "ATM",
+              "ATR",
+              "TP53",
+              "CHEK1",
+              "CHEK2",
+              "MLH1",
+              "MSH2"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_P53_PATHWAY",
+            "genes": [
+              "TP53",
+              "CDKN1A",
+              "MDM2",
+              "BAX",
+              "BBC3",
+              "GADD45A",
+              "RRM2B",
+              "SESN1",
+              "TIGAR"
+            ],
+            "n_genes": 9,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_HYPOXIA",
+            "genes": [
+              "HIF1A",
+              "VEGFA",
+              "LDHA",
+              "HK2",
+              "SLC2A1",
+              "PGK1",
+              "EPO",
+              "BNIP3",
+              "BNIP3L",
+              "PDK1"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "query": "Temozolomide glioblastoma U251 efficacy",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Bevacizumab glioblastoma U251 efficacy",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Dexamethasone glioblastoma U251 tumor growth",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Pirfenidone glioblastoma U251 efficacy",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Temozolomide standard of care glioblastoma",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Pirfenidone TGF-beta glioblastoma brain tumor",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Dexamethasone glioblastoma tumor growth promotion",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          }
+        ],
+        "tokens_in": 9111,
+        "tokens_out": 1096
+      },
+      {
+        "case": "gbm",
+        "final_ranking": [
+          {
+            "drug": "Temozolomide",
+            "rank": 1,
+            "confidence": "high",
+            "rationale": "Standard of care for GBM; directly targets DNA repair defects and p53 pathway (HALLMARK_DNA_REPAIR, HALLMARK_P53_PATHWAY); highest LINCS similarity (0.91) in U251 cells for DNA damage response; alkylating agent mechanism matches GBM biology."
+          },
+          {
+            "drug": "Bevacizumab",
+            "rank": 2,
+            "confidence": "high",
+            "rationale": "Directly targets VEGF-driven angiogenesis (HALLMARK_ANGIOGENESIS) and hypoxia (HALLMARK_HYPOXIA), both key GBM features; approved for recurrent GBM; strong LINCS similarity (0.78) for VEGF_down in U251 cells."
+          },
+          {
+            "drug": "Pirfenidone",
+            "rank": 3,
+            "confidence": "medium",
+            "rationale": "Targets TGFB1 and TNFA, relevant to GBM's inflammatory and fibrotic microenvironment; LINCS similarity (0.51) for TGFB1_down in U251 cells; not approved for GBM but has mechanistic rationale for targeting EMT and inflammation."
+          },
+          {
+            "drug": "Dexamethasone",
+            "rank": 4,
+            "confidence": "low",
+            "rationale": "Used for cerebral edema management, not anti-tumor efficacy; targets NR3C1 and inflammatory pathways (HALLMARK_INFLAMMATORY_RESPONSE); LINCS similarity (0.73) for NFKB_down but primarily palliative, not cytotoxic against GBM cells."
+          }
+        ],
+        "error": null,
+        "tool_results": [
+          {
+            "name": "Temozolomide",
+            "drugbank_id": "DB00853",
+            "targets": [
+              "DNA"
+            ],
+            "moa": "Alkylating agent; methylates guanine at O6 position causing DNA damage and apoptosis",
+            "indication": "Glioblastoma multiforme (GBM)",
+            "pathways": [
+              "HALLMARK_DNA_REPAIR",
+              "HALLMARK_P53_PATHWAY",
+              "HALLMARK_APOPTOSIS"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Bevacizumab",
+            "drugbank_id": "DB00112",
+            "targets": [
+              "VEGFA"
+            ],
+            "moa": "Anti-VEGF monoclonal antibody; inhibits angiogenesis",
+            "indication": "Glioblastoma (recurrent), colorectal cancer, NSCLC",
+            "pathways": [
+              "HALLMARK_ANGIOGENESIS",
+              "HALLMARK_HYPOXIA"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Dexamethasone",
+            "drugbank_id": "DB01234",
+            "targets": [
+              "NR3C1"
+            ],
+            "moa": "Glucocorticoid receptor agonist; anti-inflammatory and immunosuppressive",
+            "indication": "Cerebral edema in GBM, inflammation",
+            "pathways": [
+              "HALLMARK_INFLAMMATORY_RESPONSE",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "name": "Pirfenidone",
+            "drugbank_id": "DB04951",
+            "targets": [
+              "TGFB1",
+              "TNFA"
+            ],
+            "moa": "Anti-fibrotic; inhibits TGF-beta synthesis and fibroblast proliferation",
+            "indication": "Idiopathic pulmonary fibrosis (IPF)",
+            "pathways": [
+              "HALLMARK_EPITHELIAL_MESENCHYMAL_TRANSITION",
+              "HALLMARK_TNFA_SIGNALING_VIA_NFKB",
+              "HALLMARK_INFLAMMATORY_RESPONSE"
+            ],
+            "error": null,
+            "tool": "query_drugbank"
+          },
+          {
+            "signatures": [
+              {
+                "drug": "temozolomide",
+                "perturbation": "DNA_damage_up",
+                "cell_line": "U251",
+                "similarity": 0.91
+              },
+              {
+                "drug": "bevacizumab",
+                "perturbation": "VEGF_down",
+                "cell_line": "U251",
+                "similarity": 0.78
+              },
+              {
+                "drug": "dexamethasone",
+                "perturbation": "NFKB_down",
+                "cell_line": "U251",
+                "similarity": 0.73
+              },
+              {
+                "drug": "nintedanib",
+                "perturbation": "TGFB1_down",
+                "cell_line": "U251",
+                "similarity": 0.55
+              },
+              {
+                "drug": "pirfenidone",
+                "perturbation": "TGFB1_down",
+                "cell_line": "U251",
+                "similarity": 0.51
+              }
+            ],
+            "n": 5,
+            "error": null,
+            "tool": "retrieve_lincs_signatures"
+          },
+          {
+            "name": "HALLMARK_ANGIOGENESIS",
+            "genes": [
+              "VEGFA",
+              "VEGFR2",
+              "PDGFRB",
+              "FGFR1",
+              "ANGPT1",
+              "ANGPT2",
+              "TEK",
+              "FLT1",
+              "KDR",
+              "NOTCH1"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_DNA_REPAIR",
+            "genes": [
+              "BRCA1",
+              "BRCA2",
+              "RAD51",
+              "ATM",
+              "ATR",
+              "TP53",
+              "CHEK1",
+              "CHEK2",
+              "MLH1",
+              "MSH2"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_P53_PATHWAY",
+            "genes": [
+              "TP53",
+              "CDKN1A",
+              "MDM2",
+              "BAX",
+              "BBC3",
+              "GADD45A",
+              "RRM2B",
+              "SESN1",
+              "TIGAR"
+            ],
+            "n_genes": 9,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "name": "HALLMARK_HYPOXIA",
+            "genes": [
+              "HIF1A",
+              "VEGFA",
+              "LDHA",
+              "HK2",
+              "SLC2A1",
+              "PGK1",
+              "EPO",
+              "BNIP3",
+              "BNIP3L",
+              "PDK1"
+            ],
+            "n_genes": 10,
+            "error": null,
+            "tool": "get_pathway_info"
+          },
+          {
+            "query": "Temozolomide glioblastoma U251 efficacy",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Bevacizumab glioblastoma U251 efficacy",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Dexamethasone glioblastoma U251 tumor growth",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "query": "Pirfenidone glioblastoma GBM efficacy",
+            "results_count": 0,
+            "results": [],
+            "note": "PubMed search stub",
+            "error": null,
+            "tool": "search_pubmed"
+          },
+          {
+            "cell_line": "U251",
+            "drug_smiles": "CN1N=NC(=O)C1=NC(=O)N(C)C",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "U251",
+            "drug_smiles": "CC1=C(C=C(C=C1)Cl)C(=O)NC2=CC=CC=C2C(=O)NCCN3CCOCC3",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "U251",
+            "drug_smiles": "CC12CCC3C(C1CCC2(C(=O)CO)O)CCC4=CC(=O)C=C34",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          },
+          {
+            "cell_line": "U251",
+            "drug_smiles": "CC1=C(C(=O)NC1=O)C2=CC=CC=C2",
+            "predicted_logFC": null,
+            "error": null,
+            "pathway_gate": [
+              0.1646,
+              0.16,
+              0.1633,
+              0.0192,
+              0.0059,
+              0.0995,
+              0.0965,
+              0.2139,
+              0.0054,
+              0.0717
+            ],
+            "tool": "predict_response"
+          }
+        ],
+        "tokens_in": 9652,
+        "tokens_out": 1290
+      }
+    ]
+  }
+}

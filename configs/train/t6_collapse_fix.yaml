@@ -1,0 +1,46 @@
+# @package _global_
+# ^ REQUIRED on hydra-core 1.3.2 so these overrides land at root and actually
+#   override /train/v1 (without it they go under `train.*` / silently no-op).
+#
+# anti-collapse, all config-gated, otherwise identical to t1_residual:
+#   - model.drug_conditioned_decoder=true -> z_dec = MLP([cell_ctx, drug_ctx, drug_summary])
+#       gives the drug effect a STRONG direct path into the decoder (not a small
+#       residual washed out by the cell-dominated state).
+#   - model.residual_decoder=true / pool_mode=drug_query  -> keep the residual decoder and drug-query pool.
+#   - loss.lam_direction=1.0   -> 1 - Pearson(pred_logfc, true_logfc), O(1).
+#   - loss.lam_drugspec=0.5    -> drug-specific direction loss; ACTIVELY penalizes
+#       collapse (inter-drug pred Pearson 0.97 -> target < 0.7).
+#
+# Run (smoke first, then long):
+#   python train.py --config-name=train/t6_collapse_fix trainer.max_epochs=1
+#   python train.py --config-name=train/t6_collapse_fix
+# Sweep the anti-collapse weight (Hydra multirun):
+#   python train.py -m --config-name=train/t6_collapse_fix loss.lam_drugspec=0.3,0.5,1.0
+#
+# GATE after training (eval/run_internal.py prints these):
+#   (1) inter-drug pred Pearson < 0.7   (2) drug-specific delta Spearman > 0
+#   (3) Spearman@50 >= Mean baseline 0.3847 (with bootstrap CI)
+defaults:
+  - /train/v1@_global_
+  - _self_
+
+run_name: t6_collapse_fix
+
+model:
+  residual_decoder: true
+  pool_mode: drug_query
+  drug_conditioned_decoder: true
+
+loss:
+  lam_direction: 1.0     # direction loss; keep at 1.0
+  lam_drugspec: 0.5      # anti-collapse; sweep [0.3, 0.5, 1.0]
+  # lam_delta: 0.0       # optional DEG-weighted Huber; set with scripts/check_loss_scale.py
+
+ckpt:
+  dirpath: ckpts/t6_collapse_fix
+
+trainer:
+  max_epochs: 20
+
+wandb:
+  name: t6_collapse_fix_sciplex

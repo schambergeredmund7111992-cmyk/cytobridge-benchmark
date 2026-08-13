@@ -1,0 +1,41 @@
+schema_version: 1
+protocol_version: 1.5.0
+screening_seed: 42
+final_seeds: [11, 23, 42, 67, 101]
+
+screening:
+  cytobridge:
+    max_epochs: 20
+    validation_interval_epochs: 1
+    early_stopping_patience_evaluations: 5
+  chemcpa:
+    max_epochs: 201
+    validation_epochs: [50, 100, 150, 200, 201]
+    initialization: from_scratch
+    public_label: chemCPA (from scratch)
+  biolord:
+    max_epochs: 500
+    validation_interval_epochs: 20
+    early_stopping_patience_evaluations: 20
+
+selection:
+  primary_metric: validation/conditional_accuracy_drug_macro
+  tie_breaker: validation/pair_own_spearman_top50_drug_macro
+  test_responses_available: false
+
+precision_gate:
+  candidates: [32-true, bf16-mixed]
+  steps: 2
+  fp32_required: true
+  select_bf16_only_if_all_values_finite: true
+  fallback_if_only_bf16_fails: 32-true
+
+final:
+  datasets: [sciplex_drug_disjoint_v2, sciplex_scaffold_disjoint_v2, tahoe]
+  cytobridge_arms:
+    - cytobridge_full
+    - cytobridge_reconstruction_free
+    - cytobridge_normalized_reconstruction
+    - cytobridge_no_pathway_gate
+    - cytobridge_drug_blind
+  external_models: [chemcpa, biolord]

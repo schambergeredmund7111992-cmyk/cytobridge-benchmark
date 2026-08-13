@@ -1,0 +1,5 @@
+cell_idx,control_cell_idx,drug_id,cell_line
+300,0,drug_d,A549
+301,1,drug_d,MCF7
+302,2,drug_d,K562
+303,3,drug_d,HT29

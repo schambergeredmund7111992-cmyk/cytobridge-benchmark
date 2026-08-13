@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "protocol_version": "1.5.0",
+  "sciplex": {
+    "minimum_seeds": {
+      "chemCPA (from scratch)": 5,
+      "biolord": 5,
+      "cytobridge": 5,
+      "mean": 1,
+      "oracle": 1,
+      "random": 5,
+      "ridge": 1
+    }
+  },
+  "tahoe": {
+    "minimum_seeds": {
+      "cytobridge": 5,
+      "mean": 1,
+      "oracle": 1,
+      "random": 5,
+      "ridge": 1
+    }
+  },
+  "ablations": {
+    "minimum_seeds": {
+      "cytobridge": 5,
+      "cytobridge_drug_blind": 5,
+      "cytobridge_no_pathway_gate": 5,
+      "cytobridge_normalized_reconstruction": 5,
+      "cytobridge_reconstruction_free": 5
+    }
+  },
+  "gradient_audit": {
+    "models": [
+      "cytobridge_full",
+      "cytobridge_reconstruction_free",
+      "cytobridge_normalized_reconstruction",
+      "cytobridge_no_pathway_gate",
+      "cytobridge_drug_blind"
+    ],
+    "seeds": [11, 23, 42, 67, 101]
+  }
+}

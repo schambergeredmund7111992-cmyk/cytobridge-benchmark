@@ -1,0 +1,22 @@
+input_h5ad: data/raw/sciplex/sciplex3.h5ad
+smiles_csv: data/raw/sciplex/sciplex3_drugs.csv
+out_dir: data/processed/sciplex_accept
+seed: 20260710
+n_hvg: 3000
+control_label: DMSO
+
+columns:
+  drug: drug
+  context: cell_line
+  batch: plate
+  dose: dose_value
+  dose_unit: dose_unit
+  time: time
+
+qc:
+  min_genes: 200
+  max_mito_percent: 20.0
+
+pathway_gsea:
+  msigdb_gmt: data/raw/msigdb/h.all.v2024.1.Hs.symbols.gmt
+  n_permutations: 1000

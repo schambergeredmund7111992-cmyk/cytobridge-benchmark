@@ -1,0 +1,13 @@
+{
+  "task": "G3-1 pathway attribution faithfulness",
+  "metric": "Spearman r(model.pathway_attn, GSEA) across K=50 pathways",
+  "mean_spearman_r": 0.38313845081353565,
+  "median_spearman_r": 0.5269754377374339,
+  "n_pairs_r_gt_0": 27,
+  "n_pairs_total": 27,
+  "n_pathways_r_gt_0.1": 47,
+  "n_pathways_total": 50,
+  "precision_at_5": 0.19999999999999998,
+  "precision_at_10": 0.09999999999999999,
+  "precision_at_20": 0.049999999999999996
+}

@@ -1,0 +1,25 @@
+# @package _global_
+defaults:
+  - /train/accept_base@_global_
+  - _self_
+
+# Use only after validation screening has frozen the config and epoch count.
+run_name: accept_final_refit_${protocol}_seed${seed}
+
+data:
+  train_manifest: data/processed/sciplex_accept/${protocol}/fit/sciplex_fit.parquet
+  # A final refit must not instantiate a validation or test dataset.
+  val_manifest: null
+  test_manifest: null
+  treated_counts_path: data/processed/sciplex_accept/${protocol}/fit/sciplex_fit_treated_counts.npy
+  input_control_counts_path: data/processed/sciplex_accept/${protocol}/fit/sciplex_fit_input_control_counts.npy
+  truth_control_counts_path: data/processed/sciplex_accept/${protocol}/fit/sciplex_fit_truth_control_counts.npy
+  pathway_gsea_path: data/processed/sciplex_accept/${protocol}/fit/sciplex_fit_pathway_gsea.npy
+
+metric:
+  enabled: false
+
+trainer:
+  final_refit: true
+  early_stopping_patience: null
+  # Override with the validation-selected epoch count, for example trainer.max_epochs=12.

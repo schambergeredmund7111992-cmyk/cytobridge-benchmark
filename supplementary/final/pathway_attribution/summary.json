@@ -1,0 +1,20 @@
+{
+  "ckpt": "ckpts/v1_full/epoch04-val_loss328.1256.ckpt",
+  "K_pathways": 50,
+  "n_test_samples": 23810,
+  "overall_pathway_r_mean": 0.4420149326324463,
+  "overall_pathway_r_median": 0.4721829295158386,
+  "pairwise_pathway_r_mean": 0.9483823665866146,
+  "pairwise_pathway_r_median": 0.9575947523117065,
+  "n_pairs": 27,
+  "per_pair_summary": {
+    "count": 27.0,
+    "mean": 0.9483823665866146,
+    "std": 0.03606305000696417,
+    "min": 0.8852834701538086,
+    "25%": 0.9132490158081055,
+    "50%": 0.9575947523117065,
+    "75%": 0.9831140339374542,
+    "max": 0.9871144890785217
+  }
+}

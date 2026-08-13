@@ -1,0 +1,107 @@
+# Python / cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets/
+
+# Hydra / training / logging
+outputs/
+multirun/
+logs/
+wandb/
+lightning_logs/
+run_metadata.json
+*.log
+
+# Model checkpoints and large binaries
+ckpts/
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Data files — excluded from git, distributed via Zenodo instead
+*.h5ad
+*.loom
+*.npy
+*.npz
+*.parquet
+*.feather
+*.pkl
+*.pickle
+*.sqlite
+*.db
+data/raw/
+data/processed/
+data/cache/
+data/external/
+# EXCEPTION: small test fixtures for student smoke test
+!data/smoke/
+!data/smoke/**
+
+# EXCEPTION: small manuscript figure data is intentionally versioned
+# so Figures 3–5 can be reproduced from source alone (~1 MB total)
+!manuscript/
+!manuscript/analysis/
+!manuscript/analysis/**
+!manuscript/figs/
+!manuscript/figs/*.pdf
+
+# EXCEPTION: supplementary experiment summaries (small CSVs/JSONs, not raw results)
+!supplementary/
+!supplementary/*.csv
+!supplementary/*.json
+!supplementary/*.jsonl
+!supplementary/*.md
+!supplementary/*.txt
+!supplementary/*.yaml
+!supplementary/*.yml
+!supplementary/gradient_audits/
+!supplementary/gradient_audits/**
+!supplementary/record/
+!supplementary/record/**
+!supplementary/results_sub/
+!supplementary/results_sub/**
+!supplementary/week3/
+!supplementary/week3/**
+!supplementary/week5/
+!supplementary/week5/**
+
+# Generated results and figures
+results/
+reports/
+figures/out/
+figures/*.pdf
+figures/*.png
+figures/*.svg
+figures/*.csv
+
+# Archives and local transfer bundles
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Local notebooks
+.ipynb_checkpoints/

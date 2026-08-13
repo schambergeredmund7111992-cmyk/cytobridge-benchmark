@@ -1,0 +1,98 @@
+# @package _global_
+# ^ REQUIRED on hydra-core 1.3.2: without it, `@hydra.main(config_name="train/v2")`
+#   namespaces every key under `train.` and `cfg.seed` fails ("not in struct").
+#   The repo's v1.yaml / smoke.yaml / ablations need the same header on hydra 1.3.x.
+#
+# configs/train/v2.yaml
+# v2 = v1 + delta-aware auxiliary loss (logFC Huber). EVERYTHING ELSE IDENTICAL
+# to v1 so this run isolates the train/eval-objective-mismatch hypothesis
+# (arm C of the diagnostic matrix). Requires the losses.py + train.py
+# patch in ../patches/losses_v2_patch.md applied first.
+#
+# Place this file at: code/configs/train/v2.yaml
+defaults:
+  - _self_
+
+seed: 42
+run_name: v2
+
+ckpt:
+  dirpath: ckpts/${run_name}
+  resume_from: null
+
+data:
+  train_manifest: data/processed/sciplex/splits/sciplex_train.parquet
+  val_manifest: data/processed/sciplex/splits/sciplex_val.parquet
+  test_manifest: data/processed/sciplex/splits/sciplex_test.parquet
+  cell_emb_path: data/cache/sciplex_scgpt_emb.npy
+  drug_emb_path: data/cache/sciplex_molformer_emb.npz
+  treated_counts_path: data/processed/sciplex/splits/sciplex_train_treated_counts.npy
+  val_treated_counts_path: data/processed/sciplex/splits/sciplex_val_treated_counts.npy
+  test_treated_counts_path: data/processed/sciplex/splits/sciplex_test_treated_counts.npy
+  control_counts_path: data/processed/sciplex/splits/sciplex_train_control_counts.npy
+  val_control_counts_path: data/processed/sciplex/splits/sciplex_val_control_counts.npy
+  test_control_counts_path: data/processed/sciplex/splits/sciplex_test_control_counts.npy
+  pathway_gsea_path: data/processed/sciplex/splits/sciplex_train_pathway_gsea.npy
+  val_pathway_gsea_path: data/processed/sciplex/splits/sciplex_val_pathway_gsea.npy
+  test_pathway_gsea_path: data/processed/sciplex/splits/sciplex_test_pathway_gsea.npy
+  batch_size: 32
+  num_workers: 4
+  pin_memory: null
+  persistent_workers: null
+  prefetch_factor: 2
+  n_hard_same_drug: 2
+  n_hard_same_cell: 2
+
+model:
+  d_cell_in: 512
+  d_drug_in: 768
+  d: 256
+  n_layers: 4
+  n_heads: 8
+  K_pathways: 50
+  n_genes: 3000
+  contrastive_dim: 128
+  dropout: 0.1
+  pathway_init_path: null
+
+loss:
+  lam_recon: 1.0
+  lam_contrast: 0.5
+  lam_pathway: 0.3
+  lam_kl: 0.05
+  temperature: 0.07
+  weight_hard: 2.0
+  # --- NEW in v2: delta-aware auxiliary loss (DEG-weighted logFC Huber) -------
+  # Per-gene Huber on (pred_logfc vs true_logfc), WEIGHTED by |true_logfc| so it
+  # concentrates on the genes that actually move (aligned with top-50-DEG eval).
+  # (A plain unweighted Huber is degenerate: control cancels -> absolute recon.)
+  #
+  # SCALE: this term is a per-sample weighted-mean ~O(1), while ZINB-NLL is a
+  # SUM over ~3000 genes ~O(1e2-1e3). So lam_delta=0.5 would be ~1000x too small
+  # and the term would be a no-op. SET lam_delta WITH THE DIAGNOSTIC FIRST:
+  #   python scripts/check_loss_scale.py --ckpt ckpts/v1_full/<best>.ckpt
+  # which prints ||grad L_recon|| vs ||grad L_delta|| and a recommended value.
+  # 200 is a placeholder order-of-magnitude estimate, NOT a tuned value.
+  lam_delta: 305.0
+  huber_beta: 1.0
+
+optim:
+  lr_bridge: 1.0e-4
+  lr_proj: 1.0e-5
+  weight_decay: 0.01
+  max_steps: 50000
+
+trainer:
+  max_epochs: 5          # keep 5 to isolate the objective effect vs v1;
+                         # arm D = run this with trainer.max_epochs=20 override
+  accelerator: auto
+  devices: auto
+  precision: bf16-mixed
+  deterministic: true
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 4
+
+wandb:
+  use: true
+  project: cytobridge
+  name: v2_sciplex_deltahuber

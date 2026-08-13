@@ -1,0 +1,6 @@
+# @package _global_
+# Ablation: no pathway loss
+loss:
+  lam_pathway: 0.0
+  lam_kl: 0.0
+run_name: no_pathway_loss

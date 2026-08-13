@@ -1,0 +1,52 @@
+{
+  "task": "G3-2 IPF drug ranking case study",
+  "disease": "Idiopathic Pulmonary Fibrosis",
+  "n_drugs_ranked": 17,
+  "top_5_drugs": [
+    "Thalidomide",
+    "Veliparib (ABT-888)",
+    "Temsirolimus (CCI-779, NSC 683864)",
+    "Celecoxib",
+    "Vandetanib (ZD6474)"
+  ],
+  "top_5_scores": [
+    -0.00467760683133077,
+    -0.004689096785167798,
+    -0.004689799605715972,
+    -0.0047113473917175415,
+    -0.004716793898073922
+  ],
+  "known_positives": [
+    "Thalidomide",
+    "Veliparib (ABT-888)",
+    "Temsirolimus (CCI-779, NSC 683864)",
+    "Celecoxib",
+    "Vandetanib (ZD6474)",
+    "ABT-737",
+    "SRT1720 HCl",
+    "Zileuton",
+    "Tofacitinib (CP-690550) Citrate",
+    "SRT3025 HCl",
+    "Sodium Phenylbutyrate",
+    "SL-327",
+    "AG-490 (Tyrphostin B42)"
+  ],
+  "hit_results": {
+    "hit@1_any": 1,
+    "hit@1_strong": 0,
+    "precision@1": 1.0,
+    "recall@1": 0.07692307692307693,
+    "hit@3_any": 3,
+    "hit@3_strong": 0,
+    "precision@3": 1.0,
+    "recall@3": 0.23076923076923078,
+    "hit@5_any": 5,
+    "hit@5_strong": 1,
+    "precision@5": 1.0,
+    "recall@5": 0.38461538461538464,
+    "hit@10_any": 7,
+    "hit@10_strong": 1,
+    "precision@10": 0.7,
+    "recall@10": 0.5384615384615384
+  }
+}

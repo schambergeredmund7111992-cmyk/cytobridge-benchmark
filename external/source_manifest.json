@@ -1,0 +1,53 @@
+{
+  "biolord": {
+    "official_package_commit": "b7688790e49728d7f8d0906b980a629de484b19b",
+    "official_package_url": "https://github.com/nitzanlab/biolord.git",
+    "reproducibility_commit": "16bfefccc0caa013b11d222f9b02aaf535807f85",
+    "reproducibility_url": "https://github.com/nitzanlab/biolord_reproducibility.git"
+  },
+  "chemCPA": {
+    "initialization": "from_scratch",
+    "official_commit": "43e830eb0958c54e4aa64442c17ec0fed19b3f15",
+    "official_url": "https://github.com/theislab/chemCPA.git",
+    "public_label": "chemCPA (from scratch)",
+    "pretrained_weights_allowed": false
+  },
+  "environment": {
+    "anndata": "0.10.7",
+    "definition": "env/environment-accept-external.yml",
+    "lightning": "2.2.4",
+    "numpy": "1.26.4",
+    "python": "3.10",
+    "scvi_tools": "1.1.6.post2",
+    "torch": "2.1.0+cuda12.1"
+  },
+  "hardware_compatibility_overlays": {
+    "autodl_rtx_5090": {
+      "definition": "env/requirements-autodl-5090-external.txt",
+      "reason": "The registered torch 2.1 CUDA 12.1 binary has no Blackwell sm_120 kernels.",
+      "transitive_overlay": {
+        "jax": "0.4.28",
+        "jaxlib": "0.4.28",
+        "flax": "0.8.4",
+        "optax": "0.2.2",
+        "orbax_checkpoint": "0.5.16",
+        "numpyro": "0.15.0",
+        "sympy": "1.14.0"
+      },
+      "torch": "2.7.1+cu128",
+      "unchanged_contract": [
+        "official source commits",
+        "architecture",
+        "hyperparameter grid",
+        "selection rule",
+        "training data and endpoints"
+      ]
+    }
+  },
+  "frozen_on": "2026-07-11",
+  "molformer": {
+    "model": "ibm/MoLFormer-XL-both-10pct",
+    "revision": "a14249e5ad9e3e7c3b1bb604393e914cfcebd2c8"
+  },
+  "policy": "No unpinned external baseline checkout may produce a primary artifact."
+}

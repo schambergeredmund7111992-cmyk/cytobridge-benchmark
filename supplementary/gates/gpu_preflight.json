@@ -1,0 +1,53 @@
+{
+  "captured_at_utc": "2026-07-16T03:49:13.907709+00:00",
+  "cytobridge_trainable_parameters": 7598020,
+  "draft_sha256": "61de209776f85c15491e31e3e4558d23d4b58d77b8604b58ee4e983ccacf5ff5",
+  "eligible_gpus": [
+    0
+  ],
+  "estimate": {
+    "basis": "frozen 79 learned jobs; fp32-safe upper bound; one GPU per job; external 201/500-epoch budgets included",
+    "campaign_checkpoint_and_result_disk_gib": [
+      90,
+      140
+    ],
+    "cpu_ram_gib_per_learned_job": [
+      30,
+      60
+    ],
+    "total_gpu_hours": [
+      140,
+      260
+    ],
+    "vram_gib_per_learned_job": [
+      18,
+      28
+    ],
+    "wall_hours_if_all_eligible_remain_available": [
+      140.0,
+      260.0
+    ]
+  },
+  "gpus": [
+    {
+      "eligible": true,
+      "index": 0,
+      "memory_total_mib": 32607,
+      "memory_used_mib": 2,
+      "name": "NVIDIA GeForce RTX 5090",
+      "utilization_percent": 0
+    }
+  ],
+  "host": "autodl",
+  "host_node": "autodl-container-d0f64f9549-4c6fc78e",
+  "host_resources": {
+    "disk_free_gib": 8.9,
+    "ram_available_gib": 290.0
+  },
+  "pi_confirmed": true,
+  "pi_confirmed_at_utc": "2026-07-16T04:29:32.134883+00:00",
+  "resource_policy": "use every GPU with utilization<5% and memory<1GiB",
+  "schema_version": 1,
+  "status": "passed",
+  "training_launched": false
+}

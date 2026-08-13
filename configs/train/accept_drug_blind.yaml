@@ -1,0 +1,9 @@
+# @package _global_
+defaults:
+  - /train/accept_base@_global_
+  - _self_
+
+run_name: accept_drug_blind_${protocol}_seed${seed}
+
+data:
+  randomize_drug_emb: true

@@ -1,0 +1,12 @@
+Method,R2_all,R2_DEG,Spearman_DEG,n_pairs,Source
+Mean (per-cell-line),0.0130,-0.0314,0.3847,27,Baselines T0-3
+Linear (Morgan FP only),-0.2433,-0.1959,0.1834,27,Baselines T0-3
+Linear-adj (Morgan FP + cell-line),-0.2504,-0.1401,0.3274,Baselines T0-3
+kNN-MolFormer (k=5),-1.6409,-0.3067,0.3423,27,Baselines T0-3
+Ridge_clean,N/A,N/A,0.3268,27,Baselines T0-3
+Pure kNN retrieval (T1-2A),-1.6409,-0.3067,0.3423,27,T1-2 Retrieval-Augmented
+kNN + g_theta correction (T1-2B),-0.3343,-0.0312,0.3617,27,T1-2 Retrieval-Augmented
+Linear-adjusted SOTA bar (T1-2C),-0.2504,-0.1401,0.3274,27,T1-2 Retrieval-Augmented
+CytoBridge V1 base,-1333.87,-68.64,0.1684,27,CytoBridge eval
+CytoBridge T1-1+T4-1+L-1 (epoch16),-6.80,-4.31,0.1799,27,CytoBridge eval
+CytoBridge T1-5 Shrinkage (epoch18),-88.74,-12.71,0.1894,27,CytoBridge eval

@@ -1,0 +1,103 @@
+# @package _global_
+defaults:
+  - _self_
+
+seed: 42
+protocol: drug_disjoint_v2
+run_name: accept_base_${protocol}_seed${seed}
+run_metadata_path: logs/${run_name}/run_metadata.json
+
+data:
+  train_manifest: data/processed/sciplex_accept/${protocol}/splits/sciplex_train.parquet
+  val_manifest: data/processed/sciplex_accept/${protocol}/splits/sciplex_val.parquet
+  test_manifest: data/processed/sciplex_accept/${protocol}/splits/sciplex_test.parquet
+  cell_emb_path: data/cache/sciplex_accept/${protocol}/scgpt_emb.npy
+  drug_emb_path: data/cache/sciplex_accept/${protocol}/molformer_emb.npz
+  treated_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_train_treated_counts.npy
+  val_treated_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_val_treated_counts.npy
+  test_treated_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_test_treated_counts.npy
+  input_control_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_train_input_control_counts.npy
+  val_input_control_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_val_input_control_counts.npy
+  test_input_control_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_test_input_control_counts.npy
+  truth_control_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_train_truth_control_counts.npy
+  val_truth_control_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_val_truth_control_counts.npy
+  test_truth_control_counts_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_test_truth_control_counts.npy
+  pathway_gsea_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_train_pathway_gsea.npy
+  val_pathway_gsea_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_val_pathway_gsea.npy
+  test_pathway_gsea_path: data/processed/sciplex_accept/${protocol}/splits/sciplex_test_pathway_gsea.npy
+  gene_scale_path: data/processed/sciplex_accept/${protocol}/splits/training_gene_scale.npy
+  batch_size: 64
+  num_workers: 8
+  multiprocessing_context: spawn
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 1
+  n_hard_same_drug: 2
+  n_hard_same_cell: 2
+  seed: ${seed}
+  randomize_drug_emb: false
+
+model:
+  d_cell_in: 512
+  d_drug_in: 768
+  d: 256
+  n_layers: 4
+  n_heads: 8
+  K_pathways: 50
+  n_genes: 3000
+  contrastive_dim: 128
+  dropout: 0.1
+  use_pathway_gate: true
+  pathway_init_path: null
+  residual_decoder: true
+  pool_mode: drug_query
+  drug_conditioned_decoder: true
+  dec_in_component_norm: true
+
+loss:
+  lam_recon: 0.1
+  lam_logfc: 0.5
+  lam_norm_recon: 0.0
+  lam_delta: 1.0
+  lam_direction: 1.0
+  lam_drugspec: 3.0
+  lam_contrast: 0.5
+  lam_pathway: 0.3
+  lam_kl: 0.05
+  huber_beta: 1.0
+  temperature: 0.07
+  weight_hard: 2.0
+
+metric:
+  enabled: true
+  gene_panels_path: data/processed/sciplex_accept/${protocol}/splits/training_gene_panels.json
+  selection_state_path: logs/${run_name}/selection_state.json
+
+gradient_audit:
+  enabled: true
+  output_path: logs/${run_name}/gradient_norms.jsonl
+
+optim:
+  lr_proj: 1.0e-5
+  lr_bridge: 1.0e-4
+  weight_decay: 0.01
+  max_steps: 50000
+
+trainer:
+  max_epochs: 6
+  accelerator: gpu
+  devices: 1
+  precision: bf16-mixed
+  deterministic: true
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 4
+  early_stopping_patience: 2
+
+ckpt:
+  dirpath: ckpts/${run_name}
+  resume_from: null
+
+wandb:
+  use: false
+  project: cytobridge-accept
+  name: ${run_name}

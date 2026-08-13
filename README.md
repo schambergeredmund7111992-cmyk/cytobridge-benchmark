@@ -1,11 +1,14 @@
 # CytoBridge
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21911960.svg)](https://doi.org/10.5281/zenodo.21911960)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21911996.svg)](https://doi.org/10.5281/zenodo.21911996)
 
 This codebase is a validation of the CytoBridge study. It tests whether
 single-cell perturbation predictors preserve held-out compound identity after conditioning on
 cellular context. No historical result is accepted automatically: every paper number comes
 from a frozen split and a validated prediction artifact.
+
+Large binary artifacts (datasets, pretrained checkpoints, experiment results) are not stored
+in this repository; download links and setup steps are in [DATA_DOWNLOADS.md](DATA_DOWNLOADS.md).
 
 ## What is frozen
 
@@ -19,13 +22,13 @@ from a frozen split and a validated prediction artifact.
 
 ## Repository map
 
-- `cytobridge/`: model, losses, data loaders, and gradient audit.
-- `data/`: sci-Plex/Tahoe metadata selection, split freezing, bounded streaming, and targets.
-- `eval/`: metrics, statistics, baselines, artifact packaging, scoring, and multi-seed aggregation.
-- `external/`: pinned official chemCPA/biolord source contract.
-- `configs/`: Hydra data and training configurations.
-- `release/`: result gate and gradient-audit collector.
-- `tests/`: deterministic contracts for leakage, metrics, artifacts, controls, and selection.
+- [`cytobridge/`](cytobridge/): model, losses, data loaders, and gradient audit.
+- [`data/`](data/): sci-Plex/Tahoe metadata selection, split freezing, bounded streaming, and targets.
+- [`eval/`](eval/): metrics, statistics, baselines, artifact packaging, scoring, and multi-seed aggregation.
+- [`external/`](external/): pinned official chemCPA/biolord source contract.
+- [`configs/`](configs/): Hydra data and training configurations.
+- [`release/`](release/): result gate and gradient-audit collector.
+- [`tests/`](tests/): deterministic contracts for leakage, metrics, artifacts, controls, and selection.
 
 ## Environment and local gate
 
@@ -103,13 +106,13 @@ python -m data.combine_fit_splits \
 This downloads metadata and streams selected expression rows; it does not materialize the full
 Tahoe expression corpus. On cityu, `bash scripts/prepare_tahoe_cpu.sh` runs this immutable CPU
 chain. After a fresh GPU estimate is explicitly approved, build the Tahoe scGPT/MolFormer caches
-with `scripts/build_tahoe_encoder_caches.sh`. The obsolete `external_1/external_2` Tahoe scripts
+with [`scripts/build_tahoe_encoder_caches.sh`](scripts/build_tahoe_encoder_caches.sh). The obsolete `external_1/external_2` Tahoe scripts
 are fail-closed because they do not implement the current protocol.
 
 ## Train, package, and score
 
-Screen only on validation using `protocols/materialized_sweeps.json`. Run long jobs through
-the repository's remote experiment protocol; `scripts/launch_train.sh` is a foreground command
+Screen only on validation using [`protocols/materialized_sweeps.json`](protocols/materialized_sweeps.json). Run long jobs through
+the repository's remote experiment protocol; [`scripts/launch_train.sh`](scripts/launch_train.sh) is a foreground command
 for an already detached experiment, not a background launcher.
 
 ```bash
@@ -124,29 +127,29 @@ After selection, create immutable final-fit inputs with
 `python -m data.combine_fit_splits`, then use `accept_final_refit` with the selected epoch count.
 That mode disables validation, early stopping, and best-checkpoint selection.
 
-The formal path does not accept hand-entered selected values. `scripts/freeze_p1_gate.py`
+The formal path does not accept hand-entered selected values. [`scripts/freeze_p1_gate.py`](scripts/freeze_p1_gate.py)
 collects all 25 P1 screens, replays the lexicographic epoch rule per model family through
-`scripts/freeze_cytobridge_selection.py` and `scripts/freeze_external_selection.py`, and writes
+[`scripts/freeze_cytobridge_selection.py`](scripts/freeze_cytobridge_selection.py) and [`scripts/freeze_external_selection.py`](scripts/freeze_external_selection.py), and writes
 the frozen selections to `experiments/selections/` plus the unlock gate
 `experiments/gates/p1_selection_frozen.json`. The primary selection actually produced on the
-AutoDL host is versioned here as `protocols/selections/cytobridge.json`
+AutoDL host is versioned here as [`protocols/selections/cytobridge.json`](protocols/selections/cytobridge.json)
 (CytoBridge `cytobridge_09`: `loss.lam_recon=0.1`, `loss.lam_drugspec=5.0`, selected epoch 1)
 together with its ranked trials table. Final sci-Plex and Tahoe refits run
-through `scripts/run_frozen_cytobridge.py`, which also consumes the frozen numerical-precision
-and DataLoader reports (`supplementary/gates/`). Tahoe therefore reuses the primary
+through [`scripts/run_frozen_cytobridge.py`](scripts/run_frozen_cytobridge.py), which also consumes the frozen numerical-precision
+and DataLoader reports ([`supplementary/gates/`](supplementary/gates/)). Tahoe therefore reuses the primary
 hyperparameters and epoch without retuning.
 
-`scripts/campaign.py` materializes the 104 registered jobs. Each command is implemented by
-`scripts/run_campaign_job.py`; learned jobs additionally require a confirmed fresh execution-host
-preflight and exactly one exposed GPU. On RTX 5090, use `scripts/launch_autodl_campaign_phase.sh`
-to run a phase through `scripts/campaign_scheduler.py` in a
+[`scripts/campaign.py`](scripts/campaign.py) materializes the 104 registered jobs. Each command is implemented by
+[`scripts/run_campaign_job.py`](scripts/run_campaign_job.py); learned jobs additionally require a confirmed fresh execution-host
+preflight and exactly one exposed GPU. On RTX 5090, use [`scripts/launch_autodl_campaign_phase.sh`](scripts/launch_autodl_campaign_phase.sh)
+to run a phase through [`scripts/campaign_scheduler.py`](scripts/campaign_scheduler.py) in a
 detached monitored experiment. The scheduler uses all confirmed idle GPUs, never retries failed
-jobs, and leaves immutable failure evidence. `scripts/freeze_p1_gate.py` unlocks P2/P3 only after
-all 25 P1 screens complete, and `scripts/finalize_campaign.py` is the sole P4 paper-input path.
+jobs, and leaves immutable failure evidence. [`scripts/freeze_p1_gate.py`](scripts/freeze_p1_gate.py) unlocks P2/P3 only after
+all 25 P1 screens complete, and [`scripts/finalize_campaign.py`](scripts/finalize_campaign.py) is the sole P4 paper-input path.
 
-Reference controls come from `eval/reference_controls.py`; Ridge selects alpha on validation and
+Reference controls come from [`eval/reference_controls.py`](eval/reference_controls.py); Ridge selects alpha on validation and
 refits on train+validation. Official chemCPA/biolord outputs must pass the adapter contract in
-`external/README.md`.
+[`external/README.md`](external/README.md).
 
 ## Repository layout note
 
@@ -154,12 +157,12 @@ This repository is the `code/` tree of the executed acceptance workspace, which 
 and `experiments/` beside `code/`. The gate scripts write `experiments/selections/`,
 `experiments/gates/`, and `experiments/campaign_manifest.json` at `../experiments` relative to
 this checkout; rerun them inside the same workspace layout. The evidence actually produced on
-the AutoDL host is versioned here under `protocols/selections/`, `supplementary/gates/`, and
-`supplementary/campaign_manifest.json`; `handoff/STATUS.json` records the SHA-256 provenance
+the AutoDL host is versioned here under [`protocols/selections/`](protocols/selections/), [`supplementary/gates/`](supplementary/gates/), and
+[`supplementary/campaign_manifest.json`](supplementary/campaign_manifest.json); [`handoff/STATUS.json`](handoff/STATUS.json) records the SHA-256 provenance
 table of the executed profiles and frozen inputs.
 
 ## Paper and release gate
 
-`release/result_gate.py` unlocks manuscript inputs only after both sci-Plex splits, Tahoe,
+[`release/result_gate.py`](release/result_gate.py) unlocks manuscript inputs only after both sci-Plex splits, Tahoe,
 five-seed ablations, calibrated controls, paired comparisons, and gradient audits are complete.
 The historical manuscript and predictions are not valid inputs to this gate.

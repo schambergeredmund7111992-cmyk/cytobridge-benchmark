@@ -1,6 +1,6 @@
 # Data and Checkpoint Sources
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21911960.svg)](https://doi.org/10.5281/zenodo.21911960)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21911996.svg)](https://doi.org/10.5281/zenodo.21911996)
 
 This repository contains only source code (~30K lines). Large binary files — datasets,
 pretrained checkpoints, cached embeddings, trained model weights, and experiment results —
@@ -10,7 +10,7 @@ are distributed via Google Drive and Zenodo.
 
 All binary artifacts live in one shared folder:
 
-**https://drive.google.com/drive/folders/1oSdZp8M1Sp39Vph9JLqrXt3PrVQJP8VF**
+[Google Drive shared folder](https://drive.google.com/drive/folders/1oSdZp8M1Sp39Vph9JLqrXt3PrVQJP8VF)
 
 | File (inside the shared folder) | Contents | Size |
 |---|---|---|
@@ -23,10 +23,11 @@ All binary artifacts live in one shared folder:
 
 ## Zenodo
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21911960.svg)](https://doi.org/10.5281/zenodo.21911960)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21911996.svg)](https://doi.org/10.5281/zenodo.21911996)
 
 Source code snapshot and small figure-reproduction data are archived at
-[10.5281/zenodo.21911960](https://doi.org/10.5281/zenodo.21911960).
+[10.5281/zenodo.21911996](https://doi.org/10.5281/zenodo.21911996) (version v1.0.3;
+all-version DOI: [10.5281/zenodo.21911960](https://doi.org/10.5281/zenodo.21911960)).
 
 ## Direct download of public datasets
 
@@ -64,4 +65,4 @@ All experiments used a single NVIDIA RTX 5090 32GB via AutoDL. Total GPU usage: 
 ## Issues
 
 If you encounter download issues, please open a GitHub issue or contact:
-cgx510510@gmail.com (G. Chen).
+[cgx510510@gmail.com](mailto:cgx510510@gmail.com) (G. Chen).

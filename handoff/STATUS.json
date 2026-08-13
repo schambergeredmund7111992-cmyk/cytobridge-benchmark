@@ -1,12 +1,18 @@
 {
   "schema_version": 1,
-  "captured_at_utc": "2026-07-15T08:05:55Z",
-  "captured_at_asia_shanghai": "2026-07-15T16:05:55+08:00",
-  "status": "protocol_1_5_autodl_5090_handoff_sysu_validated",
+  "captured_at_utc": "2026-08-13T04:30:47Z",
+  "captured_at_asia_shanghai": "2026-08-13T20:30:47+08:00",
+  "status": "protocol_1_5_autodl_5090_completed_release_v1_0_3",
   "formal_execution_target": "AutoDL RTX 5090 (32 GB)",
-  "training_started": false,
-  "revised_results_exist": false,
-  "paper_inputs_unlocked": false,
+  "training_started": true,
+  "revised_results_exist": true,
+  "paper_inputs_unlocked": true,
+  "release": {
+    "version": "1.0.3",
+    "github_tag": "v1.0.3",
+    "zenodo_version_doi": "10.5281/zenodo.21911996",
+    "zenodo_concept_doi": "10.5281/zenodo.21911960"
+  },
   "source_baseline_commit": "6a4d2f0e59c9fc4d203354d7cf940164e92edc83",
   "protocol": {
     "version": "1.5.0",
@@ -84,15 +90,9 @@
     "jobs": 104,
     "learned_jobs": 79,
     "gradient_audit_jobs": 25,
-    "completed_jobs": 0
+    "completed_jobs": 104
   },
-  "blockers": [
-    "the actual AutoDL RTX 5090 must pass the sm_120 hardware smoke",
-    "the student's external assets and generated caches must pass handoff/check_readiness.py",
-    "the numerical first-batch and spawn DataLoader equivalence gates must pass on AutoDL",
-    "a fresh AutoDL GPU/RAM/disk/runtime estimate must receive explicit PI confirmation",
-    "the frozen 104-job campaign and final result gate have not run"
-  ],
+  "blockers": [],
   "chemcpa": {
     "public_label": "chemCPA (from scratch)",
     "initialization": "from_scratch",

@@ -1,10 +1,11 @@
-CytoBridge 
+# CytoBridge
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21911960.svg)](https://doi.org/10.5281/zenodo.21911960)
 
 This codebase is a validation of the CytoBridge study. It tests whether
 single-cell perturbation predictors preserve held-out compound identity after conditioning on
-cellular context.Every paper number come from a validated prediction artifact.
+cellular context. No historical result is accepted automatically: every paper number comes
+from a frozen split and a validated prediction artifact.
 
 ## What is frozen
 

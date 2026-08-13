@@ -6,7 +6,6 @@ authors:
     family-names: Zhao
   - given-names: Guanxing
     family-names: Chen
-year: 2026
 repository-code: "https://github.com/schambergeredmund7111992-cmyk/cytobridge-benchmark"
 abstract: "CytoBridge fuses frozen scGPT cell embeddings and MolFormer-XL drug embeddings through a pathway-gated cross-attention bridge, followed by a ZINB decoder for single-cell logFC prediction. This repository is a diagnostic study that exposes prediction collapse in single-cell perturbation models through an off-diagonal drug-discrimination control."
 keywords:

@@ -14,6 +14,7 @@
     "zenodo_concept_doi": "10.5281/zenodo.21911960"
   },
   "source_baseline_commit": "6a4d2f0e59c9fc4d203354d7cf940164e92edc83",
+  "source_baseline_commit_note": "The public repository history was squashed before the v1.0.3 release; this baseline commit exists only in the original execution workspace and cannot be resolved from the published git history.",
   "protocol": {
     "version": "1.5.0",
     "protocol_sha256": "0fd8f62a5f8c29d1e21066b7d8871c7d2dcc4e7366bbef816b0f5a3cbfa3bbd0",

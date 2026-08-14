@@ -111,3 +111,4 @@ figures/*.csv
 !release_asoc/
 !release_asoc/**
 release_asoc/**/__pycache__/
+manuscript/**/__pycache__/

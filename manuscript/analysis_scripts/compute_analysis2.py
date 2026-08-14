@@ -114,6 +114,10 @@ for k in range(len(pairs)):
     d = json.loads(cs[f"pair{k}"]); print(f"  {d['A']} vs {d['B']}: pred {d['pred_r']:.2f} / true {d['true_r']:.2f}")
 
 # ---- 6. BOOTSTRAP CI for AUC and Spearman (loss-only) ----
+# NOTE: this bootstrap resamples the 27 (drug, cell line) anchors individually
+# on the per-pair-vehicle construction. Section 4.5 of the paper reports a
+# drug-clustered bootstrap on the pooled-vehicle construction instead
+# (CI [0.37, 0.51], Fig. 4e); see manuscript/analysis/data2/README.md.
 rng = np.random.default_rng(0)
 aucs, rhos = [], []
 n = len(true0)

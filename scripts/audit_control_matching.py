@@ -19,8 +19,8 @@ If no   -> drop arm B; the control-matching confound is not addressable and
 Run on the remote where the processed h5ad lives:
 
     cd code
-    python /path/to/audit_control_matching.py \
-        --h5ad data/processed/sciplex/sciplex_processed.h5ad
+    python scripts/audit_control_matching.py \
+        --h5ad data/processed/sciplex_accept/drug_disjoint_v2/sciplex_processed.h5ad
 """
 from __future__ import annotations
 

@@ -7,7 +7,6 @@ Uses per-split npy files + parquet manifests (no full h5ad needed at runtime).
 from __future__ import annotations
 
 import argparse
-import json
 from pathlib import Path
 
 import numpy as np
@@ -240,11 +239,11 @@ def baseline_knn_molformer(fit_pairs, test_pairs, molformer_emb, molformer_ids,
 # ---------------------------------------------------------------------------
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--splits_dir", default="data/processed/sciplex/splits")
-    ap.add_argument("--splits_json", default="data/processed/sciplex/splits/internal_splits.json")
-    ap.add_argument("--smiles_csv", default="data/processed/sciplex/drugs_canonical.csv")
+    ap.add_argument("--splits_dir", default="data/processed/sciplex_accept/drug_disjoint_v2/splits")
+    ap.add_argument("--splits_csv", default="data/processed/sciplex_accept/drug_disjoint_v2/split_assignments.csv")
+    ap.add_argument("--smiles_csv", default="data/processed/sciplex_accept/drug_disjoint_v2/eligible_compounds.csv")
     ap.add_argument("--molformer_npz", default="data/cache/sciplex_molformer_emb.npz")
-    ap.add_argument("--ridge_csv", default="../results/ridge_baseline_clean_v2.csv")
+    ap.add_argument("--ridge_csv", default="results/ridge_baseline_clean_v2.csv")
     ap.add_argument("--out", default="results/baselines_comparison.csv")
     ap.add_argument("--k_knn", type=int, default=5)
     ap.add_argument("--alpha", type=float, default=1.0)
@@ -252,10 +251,17 @@ def main():
 
     splits_dir = Path(args.splits_dir)
 
-    with open(args.splits_json) as f:
-        splits = json.load(f)
-    train_drugs = splits["train_drugs"] + splits["val_drugs"]
-    test_drugs = splits["test_drugs"]
+    assignments = pd.read_csv(args.splits_csv)
+    missing = {"drug_id", "split"} - set(assignments.columns)
+    if missing:
+        raise SystemExit(f"{args.splits_csv} is missing column(s): {sorted(missing)}")
+    by_split = (
+        assignments.groupby("split")["drug_id"]
+        .apply(lambda series: series.astype(str).tolist())
+        .to_dict()
+    )
+    train_drugs = by_split.get("train", []) + by_split.get("val", [])
+    test_drugs = by_split.get("test", [])
     cell_lines = ["A549", "K562", "MCF7"]
     n_genes = 3000
 
@@ -266,23 +272,25 @@ def main():
     pairs_train = build_pseudobulk(
         splits_dir / "sciplex_train.parquet",
         splits_dir / "sciplex_train_treated_counts.npy",
-        splits_dir / "sciplex_train_control_counts.npy",
+        splits_dir / "sciplex_train_truth_control_counts.npy",
     )
     pairs_val = build_pseudobulk(
         splits_dir / "sciplex_val.parquet",
         splits_dir / "sciplex_val_treated_counts.npy",
-        splits_dir / "sciplex_val_control_counts.npy",
+        splits_dir / "sciplex_val_truth_control_counts.npy",
     )
     pairs_test = build_pseudobulk(
         splits_dir / "sciplex_test.parquet",
         splits_dir / "sciplex_test_treated_counts.npy",
-        splits_dir / "sciplex_test_control_counts.npy",
+        splits_dir / "sciplex_test_truth_control_counts.npy",
     )
     pairs_fit = merge_pairs(pairs_train, pairs_val)
     print(f"  Fit pairs: {len(pairs_fit)}, Test pairs: {len(pairs_test)}")
 
     # ---- SMILES -> Morgan FP ----
     smiles_df = pd.read_csv(args.smiles_csv)
+    if "smiles" not in smiles_df.columns and "canonical_smiles" in smiles_df.columns:
+        smiles_df = smiles_df.rename(columns={"canonical_smiles": "smiles"})
     smiles_map = dict(zip(smiles_df["drug_id"].astype(str), smiles_df["smiles"]))
     all_drug_names = set()
     for d, _ in pairs_fit:

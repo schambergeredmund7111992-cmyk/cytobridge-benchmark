@@ -11,9 +11,9 @@ Run:
   cd code
   python scripts/check_drug_embeddings.py \
     --molformer data/cache/sciplex_molformer_emb.npz \
-    --splits_json data/processed/sciplex/splits/internal_splits.json
+    --splits_csv data/processed/sciplex_accept/drug_disjoint_v2/split_assignments.csv
 
-Reads only the MolFormer npz + split JSON; no GPU, no model, no training data.
+Reads only the MolFormer npz + split assignments CSV; no GPU, no model, no training data.
 """
 from __future__ import annotations
 
@@ -22,6 +22,7 @@ import json
 from pathlib import Path
 
 import numpy as np
+import pandas as pd
 
 
 def cosine_stats(emb: np.ndarray) -> dict:
@@ -47,8 +48,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--molformer", type=Path,
                     default=Path("data/cache/sciplex_molformer_emb.npz"))
-    ap.add_argument("--splits_json", type=Path,
-                    default=Path("data/processed/sciplex/splits/internal_splits.json"))
+    ap.add_argument("--splits_csv", type=Path,
+                    default=Path("data/processed/sciplex_accept/drug_disjoint_v2/split_assignments.csv"))
     args = ap.parse_args()
 
     mf = np.load(args.molformer, allow_pickle=True)
@@ -66,16 +67,25 @@ def main():
         emb = tokens
     id_to_row = {d: i for i, d in enumerate(ids)}
 
-    splits = json.loads(Path(args.splits_json).read_text())
-    test_drugs = [d for d in splits.get("test_drugs", []) if d in id_to_row]
-    train_drugs = [d for d in (splits.get("train_drugs", []) + splits.get("val_drugs", []))
-                   if d in id_to_row]
+    assignments = pd.read_csv(args.splits_csv)
+    missing = {"drug_id", "split"} - set(assignments.columns)
+    if missing:
+        raise SystemExit(f"{args.splits_csv} is missing column(s): {sorted(missing)}")
+    by_split = (
+        assignments.groupby("split")["drug_id"]
+        .apply(lambda series: series.astype(str).tolist())
+        .to_dict()
+    )
+    test_drugs = [d for d in by_split.get("test", []) if d in id_to_row]
+    train_drugs = [
+        d for d in (by_split.get("train", []) + by_split.get("val", [])) if d in id_to_row
+    ]
 
     test_emb = emb[[id_to_row[d] for d in test_drugs]] if test_drugs else np.zeros((0, emb.shape[1]))
     train_emb = emb[[id_to_row[d] for d in train_drugs]] if train_drugs else np.zeros((0, emb.shape[1]))
 
     print(f"embedding shape: tokens={tokens.shape}  mean-pooled={emb.shape}")
-    print(f"test drugs found: {len(test_drugs)} / {len(splits.get('test_drugs', []))}")
+    print(f"test drugs found: {len(test_drugs)} / {len(by_split.get('test', []))}")
     print(f"train+val drugs found: {len(train_drugs)}")
     print("\n--- TEST-drug pairwise cosine ---")
     ts = cosine_stats(test_emb)

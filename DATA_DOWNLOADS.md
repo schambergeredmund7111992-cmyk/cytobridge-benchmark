@@ -41,17 +41,58 @@ If you prefer to download raw data directly from public sources:
 
 ## Setup after download
 
+### sci-Plex
+
 ```bash
-# sci-Plex
-python -m data.prepare_sciplex_scperturb --h5ad SrivatsanTrapnell2020_sciplex3.h5ad --out data/raw/sciplex/
+python -m data.download --target sciplex --out data/raw
+python -m data.prepare_sciplex_scperturb --fetch_pubchem
 python -m data.preprocess --config configs/data/sciplex.yaml
 
-# Tahoe
+for protocol in drug_disjoint_v2 scaffold_disjoint_v2; do
+  python -m data.pathway_gsea \
+    --protocol-dir data/processed/sciplex_accept/$protocol \
+    --gmt data/raw/msigdb/h.all.v2024.1.Hs.symbols.gmt
+done
+```
+
+If you use `SrivatsanTrapnell2020_sciplex3.h5ad` from the Google Drive folder instead,
+place it at `data/raw/sciplex/SrivatsanTrapnell2020_sciplex3.h5ad` (the default `--input`);
+`--fetch_pubchem` then only refreshes the SMILES table when needed.
+
+### Tahoe
+
+Tahoe preprocessing depends on the sci-Plex protocol output above (`gene_ids.txt`).
+
+```bash
 tar -xzf tahoe_expression_data.tar.gz -C data/raw/tahoe/
 tar -xzf tahoe_data_merged.tar.gz -C data/processed/
-python -m data.preprocess_tahoe --selected-h5ad data/raw/tahoe/selected_panel.h5ad ...
+python -m data.download_tahoe_metadata --out data/raw/tahoe
+python -m data.select_tahoe_streaming \
+  --obs-metadata data/raw/tahoe/metadata/obs_metadata.parquet \
+  --sample-metadata data/raw/tahoe/metadata/sample_metadata.parquet \
+  --drug-metadata data/raw/tahoe/metadata/drug_metadata.parquet \
+  --out data/processed/tahoe_selection
+python -m data.stream_tahoe_panel \
+  --selected-cells data/processed/tahoe_selection/selected_cells.parquet \
+  --gene-metadata data/raw/tahoe/metadata/gene_metadata.parquet \
+  --out data/raw/tahoe/selected_panel.h5ad
+python -m data.preprocess_tahoe \
+  --selected-h5ad data/raw/tahoe/selected_panel.h5ad \
+  --sciplex-gene-ids data/processed/sciplex_accept/drug_disjoint_v2/gene_ids.txt \
+  --out data/processed/tahoe_accept
+python -m data.pathway_gsea \
+  --protocol-dir data/processed/tahoe_accept \
+  --prefix tahoe \
+  --gmt data/raw/msigdb/h.all.v2024.1.Hs.symbols.gmt
+python -m data.combine_fit_splits \
+  --protocol-dir data/processed/tahoe_accept \
+  --prefix tahoe \
+  --out data/processed/tahoe_accept/fit
+```
 
-# Results (regenerate paper figures)
+### Results (regenerate paper figures)
+
+```bash
 tar -xzf result.tar.gz -C .
 python manuscript/generate_fig3_collapse.py
 python manuscript/generate_fig4_control.py

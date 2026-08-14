@@ -99,10 +99,11 @@ def test_combined_loss_keys_and_gating():
         "control_counts": torch.randint(0, 20, (B, G)).float(),
         "pathway_gsea": torch.rand(B, K),
     }
-    # v1 defaults: delta/direction OFF -> zero
+    # v1 defaults: delta/direction/logfc/norm-recon OFF -> zero
     ld = CytoBridgeLoss(CytoBridgeLossConfig()).forward(outputs, batch)
     assert set(ld) == {"loss", "L_recon", "L_contrast", "L_pathway", "L_kl",
-                       "L_delta", "L_direction", "L_drugspec"}
+                       "L_delta", "L_direction", "L_drugspec",
+                       "L_logfc", "L_norm_recon"}
     assert ld["L_delta"].item() == 0.0 and ld["L_direction"].item() == 0.0
     # turn direction ON with control present -> nonzero, grad flows
     ld2 = CytoBridgeLoss(CytoBridgeLossConfig(lam_direction=1.0)).forward(outputs, batch)

@@ -57,15 +57,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ckpt", type=Path, required=True)
     ap.add_argument("--manifest", type=Path,
-                    default=Path("data/processed/sciplex/splits/sciplex_test.parquet"))
+                    default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_test.parquet"))
     ap.add_argument("--cell_emb", type=Path, default=Path("data/cache/sciplex_scgpt_emb.npy"))
     ap.add_argument("--drug_emb", type=Path, default=Path("data/cache/sciplex_molformer_emb.npz"))
     ap.add_argument("--counts", type=Path,
-                    default=Path("data/processed/sciplex/splits/sciplex_test_treated_counts.npy"))
+                    default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_test_treated_counts.npy"))
     ap.add_argument("--control_counts", type=Path,
-                    default=Path("data/processed/sciplex/splits/sciplex_test_control_counts.npy"))
+                    default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_test_truth_control_counts.npy"))
     ap.add_argument("--gsea", type=Path,
-                    default=Path("data/processed/sciplex/splits/sciplex_test_pathway_gsea.npy"))
+                    default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_test_pathway_gsea.npy"))
     ap.add_argument("--top_k", type=int, default=50)
     ap.add_argument("--out", type=Path, default=Path("results/ranking_t6.json"))
     args = ap.parse_args()

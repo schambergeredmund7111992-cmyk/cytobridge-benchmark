@@ -182,9 +182,9 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--tahoe_h5ad", type=Path, required=True)
     parser.add_argument("--sciplex_splits_json", type=Path,
-                        default=Path("data/processed/sciplex/splits/internal_splits.json"))
+                        default=Path("data/processed/sciplex_accept/drug_disjoint_v2/split_assignments.csv"))
     parser.add_argument("--sciplex_manifest", type=Path,
-                        default=Path("data/processed/sciplex/splits/sciplex_train.parquet"))
+                        default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_train.parquet"))
     parser.add_argument("--out_dir", type=Path, default=Path("data/processed/tahoe/splits"))
     parser.add_argument("--n_per_split", type=int, default=50000)
     parser.add_argument("--drug_col", default="drug")

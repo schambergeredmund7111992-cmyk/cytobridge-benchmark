@@ -1,6 +1,6 @@
 [project]
 name = "cytobridge"
-version = "1.0.0"
+version = "1.0.3"
 description = "Leakage-controlled benchmark for conditional drug identity in single-cell perturbation prediction."
 readme = "README.md"
 license = { text = "MIT" }

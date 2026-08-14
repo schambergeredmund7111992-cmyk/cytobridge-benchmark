@@ -86,7 +86,10 @@ def main():
     model.eval()
 
     # --- Load test data ---
-    BASE = REPO / "data" / "processed" / "sciplex" / "splits"
+    BASE = (
+        REPO / "data" / "processed" / "sciplex_accept"
+        / "drug_disjoint_v2" / "splits"
+    )
     CACHE = REPO / "data" / "cache"
     print("Loading test dataset...")
     ds = CytoBridgeDataset(
@@ -95,16 +98,18 @@ def main():
         drug_emb_path=CACHE / "sciplex_molformer_emb.npz",
         treated_counts_path=BASE / "sciplex_test_treated_counts.npy",
         pathway_gsea_path=BASE / "sciplex_test_pathway_gsea.npy",
-        control_counts_path=BASE / "sciplex_test_control_counts.npy",
+        control_counts_path=BASE / "sciplex_test_truth_control_counts.npy",
         n_hard_same_drug=0, n_hard_same_cell=0, seed=42,
     )
     print(f"Test samples: {len(ds)}")
 
     # Load pathway names if available
-    pathway_names_path = BASE / "pathway_names_computed.csv"
+    pathway_names_path = BASE.parent / "pathway_names.txt"
     pathway_names = None
     if pathway_names_path.exists():
-        pathway_names = pd.read_csv(pathway_names_path)
+        pathway_names = [
+            line for line in pathway_names_path.read_text().splitlines() if line
+        ]
         print(f"Pathway names: {len(pathway_names)} entries")
 
     loader = DataLoader(ds, batch_size=args.batch_size, shuffle=False,

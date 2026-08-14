@@ -29,8 +29,7 @@ def _obs_batches(path: Path, batch_size: int):
     missing = set(OBS_COLUMNS) - set(dataset.schema.names)
     if missing:
         raise ValueError(f"Tahoe obs metadata is missing columns: {sorted(missing)}")
-    for batch in dataset.to_batches(columns=list(OBS_COLUMNS), batch_size=batch_size):
-        yield from dataset.to_batches(columns=list(OBS_COLUMNS), batch_size=batch_size)
+    yield from dataset.to_batches(columns=list(OBS_COLUMNS), batch_size=batch_size)
 
 
 def _prepare_sample_and_drug_tables(

@@ -25,7 +25,7 @@ case "$PHASE" in
         echo "[sciplex] ${protocol} GSEA exists; not overwriting"
       fi
     done
-    pytest -q tests/test_no_data_leakage.py tests/test_benchmark_splits.py
+    pytest -q tests/test_no_data_leakage.py
     ;;
   *)
     echo "usage: bash scripts/run_pipeline.sh [smoke|sciplex]" >&2

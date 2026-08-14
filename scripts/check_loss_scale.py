@@ -12,12 +12,12 @@ Run from the repo `code/` dir (paths default to smoke; override for real data):
 
     cd code
     python scripts/check_loss_scale.py --ckpt ckpts/v1_full/<best>.ckpt \
-        --manifest data/processed/sciplex/splits/sciplex_train.parquet \
+        --manifest data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_train.parquet \
         --cell_emb data/cache/sciplex_scgpt_emb.npy \
         --drug_emb data/cache/sciplex_molformer_emb.npz \
-        --treated  data/processed/sciplex/splits/sciplex_train_treated_counts.npy \
-        --control  data/processed/sciplex/splits/sciplex_train_control_counts.npy \
-        --gsea     data/processed/sciplex/splits/sciplex_train_pathway_gsea.npy
+        --treated  data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_train_treated_counts.npy \
+        --control  data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_train_truth_control_counts.npy \
+        --gsea     data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_train_pathway_gsea.npy
 
 Recommendation printed at the end is lam_delta for ~1:1 gradient balance; sweep
 ~[0.3x, 3x] of it. Re-confirm by watching train/L_recon vs train/L_delta in wandb.

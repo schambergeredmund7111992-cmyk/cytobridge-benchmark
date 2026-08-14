@@ -147,17 +147,17 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--ckpt", type=Path, required=True)
     parser.add_argument("--manifest", type=Path,
-                        default=Path("data/processed/sciplex/splits/sciplex_test.parquet"))
+                        default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_test.parquet"))
     parser.add_argument("--cell_emb", type=Path,
                         default=Path("data/cache/sciplex_scgpt_emb.npy"))
     parser.add_argument("--drug_emb", type=Path,
                         default=Path("data/cache/sciplex_molformer_emb.npz"))
     parser.add_argument("--counts", type=Path,
-                        default=Path("data/processed/sciplex/splits/sciplex_test_treated_counts.npy"))
+                        default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_test_treated_counts.npy"))
     parser.add_argument("--input_control_counts", type=Path, required=True)
     parser.add_argument("--truth_control_counts", type=Path, required=True)
     parser.add_argument("--gsea", type=Path,
-                        default=Path("data/processed/sciplex/splits/sciplex_test_pathway_gsea.npy"))
+                        default=Path("data/processed/sciplex_accept/drug_disjoint_v2/splits/sciplex_test_pathway_gsea.npy"))
     parser.add_argument("--baseline_csv", type=Path,
                         default=Path("results/ridge_baseline.csv"))
     parser.add_argument("--out_dir", type=Path, default=Path("results/"))

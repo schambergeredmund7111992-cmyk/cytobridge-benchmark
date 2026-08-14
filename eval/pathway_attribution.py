@@ -47,7 +47,7 @@ def load_model(ckpt_path: str, device: str = "cuda") -> CytoBridge:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--ckpt", default="ckpts/v1/epoch19-val_loss325.2686.ckpt")
-    ap.add_argument("--splits_dir", default="data/processed/sciplex/splits")
+    ap.add_argument("--splits_dir", default="data/processed/sciplex_accept/drug_disjoint_v2/splits")
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--out_dir", default="results/pathway_attribution")
     args = ap.parse_args()
@@ -57,8 +57,14 @@ def main():
     splits_dir = Path(args.splits_dir)
 
     # ---- Load pathway names ----
-    pathway_names_df = pd.read_csv(splits_dir / "pathway_names_computed.csv")
-    pathway_names = pathway_names_df["pathway"].tolist()
+    names_file = splits_dir.parent / "pathway_names.txt"
+    pathway_names = [
+        line for line in names_file.read_text().splitlines() if line
+    ]
+    if not pathway_names:
+        raise FileNotFoundError(
+            f"{names_file} is missing or empty; run data.pathway_gsea first."
+        )
     K = len(pathway_names)
     print(f"Loaded {K} pathway names")
 
@@ -83,7 +89,7 @@ def main():
         drug_emb_path="data/cache/sciplex_molformer_emb.npz",
         treated_counts_path=str(splits_dir / "sciplex_test_treated_counts.npy"),
         pathway_gsea_path=str(splits_dir / "sciplex_test_pathway_gsea.npy"),
-        control_counts_path=str(splits_dir / "sciplex_test_control_counts.npy"),
+        control_counts_path=str(splits_dir / "sciplex_test_truth_control_counts.npy"),
         n_hard_same_drug=0, n_hard_same_cell=0,
     )
 

@@ -153,32 +153,17 @@ refits on train+validation. Official chemCPA/biolord outputs must pass the adapt
 
 ## Regenerate every table and figure
 
-The shipped regeneration inputs under [`manuscript/analysis/regeneration_inputs/`](manuscript/analysis/regeneration_inputs/)
-(stored per-pair predictions for the seven audited configurations, the frozen pooled-vehicle
-truth, baseline scored runs, oracle and replicate matrices, and training logs) reproduce every
-number in Tables 3–8 and Figures 3–6 of the paper. One command recomputes them and reconciles
-each value against the frozen printed numbers in
-[`manuscript/analysis/expected_values.json`](manuscript/analysis/expected_values.json):
+Every number reported in the manuscript is reproduced by the author-supplied supplement:
 
 ```bash
-python scripts/regenerate_paper_numbers.py \
-  --bundle manuscript/analysis/regeneration_inputs \
-  --out out
-python manuscript/generate_fig3_collapse.py --data out/figures_data
-python manuscript/generate_fig4_control.py --data out/figures_data
-python manuscript/generate_fig5_mechanism.py --data out/figures_data
+cd release_asoc
+python reproduce.py
 ```
 
-The reconciliation report is `out/reconciliation_report.md` (all entries PASS; the Table 8
-technical split-half ceiling requires the 2.4 GB cell-level h5ad and is SKIPped unless
-`--h5ad /path/to/SrivatsanTrapnell2020_sciplex3.h5ad` is given — see DATA_DOWNLOADS.md).
-Deterministic quantities match the printed precision; stochastic quantities (the drug-clustered
-bootstrap interval, permutation p-values) are recomputed with the recorded seed and checked
-within tolerance. The inputs were exported from the frozen data with
-[`scripts/export_regeneration_inputs.py`](scripts/export_regeneration_inputs.py); run that script on the training
-host to rebuild the bundle from scratch. The per-pair artifacts under
-`manuscript/analysis/data{,2,3}` belong to the superseded per-pair-vehicle construction and
-must not be compared against the paper's tables (see the READMEs there).
+`reproduce.py` reads the frozen split and the stored predictions (no training, no GPU,
+no network), recomputes each reported quantity with the paper's own metric implementation,
+and prints a PAPER vs RECOMPUTED verdict per row. See
+[`release_asoc/`](release_asoc/) and its own LICENSE below.
 
 ## Author-supplied release supplement
 

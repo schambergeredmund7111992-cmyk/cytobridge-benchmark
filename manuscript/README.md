@@ -1,15 +1,15 @@
 # Manuscript figure assets
 
-The project paper uses hand-drawn Fig. 1 and Fig. 2. The reproducible code-backed figures are:
-
-- Fig. 3 collapse overview: `generate_fig3_collapse.py`
-- Fig. 4 control validation: `generate_fig4_control.py`
-- Fig. 5 mechanism and case studies: `generate_fig5_mechanism.py`
-
-Each script reads the small checked-in arrays/tables under `analysis/data*` and writes a PDF under `figs/`.
+The paper figures and the graphical abstract are shipped in
+[`release_asoc/figures/`](../release_asoc/figures/), and the scripts that
+regenerate every reported number (including the figure data) live in
+[`release_asoc/code/`](../release_asoc/code/), driven by the single entry
+point:
 
 ```bash
-python manuscript/generate_fig3_collapse.py
-python manuscript/generate_fig4_control.py
-python manuscript/generate_fig5_mechanism.py
+cd release_asoc
+python reproduce.py
 ```
+
+`reproduce.py` prints a PAPER vs RECOMPUTED verdict for every row of the
+manuscript's tables (no training, no GPU, no network).

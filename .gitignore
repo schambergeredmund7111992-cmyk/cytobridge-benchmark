@@ -110,3 +110,4 @@ figures/*.csv
 # split, gene order, and the reproduce.py self-check; see release_asoc/LICENSE)
 !release_asoc/
 !release_asoc/**
+release_asoc/**/__pycache__/

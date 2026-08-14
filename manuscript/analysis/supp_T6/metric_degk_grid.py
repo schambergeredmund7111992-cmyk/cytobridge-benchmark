@@ -12,7 +12,8 @@ at EVERY grid cell (the well-posedness gate, asserted across the whole grid).
 CONSTRUCTION NOTE: on the per-pair-vehicle grid four cells (all-3000 x Spearman)
 exceed the 0.70 threshold; the paper discusses this exception explicitly
 (Section 4.5) and reports the pooled-vehicle grid in Table 7, where all 56 cells
-fall in [0.481, 0.574]. See manuscript/analysis/data3/README.md.
+fall in [0.481, 0.574]. The authoritative regeneration path is
+release_asoc/reproduce.py.
 
 REUSE, DO NOT REWRITE: scores with code/eval/metrics.py::drug_discrimination_score.
 

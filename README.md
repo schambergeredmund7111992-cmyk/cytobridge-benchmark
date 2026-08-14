@@ -172,7 +172,11 @@ split (65/8/9 drug lists, gene order, pair order), the stored predictions of eve
 audited model, and the analysis scripts, together with
 [`release_asoc/reproduce.py`](release_asoc/reproduce.py): one command that recomputes
 every number reported in the manuscript from these artifacts and prints a
-PAPER vs RECOMPUTED verdict per row (no training, no GPU, no network). Its own
+PAPER vs RECOMPUTED verdict per row (no training, no GPU, no network). The
+supplement is kept as the author's original release, which was executed on the
+author's macOS machine (a few scripts under `release_asoc/code/` carry
+hard-coded `/Users/cgxmac/...` paths from that environment; see
+[`release_asoc/NOTES.md`](release_asoc/NOTES.md)). Its own
 LICENSE (software MIT, derived data CC BY 4.0) is in
 [`release_asoc/LICENSE`](release_asoc/LICENSE).
 

@@ -151,6 +151,35 @@ Reference controls come from [`eval/reference_controls.py`](eval/reference_contr
 refits on train+validation. Official chemCPA/biolord outputs must pass the adapter contract in
 [`external/README.md`](external/README.md).
 
+## Regenerate every table and figure
+
+The shipped regeneration inputs under [`manuscript/analysis/regeneration_inputs/`](manuscript/analysis/regeneration_inputs/)
+(stored per-pair predictions for the seven audited configurations, the frozen pooled-vehicle
+truth, baseline scored runs, oracle and replicate matrices, and training logs) reproduce every
+number in Tables 3–8 and Figures 3–6 of the paper. One command recomputes them and reconciles
+each value against the frozen printed numbers in
+[`manuscript/analysis/expected_values.json`](manuscript/analysis/expected_values.json):
+
+```bash
+python scripts/regenerate_paper_numbers.py \
+  --bundle manuscript/analysis/regeneration_inputs \
+  --out out
+python manuscript/generate_fig3_collapse.py --data out/figures_data
+python manuscript/generate_fig4_control.py --data out/figures_data
+python manuscript/generate_fig5_mechanism.py --data out/figures_data
+```
+
+The reconciliation report is `out/reconciliation_report.md` (all entries PASS; the Table 8
+technical split-half ceiling requires the 2.4 GB cell-level h5ad and is SKIPped unless
+`--h5ad /path/to/SrivatsanTrapnell2020_sciplex3.h5ad` is given — see DATA_DOWNLOADS.md).
+Deterministic quantities match the printed precision; stochastic quantities (the drug-clustered
+bootstrap interval, permutation p-values) are recomputed with the recorded seed and checked
+within tolerance. The inputs were exported from the frozen data with
+[`scripts/export_regeneration_inputs.py`](scripts/export_regeneration_inputs.py); run that script on the training
+host to rebuild the bundle from scratch. The per-pair artifacts under
+`manuscript/analysis/data{,2,3}` belong to the superseded per-pair-vehicle construction and
+must not be compared against the paper's tables (see the READMEs there).
+
 ## Repository layout note
 
 This repository is the `code/` tree of the executed acceptance workspace, which kept `protocols/`

@@ -99,6 +99,38 @@ python manuscript/generate_fig4_control.py
 python manuscript/generate_fig5_mechanism.py
 ```
 
+## Regenerate every table and figure
+
+The repository ships the regeneration inputs under
+`manuscript/analysis/regeneration_inputs/` (stored per-pair predictions for
+the seven audited configurations, the frozen pooled-vehicle truth, baseline
+scored runs, oracle and replicate matrices, training logs, and an
+`inputs_manifest.json` with SHA-256 checks). No download is needed:
+
+```bash
+python scripts/regenerate_paper_numbers.py \
+  --bundle manuscript/analysis/regeneration_inputs \
+  --out out
+python manuscript/generate_fig3_collapse.py --data out/figures_data
+python manuscript/generate_fig4_control.py --data out/figures_data
+python manuscript/generate_fig5_mechanism.py --data out/figures_data
+```
+
+`out/reconciliation_report.md` reconciles every computed value against the
+frozen printed numbers in `manuscript/analysis/expected_values.json`. The only
+optional input is the cell-level sci-Plex h5ad, needed for the Table 8
+technical split-half ceiling:
+
+```bash
+python scripts/regenerate_paper_numbers.py \
+  --bundle manuscript/analysis/regeneration_inputs \
+  --h5ad SrivatsanTrapnell2020_sciplex3.h5ad --out out
+```
+
+The bundle was exported from the frozen data with
+`scripts/export_regeneration_inputs.py` (run it on the training host to
+rebuild it from scratch; see the docstring there).
+
 ## Compute environment
 
 All experiments used a single NVIDIA RTX 5090 32GB via AutoDL. Total GPU usage: ~98 hours.

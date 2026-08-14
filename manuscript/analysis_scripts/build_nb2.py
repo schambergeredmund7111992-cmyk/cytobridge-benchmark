@@ -1,7 +1,12 @@
-"""Rebuild the three composite figures in a strict Nature-subjournal style.
-Wong (2011) colorblind-safe palette + cividis sequential maps. Reads ONLY the
-verified data in analysis/data, analysis/data2, and the frozen E6E7 vectors;
-no number is recomputed here, only the visual layer is redrawn."""
+"""DEPRECATED figure builder (legacy per-pair construction).
+
+Superseded by `scripts/regenerate_paper_numbers.py` + the pooled-construction
+figures in `manuscript/generate_fig3_collapse.py` / `generate_fig4_control.py` /
+`generate_fig5_mechanism.py`, which read `out/figures_data/` and reconcile
+every number against `manuscript/analysis/expected_values.json`. Kept for
+historical reference only; the hard-coded values and /Users/cgxmac paths
+below predate the frozen pooled-vehicle analysis described in Section 4.5 of
+the paper (see manuscript/analysis/data3/README.md)."""
 import os
 import nbformat as nbf
 from nbconvert.preprocessors import ExecutePreprocessor

@@ -42,8 +42,9 @@ import numpy as np
 import pandas as pd
 
 _REPO = Path(__file__).resolve().parents[3]
-_DEFAULT_CODE = _REPO / "code"
-_DEFAULT_RES = _REPO / "student_progress_E6E7" / "E6E7" / "results"
+# The repository root IS the code directory in the released layout.
+_DEFAULT_CODE = _REPO
+_DEFAULT_RES = _REPO / "student_progress_E6E7" / "E6E7" / "results"  # legacy, optional
 
 KS = [20, 50, 100, None]          # None = all genes
 METRICS = ["pearson", "spearman"]

@@ -180,6 +180,17 @@ host to rebuild the bundle from scratch. The per-pair artifacts under
 `manuscript/analysis/data{,2,3}` belong to the superseded per-pair-vehicle construction and
 must not be compared against the paper's tables (see the READMEs there).
 
+## Author-supplied release supplement
+
+The author-supplied supplement in [`release_asoc/`](release_asoc/) contains the frozen
+split (65/8/9 drug lists, gene order, pair order), the stored predictions of every
+audited model, and the analysis scripts, together with
+[`release_asoc/reproduce.py`](release_asoc/reproduce.py): one command that recomputes
+every number reported in the manuscript from these artifacts and prints a
+PAPER vs RECOMPUTED verdict per row (no training, no GPU, no network). Its own
+LICENSE (software MIT, derived data CC BY 4.0) is in
+[`release_asoc/LICENSE`](release_asoc/LICENSE).
+
 ## Repository layout note
 
 This repository is the `code/` tree of the executed acceptance workspace, which kept `protocols/`

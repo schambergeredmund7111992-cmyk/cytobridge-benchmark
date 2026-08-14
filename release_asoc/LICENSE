@@ -1,0 +1,52 @@
+This release contains both software and derived data. They are licensed separately.
+
+================================================================================
+SOFTWARE  —  everything under code/ , reproduce.py
+================================================================================
+
+MIT License
+
+Copyright (c) 2026 Xichen Zhao and Guanxing Chen
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+DERIVED DATA  —  everything under split/ , predictions/ , figures/
+================================================================================
+
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt these files for any purpose, including commercially,
+provided you give appropriate credit to this work.
+
+These files are derived from publicly available data and must be attributed to
+their original sources as well:
+
+  sci-Plex 3 single-cell chemical transcriptomics
+    Srivatsan et al., Science 367:45-51 (2020)
+    GEO accession GSE139944
+
+  MSigDB Hallmark gene sets
+    Liberzon et al., Cell Systems 1:417-425 (2015)
+
+Neither source dataset is redistributed here in full. `split/` contains count
+matrices restricted to the nine held-out compounds of the frozen test split;
+`predictions/` contains model outputs and the pseudobulk targets they are scored
+against.

@@ -1,0 +1,28 @@
+row_index,drug,cell_line
+0,AG-490 (Tyrphostin B42),A549
+1,AG-490 (Tyrphostin B42),K562
+2,AG-490 (Tyrphostin B42),MCF7
+3,Celecoxib,A549
+4,Celecoxib,K562
+5,Celecoxib,MCF7
+6,Fulvestrant,A549
+7,Fulvestrant,K562
+8,Fulvestrant,MCF7
+9,Ramelteon,A549
+10,Ramelteon,K562
+11,Ramelteon,MCF7
+12,SL-327,A549
+13,SL-327,K562
+14,SL-327,MCF7
+15,SRT3025 HCl,A549
+16,SRT3025 HCl,K562
+17,SRT3025 HCl,MCF7
+18,Thalidomide,A549
+19,Thalidomide,K562
+20,Thalidomide,MCF7
+21,Tofacitinib (CP-690550) Citrate,A549
+22,Tofacitinib (CP-690550) Citrate,K562
+23,Tofacitinib (CP-690550) Citrate,MCF7
+24,Zileuton,A549
+25,Zileuton,K562
+26,Zileuton,MCF7

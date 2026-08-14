@@ -105,3 +105,8 @@ figures/*.csv
 
 # Local notebooks
 .ipynb_checkpoints/
+
+# EXCEPTION: the author-supplied release supplement (stored predictions, frozen
+# split, gene order, and the reproduce.py self-check; see release_asoc/LICENSE)
+!release_asoc/
+!release_asoc/**

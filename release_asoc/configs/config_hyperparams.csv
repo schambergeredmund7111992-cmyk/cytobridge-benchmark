@@ -1,0 +1,8 @@
+configuration,artifact_stem,lam_recon,lam_drugspec,lam_delta,dec_in_component_norm,source
+norm-only,t7_sub_norm_only,1.0,3.0,0.5,true,logs/*/hparams.yaml
+recovery baseline,t6_sub_baseline,1.0,0.5,0.0,false,logs/*/hparams.yaml
+drug-spec x1,t7_sub_drugspec1,0.02,1.0,0.5,true,logs/*/hparams.yaml
+low recon weight,t7_sub_lamrecon01,0.1,3.0,0.5,true,logs/*/hparams.yaml
+loss-only,t7_sub_loss_only,0.02,3.0,0.5,false,logs/*/hparams.yaml
+drug-spec x5,t7_sub_drugspec5,0.02,5.0,0.5,true,logs/*/hparams.yaml
+drug-spec x3,t7_sub_drugspec3,,,,,NOT RETAINED

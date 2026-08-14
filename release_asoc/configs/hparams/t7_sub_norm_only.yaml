@@ -1,0 +1,31 @@
+model_cfg:
+  d_cell_in: 512
+  d_drug_in: 768
+  d: 256
+  n_layers: 4
+  n_heads: 8
+  K_pathways: 50
+  n_genes: 3000
+  contrastive_dim: 128
+  dropout: 0.1
+  use_pathway_gate: true
+  pathway_init_path: null
+  residual_decoder: true
+  pool_mode: drug_query
+  drug_conditioned_decoder: true
+  dec_in_component_norm: true
+loss_cfg:
+  lam_recon: 1.0
+  lam_contrast: 0.5
+  lam_pathway: 0.3
+  lam_kl: 0.05
+  temperature: 0.07
+  weight_hard: 2.0
+  lam_direction: 1.0
+  lam_delta: 0.5
+  lam_drugspec: 3.0
+opt_cfg:
+  lr_proj: 5.0e-05
+  lr_bridge: 0.0002
+  weight_decay: 0.01
+  max_steps: 10000

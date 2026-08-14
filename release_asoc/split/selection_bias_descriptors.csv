@@ -1,0 +1,7 @@
+descriptor,scored_median,background_median,mannwhitney_p,n_scored,n_background
+MW,335.354,413.477,0.4577,9,163
+logP,2.732,3.341,0.9015,9,163
+TPSA,77.98,91.64,0.1497,9,163
+HBD,2.0,2.0,0.4084,9,163
+HBA,4.0,6.0,0.0951,9,163
+RotB,4.0,5.0,0.4864,9,163
